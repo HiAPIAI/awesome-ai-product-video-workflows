@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UGC 商品视频广告工作流 | HiAPIAI</title>
+  <meta name="description" content="使用已核实商品、批准脚本、真人授权或合成人物披露、图生视频、原生口播和广告质检，制作真实可信的创作者式商品演示。">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://hiapiai.github.io/awesome-ai-product-video-workflows/zh/workflows/ugc-product-video-ad-workflow/">
+  <link rel="alternate" hreflang="en" href="https://hiapiai.github.io/awesome-ai-product-video-workflows/workflows/ugc-product-video-ad-workflow/">
+  <link rel="alternate" hreflang="zh-CN" href="https://hiapiai.github.io/awesome-ai-product-video-workflows/zh/workflows/ugc-product-video-ad-workflow/">
+  <link rel="alternate" hreflang="x-default" href="https://hiapiai.github.io/awesome-ai-product-video-workflows/workflows/ugc-product-video-ad-workflow/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="UGC 商品视频广告工作流 | HiAPIAI">
+  <meta property="og:description" content="使用已核实商品、批准脚本、真人授权或合成人物披露、图生视频、原生口播和广告质检，制作真实可信的创作者式商品演示。">
+  <meta property="og:url" content="https://hiapiai.github.io/awesome-ai-product-video-workflows/zh/workflows/ugc-product-video-ad-workflow/">
+  <meta property="og:image" content="https://hiapiai.github.io/awesome-ai-product-video-workflows/assets/ai-product-video-workflows-social-preview.jpg">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="640">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="UGC 商品视频广告工作流 | HiAPIAI">
+  <meta name="twitter:description" content="使用已核实商品、批准脚本、真人授权或合成人物披露、图生视频、原生口播和广告质检，制作真实可信的创作者式商品演示。">
+  <meta name="twitter:image" content="https://hiapiai.github.io/awesome-ai-product-video-workflows/assets/ai-product-video-workflows-social-preview.jpg">
+  <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../../assets/style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"UGC 商品视频广告工作流","description":"使用已核实商品、批准脚本、真人授权或合成人物披露、图生视频、原生口播和广告质检，制作真实可信的创作者式商品演示。","url":"https://hiapiai.github.io/awesome-ai-product-video-workflows/zh/workflows/ugc-product-video-ad-workflow/","image":"https://hiapiai.github.io/awesome-ai-product-video-workflows/assets/ai-product-video-workflows-social-preview.jpg","inLanguage":"zh-CN","isPartOf":{"@type":"CollectionPage","name":"Awesome AI Product Video Workflows","url":"https://hiapiai.github.io/awesome-ai-product-video-workflows/zh/"},"step":[{"@type":"HowToStep","position":1,"name":"明确创作者身份关系","text":"确认人物是卖家、受聘创作者、已授权顾客还是合成人物。不得把生成人物描述为真实购买者，也不得编造个人体验。"},{"@type":"HowToStep","position":2,"name":"先写演示，再写口播","text":"使用能在规定秒数内自然说完的语言，让每句话对应可见动作，并删除未经核实的效果、夸张赞美或无来源对比。"},{"@type":"HowToStep","position":3,"name":"准备可信的首帧","text":"让商品足够大以便核对，人物握持方式合理。使用真实环境、手机拍摄构图和清晰交互结构，避免无法动画化的棚拍摆姿。"},{"@type":"HowToStep","position":4,"name":"生成单段连续演示","text":"第一条验证片只使用一个人物、一个商品、一个地点和一条动作链。任务创建后立即记录 task ID，轮询临时失败时恢复同一任务。"},{"@type":"HowToStep","position":5,"name":"核查真实性、声音和披露","text":"带声音完整观看，确认口播、商品行为、手部接触、CTA、合成媒体披露和平台广告要求，再判断是否可发布。"}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../../zh/">HiAPIAI · Product Video</a>
+    <nav aria-label="主导航">
+      <a href="../../../zh/">全部工作流</a>
+      <a href="../../../workflows/ugc-product-video-ad-workflow/">English</a>
+      <a href="https://github.com/HiAPIAI/awesome-ai-product-video-workflows">GitHub</a>
+    </nav>
+  </header>
+  <main>
+    <article class="workflow-article">
+      <p class="eyebrow">UGC 商品视频广告工作流</p>
+      <h1>UGC 商品视频广告工作流</h1>
+      <p class="lede">使用已核实商品、批准脚本、真人授权或合成人物披露、图生视频、原生口播和广告质检，制作真实可信的创作者式商品演示。</p>
+      <div class="io-grid">
+        <section>
+          <h2>输入</h2>
+          <ul><li>商品事实卡</li><li>创作者或合成人物参考</li><li>批准的口播脚本</li><li>平台披露要求</li></ul>
+        </section>
+        <section>
+          <h2>输出</h2>
+          <ul><li>UGC Brief</li><li>首帧或参考素材包</li><li>竖屏视频片段</li><li>授权与质检记录</li></ul>
+        </section>
+      </div>
+      <section>
+        <h2>完整工作流</h2>
+        <ol class="steps">
+          <li>
+                <h3>明确创作者身份关系</h3>
+                <p>确认人物是卖家、受聘创作者、已授权顾客还是合成人物。不得把生成人物描述为真实购买者，也不得编造个人体验。</p>
+              </li><li>
+                <h3>先写演示，再写口播</h3>
+                <p>使用能在规定秒数内自然说完的语言，让每句话对应可见动作，并删除未经核实的效果、夸张赞美或无来源对比。</p>
+              </li><li>
+                <h3>准备可信的首帧</h3>
+                <p>让商品足够大以便核对，人物握持方式合理。使用真实环境、手机拍摄构图和清晰交互结构，避免无法动画化的棚拍摆姿。</p>
+              </li><li>
+                <h3>生成单段连续演示</h3>
+                <p>第一条验证片只使用一个人物、一个商品、一个地点和一条动作链。任务创建后立即记录 task ID，轮询临时失败时恢复同一任务。</p>
+              </li><li>
+                <h3>核查真实性、声音和披露</h3>
+                <p>带声音完整观看，确认口播、商品行为、手部接触、CTA、合成媒体披露和平台广告要求，再判断是否可发布。</p>
+              </li>
+        </ol>
+      </section>
+      <section class="gate-panel">
+        <h2>进入下一阶段前的门禁</h2>
+        <ul><li>人物身份明确</li><li>记录授权或合成披露</li><li>口播与动作对应</li><li>完成全片音频检查</li></ul>
+      </section>
+      <section>
+        <h2>继续执行</h2>
+        <p>返回工作流案例库选择下一阶段；实际付费生成、真人肖像和公开发布均需要单独确认。</p>
+        <p><a class="button" href="../../../zh/">返回全部工作流</a></p>
+      </section>
+    </article>
+  </main>
+  <footer>
+    <p>Open workflows by <a href="https://www.hiapi.ai/">HiAPI</a> · <a href="https://github.com/HiAPIAI/awesome-ai-product-video-workflows">Source on GitHub</a></p>
+  </footer>
+</body>
+</html>

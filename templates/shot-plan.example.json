@@ -1,0 +1,27 @@
+{
+  "shot_id": "shot-01",
+  "purpose": "Reveal one verified product feature",
+  "duration_seconds": 6,
+  "aspect_ratio": "9:16",
+  "source_reference": "/absolute/path/to/approved-hero-visual.png",
+  "start_state": "Describe the exact first frame",
+  "primary_action": "Describe one product or creator action",
+  "camera_move": "Describe one restrained camera move",
+  "end_state": "Describe the exact final state",
+  "spoken_script": "",
+  "audio_cues": [
+    "quiet room tone"
+  ],
+  "must_preserve": [
+    "product silhouette",
+    "control count and placement",
+    "logo spelling and position",
+    "material and color"
+  ],
+  "must_avoid": [
+    "duplicate product",
+    "new controls or accessories",
+    "unsupported on-screen claims",
+    "platform watermark"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "product": {
+    "name": "Replace with the verified product name",
+    "category": "home-accessory",
+    "source_urls": [
+      "https://example.com/replace-with-current-product-page"
+    ],
+    "source_files": [
+      "/absolute/path/to/original-product-image.png"
+    ],
+    "identity_anchors": [
+      "Replace with visible silhouette and proportion anchors",
+      "Replace with verified material, color, controls, and packaging"
+    ],
+    "verified_claims": [
+      {
+        "claim": "Replace with a current, supportable product fact",
+        "source": "Replace with the exact evidence URL or document"
+      }
+    ],
+    "prohibited_claims": [
+      "No invented customer testimonial",
+      "No unsupported performance result"
+    ]
+  },
+  "creative": {
+    "route": "product-led-cinematic",
+    "audience": "Replace with the target audience",
+    "platforms": [
+      "tiktok",
+      "instagram-reels"
+    ],
+    "aspect_ratio": "9:16",
+    "duration_seconds": 10,
+    "language": "en",
+    "visual_promise": "Replace with one visible product promise",
+    "call_to_action": "Replace with an approved truthful CTA"
+  },
+  "rights": {
+    "product_media_authorized": false,
+    "brand_assets_authorized": false,
+    "talent_source": "none",
+    "talent_consent_confirmed": false
+  },
+  "cost_confirmation": false,
+  "publication_authorized": false
+}

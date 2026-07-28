@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Product Video Workflows"
+  short_description: "Turn product images into ecommerce video ads"
+  default_prompt: "Use $awesome-ai-product-video-workflows to plan a source-grounded product image to video ad workflow."

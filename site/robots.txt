@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hiapiai.github.io/awesome-ai-product-video-workflows/sitemap.xml

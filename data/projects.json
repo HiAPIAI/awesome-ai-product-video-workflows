@@ -1,0 +1,138 @@
+{
+  "verified_at": "2026-07-27",
+  "method": "GitHub REST API metadata plus README and license-file review",
+  "projects": [
+    {
+      "name": "MoneyPrinterTurbo",
+      "repo": "harry0703/MoneyPrinterTurbo",
+      "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+      "stars": 99596,
+      "license": "MIT",
+      "category": "automated-short-video",
+      "adoption": "workflow-reference",
+      "summary_en": "A topic-to-short-video pipeline covering scripts, voice, subtitles, music, aspect ratios, and final assembly.",
+      "summary_zh": "从主题到短视频的完整管线，覆盖脚本、配音、字幕、音乐、横竖版和最终合成。"
+    },
+    {
+      "name": "Short Video Factory",
+      "repo": "YILS-LIN/short-video-factory",
+      "url": "https://github.com/YILS-LIN/short-video-factory",
+      "stars": 5007,
+      "license": "AGPL-3.0",
+      "category": "ecommerce-video",
+      "adoption": "method-only",
+      "summary_en": "A desktop workflow for product-marketing videos, batch editing, cross-platform output, and example-led onboarding.",
+      "summary_zh": "面向商品营销视频的桌面工作流，包含批量剪辑、跨平台输出和示例引导。"
+    },
+    {
+      "name": "Generative Media Skills",
+      "repo": "SamurAIGPT/Generative-Media-Skills",
+      "url": "https://github.com/SamurAIGPT/Generative-Media-Skills",
+      "stars": 3920,
+      "license": "MIT",
+      "category": "agent-media-skills",
+      "adoption": "workflow-reference",
+      "summary_en": "Agent-ready image, video, and audio recipes with reusable primitives, product references, and asynchronous generation patterns.",
+      "summary_zh": "面向 Agent 的图像、视频和音频配方，包含可复用原子能力、商品参考图和异步生成模式。"
+    },
+    {
+      "name": "OpenShorts",
+      "repo": "mutonby/openshorts",
+      "url": "https://github.com/mutonby/openshorts",
+      "stars": 2770,
+      "license": "MIT except cloud/ under a commercial license",
+      "category": "ugc-and-shorts",
+      "adoption": "workflow-reference",
+      "summary_en": "A self-hosted short-video platform with product research, hook and script generation, AI actors, captions, rendering, QC, and social publishing modules.",
+      "summary_zh": "自托管短视频平台，覆盖商品调研、Hook 与脚本、AI 演员、字幕、渲染、质检和社媒发布模块。"
+    },
+    {
+      "name": "Video ShotCraft",
+      "repo": "Vincentwei1021/video-shotcraft",
+      "url": "https://github.com/Vincentwei1021/video-shotcraft",
+      "stars": 2344,
+      "license": "Apache-2.0",
+      "category": "product-video-shots",
+      "adoption": "workflow-reference",
+      "summary_en": "A cinematic product-video skill with product shot recipes, motion previews, Remotion templates, asset notes, and headless rendering guidance.",
+      "summary_zh": "电影感商品视频技能，提供产品镜头卡、动效预览、Remotion 模板、素材规范和无头渲染说明。"
+    },
+    {
+      "name": "DramaClaw",
+      "repo": "dramaclaw/dramaclaw",
+      "url": "https://github.com/dramaclaw/dramaclaw",
+      "stars": 2155,
+      "license": "Elastic-2.0",
+      "category": "aigc-video-studio",
+      "adoption": "method-only",
+      "summary_en": "A general AIGC production engine for scripts, reusable assets, shots, voices, asynchronous tasks, and finished videos across ads and ecommerce.",
+      "summary_zh": "通用 AIGC 制作引擎，面向广告与电商的剧本、资产、镜头、声音、异步任务和成片流程。"
+    },
+    {
+      "name": "ClipForge",
+      "repo": "xixihhhh/clipforge",
+      "url": "https://github.com/xixihhhh/clipforge",
+      "stars": 413,
+      "license": "AGPL-3.0",
+      "category": "ecommerce-video",
+      "adoption": "method-only",
+      "summary_en": "A one-product-image workflow for extracting selling points, writing scripts, preserving the source product, generating media, voice, captions, and marketplace-ready videos.",
+      "summary_zh": "从一张商品图提炼卖点、写脚本、锁定商品原图、生成素材、配音字幕并输出带货视频。"
+    },
+    {
+      "name": "Flowboard",
+      "repo": "crisng95/flowboard",
+      "url": "https://github.com/crisng95/flowboard",
+      "stars": 397,
+      "license": "No license file found",
+      "category": "product-video-canvas",
+      "adoption": "method-only",
+      "summary_en": "An infinite-canvas product-video workflow that connects reusable product references, composed studio shots, environment variants, and image-to-video nodes.",
+      "summary_zh": "无限画布式商品视频工作流，把可复用商品参考、棚拍合成、环境变体和图生视频节点连接起来。"
+    },
+    {
+      "name": "HyperFrames Launches",
+      "repo": "heygen-com/hyperframes-launches",
+      "url": "https://github.com/heygen-com/hyperframes-launches",
+      "stars": 331,
+      "license": "No license file found",
+      "category": "product-launch-video",
+      "adoption": "method-only",
+      "summary_en": "A public collection of product-launch video compositions with per-project layouts, storyboards, assets, and reproducible motion structures.",
+      "summary_zh": "公开的产品发布视频工程集合，展示逐项目目录、故事板、素材和可复现的动效结构。"
+    },
+    {
+      "name": "TVC Director",
+      "repo": "Ethanxwang/tvc-director",
+      "url": "https://github.com/Ethanxwang/tvc-director",
+      "stars": 264,
+      "license": "MIT",
+      "category": "commercial-storyboard",
+      "adoption": "workflow-reference",
+      "summary_en": "A product brief to multi-view references, nine-grid storyboards, keyframes, and Seedance video scripts workflow for cinematic commercials.",
+      "summary_zh": "把商品 Brief 转成多视图参考、九宫格分镜、关键帧和 Seedance 视频脚本的电影广告工作流。"
+    },
+    {
+      "name": "Open AI UGC",
+      "repo": "Anil-matcha/Open-AI-UGC",
+      "url": "https://github.com/Anil-matcha/Open-AI-UGC",
+      "stars": 207,
+      "license": "MIT",
+      "category": "ugc-video-ads",
+      "adoption": "workflow-reference",
+      "summary_en": "A self-hosted UGC video-ad application with AI actors, multiple image references, video models, task tracking, and production deployment guidance.",
+      "summary_zh": "自托管 UGC 视频广告应用，包含 AI 演员、多图参考、视频模型、任务跟踪和生产部署说明。"
+    },
+    {
+      "name": "Video Production Skills",
+      "repo": "Pluviobyte/video-production-skills",
+      "url": "https://github.com/Pluviobyte/video-production-skills",
+      "stars": 574,
+      "license": "No license file found",
+      "category": "video-production-skills",
+      "adoption": "method-only",
+      "summary_en": "A growing library of production skills for motion direction, product and website videos, reference recreation, openers, and QA.",
+      "summary_zh": "持续增长的视频制作技能库，覆盖动效导演、商品与网站视频、参考复刻、片头和质检。"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+# Awesome AI Product Video Workflows
+
+> Open workflows and worked cases for turning product images, ecommerce listings, and product briefs into hero visuals, video ads, UGC ads, and social media variants.
+
+Primary repository: https://github.com/HiAPIAI/awesome-ai-product-video-workflows
+Search-friendly site: https://hiapiai.github.io/awesome-ai-product-video-workflows/
+
+## Start
+
+- Skill instructions: SKILL.md
+- English overview: README.md
+- Chinese overview: README.zh-CN.md
+- Upstream audit: docs/open-source-foundations.md
+- SEO strategy: docs/seo-strategy.md
+
+## Workflows
+
+- Product image audit: workflows/01-product-image-audit.md
+- Product image to hero visual: workflows/02-product-image-to-hero-visual.md
+- Hero visual to product video: workflows/03-hero-visual-to-product-video.md
+- Product page to video ad: workflows/04-product-page-to-video-ad.md
+- UGC product video ad: workflows/05-ugc-product-video-ad.md
+- Social variants and QC: workflows/06-social-variants-and-qc.md
+
+## Examples
+
+- Real clip-light UGC ad: examples/clip-light-ugc-ad/README.md
+- Cinematic product launch recipe: examples/cinematic-product-launch/README.md
+- Catalog to social variants recipe: examples/catalog-to-social-variants/README.md
