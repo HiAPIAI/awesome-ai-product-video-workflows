@@ -6,7 +6,7 @@
 
 **目标搜索词**: `商品图生成商业主视觉`
 
-[English](../02-product-image-to-hero-visual.md) · [搜索友好网页](https://hiapiai.github.io/awesome-ai-product-video-workflows/zh/workflows/product-image-to-commercial-hero-visual/)
+[English](../02-product-image-to-hero-visual.md) · [返回中文首页](../../README.zh-CN.md)
 
 ## 输入
 

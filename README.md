@@ -4,13 +4,31 @@
 
 Open workflows and worked cases for turning **product images into AI product videos, ecommerce video ads, UGC ads, product launch videos, TikTok ads, and Instagram Reels**. Built for ecommerce sellers, advertising teams, and AI creators who need product hero visuals, image-to-video production, social media variants, and verifiable quality control.
 
-[Search-friendly website](https://hiapiai.github.io/awesome-ai-product-video-workflows/) · [简体中文](README.zh-CN.md) · [Install as an agent skill](#install-as-an-agent-skill)
+[简体中文](README.zh-CN.md) · [Explore the six workflows](#product-image-to-video-workflows) · [See the real UGC case](#real-ugc-clip-light-ad)
 
 [![Tests](https://github.com/HiAPIAI/awesome-ai-product-video-workflows/actions/workflows/test.yml/badge.svg)](https://github.com/HiAPIAI/awesome-ai-product-video-workflows/actions/workflows/test.yml)
-[![Pages](https://github.com/HiAPIAI/awesome-ai-product-video-workflows/actions/workflows/pages.yml/badge.svg)](https://hiapiai.github.io/awesome-ai-product-video-workflows/)
+[![GitHub stars](https://img.shields.io/github/stars/HiAPIAI/awesome-ai-product-video-workflows?style=flat&logo=github&label=Stars)](https://github.com/HiAPIAI/awesome-ai-product-video-workflows/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-121417.svg)](LICENSE)
 
-## What this repository provides
+## Start in 30 seconds
+
+```bash
+npx -y github:HiAPIAI/awesome-ai-product-video-workflows -y
+```
+
+Then give the skill one approved product image and its current product page. It will build the product truth sheet first and stop before any paid generation.
+
+## Why star this repository
+
+- **One source-to-ad path:** product image → commercial hero visual → storyboard → video ad → platform variants.
+- **Six complete workflows:** product-image audit, hero visual, image-to-video, product-page ad, UGC ad, and QC.
+- **Cases you can inspect:** a real generated UGC artifact plus cinematic-launch and catalog-variant recipes.
+- **Production templates:** machine-readable product brief, shot plan, workflow schema, and final-video checklist.
+- **Truth before polish:** product claims, media rights, likeness permission, cost, and publication stay explicit.
+
+If you make ecommerce ads, UGC creative, product launch videos, TikTok ads, Reels, or Shorts, Star the repository to keep the workflow library easy to find.
+
+## What you can build
 
 This is a workflow library and installable agent skill, not another one-click video engine. It connects the strongest reusable ideas from current open-source projects with a source-grounded production path:
 
@@ -18,12 +36,11 @@ This is a workflow library and installable agent skill, not another one-click vi
 
 You get:
 
-- six bilingual, search-focused product-video workflows
+- six bilingual product-video workflows designed for fast navigation inside GitHub
 - a machine-readable product brief, shot plan, and QC checklist
 - a dated audit of high-signal GitHub repositories and license boundaries
 - a real authenticated UGC video-ad case with artifact and QC evidence
 - an installable `SKILL.md` for Codex and Claude Code
-- a static bilingual website with canonical URLs, hreflang, structured data, sitemap, robots.txt, Open Graph metadata, and descriptive image alt text
 
 ## Product image to video workflows
 
@@ -112,9 +129,9 @@ cp templates/qc-checklist.md /absolute/path/to/product-video-qc.md
 
 Replace all demo values before production. The example deliberately contains `example.com` and unconfirmed rights flags.
 
-## SEO architecture
+## Find the workflow you need
 
-The GitHub repository and companion website target one clear topic cluster:
+The repository name, About description, topics, README opening, workflow titles, and examples use the same practical vocabulary people search on GitHub:
 
 - AI product video workflows
 - product image to video ad
@@ -123,7 +140,7 @@ The GitHub repository and companion website target one clear topic cluster:
 - product photography to commercial video
 - TikTok, Reels, Shorts, and marketplace video variants
 
-Each workflow has one English URL, one fully localized Chinese URL, a descriptive title and H1, unique meta description, semantic HTML, canonical and hreflang links, structured data, and internal links from the collection page. See [SEO strategy and validation](docs/seo-strategy.md).
+Each English workflow links to a complete Chinese edition and back to the repository index. The README leads with the useful output, quick install, real case, and six workflow choices instead of a keyword block. See [GitHub repository discovery strategy](docs/github-discovery-strategy.md).
 
 ## Truth and safety boundaries
 
@@ -140,7 +157,7 @@ Each workflow has one English URL, one fully localized Chinese URL, a descriptiv
 npm run check
 ```
 
-The checks rebuild bilingual Markdown and static pages, validate data and SEO metadata, scan local links, verify the social-preview image contract, and run Node tests.
+The checks rebuild the bilingual workflow documents, validate repository discovery copy and data, scan local links, verify the social-preview image contract, and run Node tests.
 
 ## Repository structure
 
@@ -159,10 +176,9 @@ The checks rebuild bilingual Markdown and static pages, validate data and SEO me
 ├── examples/
 ├── schemas/workflow.schema.json
 ├── scripts/
-│   ├── build-content.mjs
+│   ├── build-workflows.mjs
 │   ├── install.mjs
-│   └── validate.mjs
-├── site/
+│   └── validate-repository.mjs
 ├── templates/
 └── workflows/
 ```

@@ -6,7 +6,7 @@
 
 **目标搜索词**: `UGC 商品视频广告工作流`
 
-[English](../05-ugc-product-video-ad.md) · [搜索友好网页](https://hiapiai.github.io/awesome-ai-product-video-workflows/zh/workflows/ugc-product-video-ad-workflow/)
+[English](../05-ugc-product-video-ad.md) · [返回中文首页](../../README.zh-CN.md)
 
 ## 输入
 

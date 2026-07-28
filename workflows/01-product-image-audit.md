@@ -6,7 +6,7 @@ Evaluate a source product photo for identity, geometry, rights, resolution, back
 
 **Primary search phrase**: `product image preparation for AI video`
 
-[简体中文](zh/01-product-image-audit.md) · [Search-friendly web page](https://hiapiai.github.io/awesome-ai-product-video-workflows/workflows/product-image-audit-for-ai-video/)
+[简体中文](zh/01-product-image-audit.md) · [Back to repository](../README.md)
 
 ## Inputs
 

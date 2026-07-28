@@ -6,7 +6,7 @@ Animate an approved product hero image into short, controllable product-ad shots
 
 **Primary search phrase**: `hero image to AI product video ad`
 
-[简体中文](zh/03-hero-visual-to-product-video.md) · [Search-friendly web page](https://hiapiai.github.io/awesome-ai-product-video-workflows/workflows/hero-image-to-ai-product-video-ad/)
+[简体中文](zh/03-hero-visual-to-product-video.md) · [Back to repository](../README.md)
 
 ## Inputs
 

@@ -6,7 +6,7 @@ Convert a current ecommerce product page into a source-grounded hook, storyboard
 
 **Primary search phrase**: `product page to social video ad`
 
-[简体中文](zh/04-product-page-to-video-ad.md) · [Search-friendly web page](https://hiapiai.github.io/awesome-ai-product-video-workflows/workflows/product-page-to-social-video-ad/)
+[简体中文](zh/04-product-page-to-video-ad.md) · [Back to repository](../README.md)
 
 ## Inputs
 

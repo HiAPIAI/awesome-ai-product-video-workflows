@@ -6,7 +6,7 @@
 
 **目标搜索词**: `商品页生成社媒视频广告`
 
-[English](../04-product-page-to-video-ad.md) · [搜索友好网页](https://hiapiai.github.io/awesome-ai-product-video-workflows/zh/workflows/product-page-to-social-video-ad/)
+[English](../04-product-page-to-video-ad.md) · [返回中文首页](../../README.zh-CN.md)
 
 ## 输入
 

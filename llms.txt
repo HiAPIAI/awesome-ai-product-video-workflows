@@ -3,7 +3,6 @@
 > Open workflows and worked cases for turning product images, ecommerce listings, and product briefs into hero visuals, video ads, UGC ads, and social media variants.
 
 Primary repository: https://github.com/HiAPIAI/awesome-ai-product-video-workflows
-Search-friendly site: https://hiapiai.github.io/awesome-ai-product-video-workflows/
 
 ## Start
 
@@ -11,7 +10,7 @@ Search-friendly site: https://hiapiai.github.io/awesome-ai-product-video-workflo
 - English overview: README.md
 - Chinese overview: README.zh-CN.md
 - Upstream audit: docs/open-source-foundations.md
-- SEO strategy: docs/seo-strategy.md
+- GitHub discovery strategy: docs/github-discovery-strategy.md
 
 ## Workflows
 

@@ -6,7 +6,7 @@ Transform an approved product image into a reference-preserving ecommerce hero v
 
 **Primary search phrase**: `product image to commercial hero visual`
 
-[简体中文](zh/02-product-image-to-hero-visual.md) · [Search-friendly web page](https://hiapiai.github.io/awesome-ai-product-video-workflows/workflows/product-image-to-commercial-hero-visual/)
+[简体中文](zh/02-product-image-to-hero-visual.md) · [Back to repository](../README.md)
 
 ## Inputs
 

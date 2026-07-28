@@ -4,13 +4,31 @@
 
 面向电商卖家、广告团队和 AI 创作者的开放案例库：把**商品图转成 AI 商品视频、电商广告、UGC 口播、产品发布视频、TikTok 广告和 Reels 短视频**。覆盖商品主视觉、图生视频、社媒变体和可验证的成片质检。
 
-[搜索友好网页](https://hiapiai.github.io/awesome-ai-product-video-workflows/zh/) · [English](README.md) · [安装为 Agent Skill](#安装为-agent-skill)
+[English](README.md) · [查看六条完整流程](#从商品图到广告视频的完整流程) · [查看真实 UGC 案例](#真实夹灯-ugc-广告)
 
 [![Tests](https://github.com/HiAPIAI/awesome-ai-product-video-workflows/actions/workflows/test.yml/badge.svg)](https://github.com/HiAPIAI/awesome-ai-product-video-workflows/actions/workflows/test.yml)
-[![Pages](https://github.com/HiAPIAI/awesome-ai-product-video-workflows/actions/workflows/pages.yml/badge.svg)](https://hiapiai.github.io/awesome-ai-product-video-workflows/zh/)
+[![GitHub stars](https://img.shields.io/github/stars/HiAPIAI/awesome-ai-product-video-workflows?style=flat&logo=github&label=Stars)](https://github.com/HiAPIAI/awesome-ai-product-video-workflows/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-121417.svg)](LICENSE)
 
-## 这个仓库提供什么
+## 30 秒开始
+
+```bash
+npx -y github:HiAPIAI/awesome-ai-product-video-workflows -y
+```
+
+然后提供一张已获授权的商品图和当前商品页。技能会先建立商品事实卡，并停在任何付费生成之前。
+
+## 为什么值得 Star
+
+- **一条从源图到广告的完整链路：** 商品图 → 商业主视觉 → 分镜 → 视频广告 → 平台变体。
+- **六条完整工作流：** 商品图审计、主视觉、图生视频、商品页广告、UGC 广告和成片质检。
+- **能直接检查的案例：** 一个真实生成的 UGC 成片，以及电影感发布和商品目录变体配方。
+- **可以复制的生产模板：** 商品 Brief、镜头卡、工作流 Schema 和最终视频质检清单。
+- **先保证真实，再追求好看：** 商品卖点、素材授权、肖像许可、费用和发布状态全部显式记录。
+
+如果你在制作电商广告、UGC 创意、产品发布视频、TikTok、Reels 或 Shorts，可以 Star 仓库，之后需要时更容易找到。
+
+## 你可以用它做什么
 
 它是可安装的 Agent 技能与完整工作流案例库，不是另一个“一键出片”引擎。仓库把当前高质量开源项目中可复用的方法连接成一条有事实依据的生产链路：
 
@@ -18,12 +36,11 @@
 
 你会获得：
 
-- 六条双语、针对搜索意图设计的商品视频工作流
+- 六条在 GitHub 内可快速浏览的双语商品视频工作流
 - 机器可读的商品 Brief、镜头卡与质检清单
 - 带时间戳的 GitHub 高信号项目和许可证边界调研
 - 一个有真实 task、成片、转写和 QC 证据的 UGC 广告案例
 - 可供 Codex 与 Claude Code 安装的 `SKILL.md`
-- 带 canonical、hreflang、结构化数据、sitemap、robots.txt、Open Graph 和图片 alt 的双语静态网站
 
 ## 从商品图到广告视频的完整流程
 
@@ -112,9 +129,9 @@ cp templates/qc-checklist.md /absolute/path/to/product-video-qc.md
 
 生产前必须替换全部演示字段。示例故意保留 `example.com` 和未确认授权标记。
 
-## SEO 架构
+## 在 GitHub 中找到需要的流程
 
-GitHub 仓库和配套网页围绕一个清晰主题集群：
+仓库名、About 描述、Topics、README 首屏、工作流标题和案例统一使用用户在 GitHub 中会搜索的实际表达：
 
 - AI 商品视频工作流
 - 商品图生成广告视频
@@ -123,7 +140,7 @@ GitHub 仓库和配套网页围绕一个清晰主题集群：
 - 商品摄影到商业视频
 - TikTok、Reels、Shorts 和商城视频变体
 
-每条工作流都有独立英文 URL、完整本地化中文 URL、描述性标题与 H1、唯一 meta description、语义 HTML、canonical、hreflang、结构化数据和首页内部链接。详细实现见 [SEO 策略与验收](docs/seo-strategy.md)。
+每条英文工作流都链接到完整中文版本，并能返回仓库首页。README 先展示用途、快速安装、真实案例和六条路径，不使用堆砌关键词的隐藏区块。详细实现见 [GitHub 仓库发现策略](docs/github-discovery-strategy.md)。
 
 ## 真实性与安全边界
 
@@ -140,7 +157,7 @@ GitHub 仓库和配套网页围绕一个清晰主题集群：
 npm run check
 ```
 
-检查会重新生成双语 Markdown 和静态网页，验证数据与 SEO 元数据、扫描本地链接、检查社交预览图规格并运行 Node 测试。
+检查会重新生成双语工作流文档、验证仓库发现文案与数据、扫描本地链接、检查社交预览图规格并运行 Node 测试。
 
 ## 贡献
 

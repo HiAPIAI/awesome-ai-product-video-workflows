@@ -6,7 +6,7 @@
 
 **目标搜索词**: `商品图生成视频前处理`
 
-[English](../01-product-image-audit.md) · [搜索友好网页](https://hiapiai.github.io/awesome-ai-product-video-workflows/zh/workflows/product-image-audit-for-ai-video/)
+[English](../01-product-image-audit.md) · [返回中文首页](../../README.zh-CN.md)
 
 ## 输入
 

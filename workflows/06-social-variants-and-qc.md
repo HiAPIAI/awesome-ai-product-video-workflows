@@ -6,7 +6,7 @@ Turn approved product-ad clips into controlled TikTok, Reels, Shorts, marketplac
 
 **Primary search phrase**: `product video variants and quality control`
 
-[简体中文](zh/06-social-variants-and-qc.md) · [Search-friendly web page](https://hiapiai.github.io/awesome-ai-product-video-workflows/workflows/product-video-variants-and-quality-control/)
+[简体中文](zh/06-social-variants-and-qc.md) · [Back to repository](../README.md)
 
 ## Inputs
 

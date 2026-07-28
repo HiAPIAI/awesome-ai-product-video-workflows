@@ -6,7 +6,7 @@ Create a creator-style product demo with verified claims, approved dialogue, tal
 
 **Primary search phrase**: `UGC product video ad workflow`
 
-[简体中文](zh/05-ugc-product-video-ad.md) · [Search-friendly web page](https://hiapiai.github.io/awesome-ai-product-video-workflows/workflows/ugc-product-video-ad-workflow/)
+[简体中文](zh/05-ugc-product-video-ad.md) · [Back to repository](../README.md)
 
 ## Inputs
 

@@ -1,10 +1,9 @@
 {
   "name": "awesome-ai-product-video-workflows",
-  "version": "0.1.0",
-  "description": "SEO-friendly open workflows and case studies for turning product images into ecommerce video ads, UGC ads, and social media videos.",
+  "version": "0.1.1",
+  "description": "Awesome AI product video workflows for turning product images into ecommerce video ads, UGC ads, TikTok, Reels, and Shorts.",
   "type": "module",
   "private": true,
-  "homepage": "https://hiapiai.github.io/awesome-ai-product-video-workflows/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HiAPIAI/awesome-ai-product-video-workflows.git"
@@ -13,9 +12,9 @@
     "awesome-ai-product-video-workflows": "./scripts/install.mjs"
   },
   "scripts": {
-    "build": "node scripts/build-content.mjs",
+    "build": "node scripts/build-workflows.mjs",
     "test": "node --test tests/*.test.mjs",
-    "validate": "node scripts/validate.mjs",
+    "validate": "node scripts/validate-repository.mjs",
     "check": "npm run build && npm run validate && npm test && git diff --check"
   },
   "keywords": [
@@ -26,7 +25,13 @@
     "image-to-video",
     "ugc-ads",
     "social-media-video",
-    "agent-skills"
+    "agent-skills",
+    "product-video",
+    "generative-ai",
+    "marketing-automation",
+    "tiktok-ads",
+    "instagram-reels",
+    "youtube-shorts"
   ],
   "license": "MIT",
   "engines": {
