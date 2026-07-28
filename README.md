@@ -172,7 +172,7 @@ The checks rebuild the bilingual workflow documents, validate repository discove
 │   └── workflows.json
 ├── docs/
 │   ├── open-source-foundations.md
-│   └── seo-strategy.md
+│   └── github-discovery-strategy.md
 ├── examples/
 ├── schemas/workflow.schema.json
 ├── scripts/
