@@ -1,0 +1,44 @@
+name: Workflow request
+description: Propose a reusable product-video workflow backed by a real task.
+title: "[workflow] "
+labels:
+  - workflow-request
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please describe a repeatable problem and the evidence needed to review it.
+        Do not upload private product pages, API keys, customer data, or media without rights.
+  - type: input
+    id: goal
+    attributes:
+      label: User goal
+      description: What should a developer, seller, or creative team be able to do?
+      placeholder: Turn a product page into a 9:16 UGC ad brief
+    validations:
+      required: true
+  - type: textarea
+    id: inputs-outputs
+    attributes:
+      label: Inputs and outputs
+      description: List the minimum inputs, expected files or records, and target platform.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Reproducible evidence
+      description: Link a redacted brief, test fixture, public artifact, or source-backed example.
+    validations:
+      required: true
+  - type: checkboxes
+    id: rights
+    attributes:
+      label: Rights and claims
+      options:
+        - label: I have removed secrets and private data.
+          required: true
+        - label: Any attached media or source links are public or authorized.
+          required: true
+        - label: I have separated observed facts from unverified product claims.
+          required: true

@@ -2,6 +2,11 @@
 
 Thanks for improving this AI product-video workflow library.
 
+The fastest useful contribution is a small, source-backed workflow or a reproducible
+fix. Start with the [workflow request](.github/ISSUE_TEMPLATE/workflow-request.yml)
+or [bug report](.github/ISSUE_TEMPLATE/bug-report.yml) template when you are not
+ready to open a pull request.
+
 ## Add or correct an open-source project
 
 Update `data/projects.json` with:
