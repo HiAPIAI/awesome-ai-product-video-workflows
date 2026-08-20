@@ -67,9 +67,12 @@ for a shared release.
 | Live action | [`live-action/`](live-action/) | 15 Seedance 2.0 live-action workflows with dry-run runner and render evidence |
 | Blender previs | [`blender-previs/`](blender-previs/) | Codex-to-Blender shot contracts and manual Seedance handoff (branch snapshot) |
 
-See [Content Integration Draft](docs/content-integration.md) for ownership boundaries,
-validation gates, and migration risks. This index does not imply that the sibling
-repositories have been renamed or archived.
+See [Content Integration](docs/content-integration.md) for ownership boundaries,
+validation gates, and migration risks. The absorbed sibling repositories remain
+available as archived history pages and GitHub redirects.
+
+The flagship App Demo decision and promotion gates are recorded in
+[`docs/flagship-app-demo-decision.md`](docs/flagship-app-demo-decision.md).
 
 ## Product image to video workflows
 

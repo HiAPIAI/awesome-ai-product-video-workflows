@@ -20,7 +20,7 @@
   <text x="1291" y="46" text-anchor="middle" fill="#FFFFFF" font-family="Arial" font-size="15" font-weight="700">Create automation</text>
 
   <text x="270" y="132" fill="#171A1F" font-family="Arial" font-size="30" font-weight="700">Good morning, Maya</text>
-  <text x="270" y="163" fill="#68717D" font-family="Arial" font-size="16">Here is what moved across your customer journeys.</text>
+  <text x="270" y="163" fill="#68717D" font-family="Arial" font-size="16">Example workspace · demo data for a reproducible UI flow.</text>
 
   <g font-family="Arial">
     <rect x="270" y="204" width="254" height="142" rx="8" fill="#FFFFFF" stroke="#DDE2E8"/>

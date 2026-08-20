@@ -99,3 +99,8 @@ Prompt provenance findings are recorded in
 [`docs/prompt-provenance-audit.md`](prompt-provenance-audit.md). The current source
 licenses support attribution-preserving indexing, not blanket redistribution of
 third-party prompts or media.
+
+The evidence-based flagship decision and promotion gates are recorded in
+[`docs/flagship-app-demo-decision.md`](flagship-app-demo-decision.md). Only the
+SaaS case is an optimization candidate; the other App Demo examples remain
+tutorial templates.

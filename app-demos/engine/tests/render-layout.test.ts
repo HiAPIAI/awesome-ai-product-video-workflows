@@ -45,7 +45,7 @@ test('portrait screen viewport uses a focused 4:5 frame for a landscape canvas',
   assert.ok(Math.abs(completePortrait.width / completePortrait.height - 16 / 10) < 0.002);
 });
 
-test('filtergraph converts scene-local callout and click frames and focuses portrait screens', () => {
+test('filtergraph converts scene-local callout and click frames without forcing portrait crops', () => {
   const compiled: CompiledDemoV1 = {
     schemaVersion: 'compiled-demo-v1',
     source: {schemaVersion: 'demo-v1', path: 'demo.yaml', sha256: '0'.repeat(64)},
@@ -153,9 +153,8 @@ test('filtergraph converts scene-local callout and click frames and focuses port
   assert.match(composition.filterGraph, /\(n-219\)/u);
   assert.doesNotMatch(composition.filterGraph, /between\(n,42,97\)/u);
   assert.doesNotMatch(composition.filterGraph, /\(n-84\)/u);
-  assert.equal((composition.filterGraph.match(/crop=w=950:h=1186/gu) ?? []).length, 2);
-  assert.match(composition.filterGraph, /iw\*0\.641204-ow\/2/u);
-  assert.equal(composition.filterGraph.includes('pad=950:1186'), false);
+  assert.equal((composition.filterGraph.match(/crop=w=950:h=1186/gu) ?? []).length, 0);
+  assert.equal(composition.filterGraph.includes('pad=950:1186'), true);
   assert.equal(composition.filterGraph.includes('pad=950:594'), true);
 
   const builderPoints = [
