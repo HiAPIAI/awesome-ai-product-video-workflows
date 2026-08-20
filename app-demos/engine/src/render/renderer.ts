@@ -54,14 +54,15 @@ async function encodeOutput(
   graphPath: string,
   destination: string,
 ): Promise<void> {
+  const filterGraph = await readFile(graphPath, 'utf8');
   const args = [
     '-hide_banner',
     '-loglevel',
     'error',
     '-y',
     ...composition.inputArgs,
-    '-filter_complex_script',
-    graphPath,
+    '-filter_complex',
+    filterGraph,
     '-map',
     composition.videoLabel,
     ...(composition.audioLabel ? ['-map', composition.audioLabel] : []),

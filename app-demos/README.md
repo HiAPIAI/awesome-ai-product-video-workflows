@@ -7,10 +7,13 @@ merged into the root `package.json` or root schema namespace.
 
 ## Current status
 
-All five catalog examples are currently marked `spec-only` upstream. The compiler,
-validation, offline render path, and paid-generation preflight are available, but the
-integration should not advertise a finished demo export until at least one example
-has a downloadable MP4 and human review report.
+The compiler, validation, offline render path, and paid-generation preflight are
+available. `SaaS Feature Launch` now has a verified local landscape and portrait
+render with review metadata; the generated MP4 files stay out of Git. The other four
+examples remain `spec-only` until they receive the same render and review evidence.
+
+See [`reviews/saas-feature-launch-render.json`](reviews/saas-feature-launch-render.json)
+for the reproducible tool versions, output dimensions, hashes, and review status.
 
 The render path requires an FFmpeg build with the `drawtext` filter (usually
 provided by `libfreetype`). Run `npm --prefix app-demos/engine run doctor -- --strict`

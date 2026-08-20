@@ -20,11 +20,12 @@ schema.
 
 ## App demo gate
 
-The app-demo README currently labels every example `spec-only`. Before presenting
-the domain as production-ready, complete all of the following in the app-demo
-engine:
+The app-demo README now records one verified local render (`SaaS Feature Launch`).
+The remaining four examples are still `spec-only`. Before presenting the whole
+domain as production-ready, complete all of the following in the app-demo engine:
 
-1. Render one landscape and one portrait example with a supported FFmpeg build.
+1. Render one landscape and one portrait example with a supported FFmpeg build for
+   each remaining catalog entry.
 2. Commit the generated review metadata, not generated media, and link a reviewable
    artifact from the example README.
 3. Keep `drawtext` as an explicit doctor check. A missing filter is an environment

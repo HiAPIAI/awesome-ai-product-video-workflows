@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "render-review-v1",
+  "workflow": "saas-feature-launch",
+  "source": "app-demos/engine/examples/saas-feature-launch/demo.yaml",
+  "renderedAt": "2026-08-20",
+  "environment": {
+    "node": "26.5.0",
+    "ffmpeg": "9.0.1",
+    "ffmpegBuild": "ffmpeg-full with libfreetype",
+    "ffprobe": "9.0.1"
+  },
+  "outputs": [
+    {
+      "id": "landscape",
+      "file": "saas-feature-launch-landscape.mp4",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 330,
+      "durationSeconds": 11,
+      "videoCodec": "h264",
+      "audioCodec": "aac",
+      "sha256": "0e63b2d86a6feca2936a0aed4f6d082062f2932babfe1a7d5173a0455b5cf755"
+    },
+    {
+      "id": "vertical",
+      "file": "saas-feature-launch-vertical.mp4",
+      "width": 1080,
+      "height": 1920,
+      "fps": 30,
+      "frames": 330,
+      "durationSeconds": 11,
+      "videoCodec": "h264",
+      "audioCodec": "aac",
+      "sha256": "ab46d91c59391355c141dc8b326fcd0c0a6ac50c9b9aeda94c555f3e9400d4fb"
+    }
+  ],
+  "automatedChecks": {
+    "fullDecode": true,
+    "audioStreamPresent": true,
+    "dimensionsMatchCatalog": true,
+    "frameCountMatchesCatalog": true,
+    "reviewFramesGenerated": true
+  },
+  "visualReview": {
+    "contactSheetsReviewed": true,
+    "firstMiddleLastFramesReviewed": true,
+    "importantUiCropped": false,
+    "blackOrFrozenFramesObserved": false,
+    "audioNormalVolumeListening": "pending"
+  },
+  "status": "automated-pass-audio-review-pending",
+  "mediaPolicy": "MP4 files stay local and are intentionally not committed."
+}
