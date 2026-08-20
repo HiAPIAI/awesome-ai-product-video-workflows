@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">Northstar visual automation builder</title>
+  <desc id="desc">A fictional node-based journey builder with trigger, condition, and message nodes.</desc>
+  <rect width="1440" height="900" fill="#EEF1F4"/>
+  <rect width="1440" height="70" fill="#FFFFFF"/>
+  <rect x="24" y="18" width="34" height="34" rx="8" fill="#55C995"/>
+  <text x="72" y="43" fill="#171A1F" font-family="Arial" font-size="20" font-weight="700">Trial activation</text>
+  <text x="72" y="60" fill="#7A838F" font-family="Arial" font-size="12">Draft saved</text>
+  <rect x="1164" y="16" width="108" height="38" rx="6" fill="#F0F3F6" stroke="#D8DEE6"/>
+  <text x="1218" y="41" text-anchor="middle" fill="#343A43" font-family="Arial" font-size="14" font-weight="700">Test run</text>
+  <rect x="1286" y="16" width="130" height="38" rx="6" fill="#171A1F"/>
+  <text x="1351" y="41" text-anchor="middle" fill="#FFFFFF" font-family="Arial" font-size="14" font-weight="700">Publish</text>
+
+  <rect y="70" width="236" height="830" fill="#20242B"/>
+  <text x="26" y="112" fill="#8F99A7" font-family="Arial" font-size="12" font-weight="700">STEPS</text>
+  <g font-family="Arial" font-size="15">
+    <rect x="18" y="132" width="200" height="52" rx="6" fill="#2C323B"/><circle cx="44" cy="158" r="9" fill="#55C995"/><text x="64" y="164" fill="#FFFFFF">Trigger</text>
+    <rect x="18" y="196" width="200" height="52" rx="6" fill="#2C323B"/><rect x="36" y="222" width="16" height="16" rx="3" fill="#FFBF5B"/><text x="64" y="228" fill="#FFFFFF">Condition</text>
+    <rect x="18" y="260" width="200" height="52" rx="6" fill="#2C323B"/><path d="M36 279h18v14H36z" fill="#2D8CFF"/><text x="64" y="292" fill="#FFFFFF">Message</text>
+    <rect x="18" y="324" width="200" height="52" rx="6" fill="#2C323B"/><path d="M44 341v18M35 350h18" stroke="#F06A63" stroke-width="3"/><text x="64" y="356" fill="#FFFFFF">Delay</text>
+  </g>
+
+  <g stroke="#CBD2DB" stroke-width="3" fill="none">
+    <path d="M528 254v72"/><path d="M528 432v70"/><path d="M528 606v72"/>
+    <path d="M760 552h120"/><path d="M760 552v-126h120"/>
+  </g>
+  <g font-family="Arial">
+    <rect x="398" y="148" width="260" height="106" rx="8" fill="#FFFFFF" stroke="#BFE8D2" stroke-width="2"/>
+    <rect x="398" y="148" width="8" height="106" rx="4" fill="#55C995"/>
+    <text x="430" y="184" fill="#23734D" font-size="13" font-weight="700">TRIGGER</text>
+    <text x="430" y="217" fill="#171A1F" font-size="18" font-weight="700">Trial started</text>
+    <text x="430" y="239" fill="#7A838F" font-size="13">Immediately after signup</text>
+
+    <rect x="398" y="326" width="260" height="106" rx="8" fill="#FFFFFF" stroke="#E8D6A6" stroke-width="2"/>
+    <rect x="398" y="326" width="8" height="106" rx="4" fill="#FFBF5B"/>
+    <text x="430" y="362" fill="#8A6819" font-size="13" font-weight="700">CONDITION</text>
+    <text x="430" y="395" fill="#171A1F" font-size="18" font-weight="700">Created first project?</text>
+    <text x="430" y="417" fill="#7A838F" font-size="13">Check after 24 hours</text>
+
+    <rect x="398" y="502" width="362" height="104" rx="8" fill="#FFFFFF" stroke="#BED8F5" stroke-width="2"/>
+    <rect x="398" y="502" width="8" height="104" rx="4" fill="#2D8CFF"/>
+    <text x="430" y="538" fill="#2369A8" font-size="13" font-weight="700">YES · MESSAGE</text>
+    <text x="430" y="571" fill="#171A1F" font-size="18" font-weight="700">Share the advanced guide</text>
+    <text x="430" y="593" fill="#7A838F" font-size="13">Email · Product education</text>
+
+    <rect x="398" y="678" width="260" height="104" rx="8" fill="#FFFFFF" stroke="#D8DEE6" stroke-width="2"/>
+    <text x="430" y="714" fill="#68717D" font-size="13" font-weight="700">GOAL</text>
+    <text x="430" y="747" fill="#171A1F" font-size="18" font-weight="700">Activated account</text>
+
+    <rect x="880" y="374" width="318" height="104" rx="8" fill="#FFFFFF" stroke="#F0C3BF" stroke-width="2"/>
+    <rect x="880" y="374" width="8" height="104" rx="4" fill="#F06A63"/>
+    <text x="912" y="410" fill="#A74A45" font-size="13" font-weight="700">NO · MESSAGE</text>
+    <text x="912" y="443" fill="#171A1F" font-size="18" font-weight="700">Offer a setup session</text>
+    <text x="912" y="465" fill="#7A838F" font-size="13">In-app · Human support</text>
+
+    <rect x="880" y="500" width="318" height="104" rx="8" fill="#FFFFFF" stroke="#D8DEE6" stroke-width="2"/>
+    <text x="912" y="536" fill="#68717D" font-size="13" font-weight="700">WAIT</text>
+    <text x="912" y="569" fill="#171A1F" font-size="18" font-weight="700">2 business days</text>
+  </g>
+
+  <rect x="1228" y="70" width="212" height="830" fill="#FFFFFF"/>
+  <text x="1254" y="116" fill="#171A1F" font-family="Arial" font-size="17" font-weight="700">Journey health</text>
+  <text x="1254" y="158" fill="#7A838F" font-family="Arial" font-size="13">5 steps</text>
+  <text x="1254" y="188" fill="#7A838F" font-family="Arial" font-size="13">2 branches</text>
+  <text x="1254" y="218" fill="#7A838F" font-family="Arial" font-size="13">0 conflicts</text>
+  <rect x="1254" y="252" width="160" height="40" rx="6" fill="#EAF8F1"/>
+  <text x="1334" y="278" text-anchor="middle" fill="#26734E" font-family="Arial" font-size="13" font-weight="700">Ready to test</text>
+</svg>

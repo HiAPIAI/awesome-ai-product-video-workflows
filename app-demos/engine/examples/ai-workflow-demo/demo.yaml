@@ -1,0 +1,103 @@
+schemaVersion: demo-v1
+project:
+  id: ai-workflow-demo
+  title: AI Workflow Demo
+  description: Show a launch-asset workflow moving from a structured brief through execution to reviewed outputs.
+canvas:
+  width: 1920
+  height: 1080
+  fps: 30
+  durationFrames: 360
+brand:
+  background: "#F2F3F5"
+  foreground: "#17191D"
+  accent: "#F06449"
+  fontFamily: "Arial, sans-serif"
+assets:
+  - id: structured-brief
+    type: image
+    path: assets/structured-brief.svg
+    alt: Relay structured launch brief
+    license: MIT
+  - id: workflow-running
+    type: image
+    path: assets/workflow-running.svg
+    alt: Relay AI workflow execution view
+    license: MIT
+  - id: reviewed-output
+    type: image
+    path: assets/reviewed-output.svg
+    alt: Relay reviewed launch asset output
+    license: MIT
+scenes:
+  - id: ai-workflow-title
+    kind: title
+    startFrame: 0
+    durationFrames: 45
+    heading: From brief to reviewed launch assets
+    body: Keep context, generation, and approval in one visible workflow.
+    transitionIn: fade
+    transitionOut: slide-up
+  - id: enter-brief
+    kind: screen
+    startFrame: 45
+    durationFrames: 90
+    assetId: structured-brief
+    fit: contain
+    from: {scale: 0.98, opacity: 0}
+    to: {scale: 1.04, opacity: 1}
+    easing: ease-out
+    cursor:
+      from: {x: 520, y: 340}
+      to: {x: 1120, y: 710}
+      clickFrames: [66]
+    transitionIn: scale
+    transitionOut: fade
+  - id: run-workflow
+    kind: screen
+    startFrame: 135
+    durationFrames: 105
+    assetId: workflow-running
+    fit: contain
+    from: {x: 24, scale: 1.02}
+    to: {x: -16, scale: 1.07}
+    easing: ease-in-out
+    callouts:
+      - text: Every step exposes its input, status, and output
+        at: {x: 1030, y: 330}
+        startFrame: 28
+        durationFrames: 58
+        accent: "#F06449"
+    transitionIn: fade
+    transitionOut: fade
+  - id: review-output
+    kind: screen
+    startFrame: 240
+    durationFrames: 90
+    assetId: reviewed-output
+    fit: contain
+    from: {scale: 1.06, opacity: 0}
+    to: {scale: 1, opacity: 1}
+    easing: ease-out
+    cursor:
+      from: {x: 1080, y: 540}
+      to: {x: 1210, y: 742}
+      clickFrames: [58]
+    transitionIn: fade
+    transitionOut: fade
+  - id: ai-workflow-outro
+    kind: outro
+    startFrame: 330
+    durationFrames: 30
+    heading: Generate fast. Approve deliberately.
+    body: Relay keeps the human decision visible.
+    transitionIn: fade
+outputs:
+  - id: landscape
+    width: 1920
+    height: 1080
+    fps: 30
+    fileName: ai-workflow-demo-landscape.mp4
+hiapi:
+  enabled: false
+  enhancements: []

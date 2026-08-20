@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1600" viewBox="0 0 900 1600" role="img" aria-labelledby="title desc">
+  <title id="title">Clipnote publish-ready vertical video</title>
+  <desc id="desc">A fictional vertical video preview with captions inside marked safe margins.</desc>
+  <rect width="900" height="1600" fill="#17191E"/>
+  <rect x="120" y="44" width="660" height="1512" rx="8" fill="#C9D8E0"/>
+  <rect x="158" y="82" width="584" height="1436" rx="6" fill="#8DAAB9"/>
+  <rect x="194" y="122" width="512" height="302" rx="8" fill="#AFC4CF"/>
+  <circle cx="450" cy="282" r="74" fill="#F4C36B"/>
+  <rect x="238" y="476" width="424" height="214" rx="8" fill="#F6F8F9"/>
+  <rect x="274" y="520" width="352" height="24" rx="8" fill="#20242B"/>
+  <rect x="274" y="568" width="264" height="18" rx="8" fill="#7357D9"/>
+  <rect x="274" y="614" width="316" height="18" rx="8" fill="#CBD2D8"/>
+  <rect x="238" y="738" width="424" height="254" rx="8" fill="#FFFFFF"/>
+  <rect x="276" y="786" width="174" height="18" rx="8" fill="#20242B"/>
+  <rect x="276" y="834" width="348" height="16" rx="8" fill="#D1D7DC"/>
+  <rect x="276" y="876" width="282" height="16" rx="8" fill="#D1D7DC"/>
+  <rect x="276" y="928" width="132" height="30" rx="8" fill="#EEEAFB"/>
+
+  <rect x="186" y="1082" width="528" height="138" rx="8" fill="#17191E" fill-opacity="0.94"/>
+  <text x="450" y="1134" text-anchor="middle" fill="#FFFFFF" font-family="Arial" font-size="34" font-weight="800">Choose the feature.</text>
+  <text x="450" y="1182" text-anchor="middle" fill="#D8CCFF" font-family="Arial" font-size="34" font-weight="800">Export the vertical cut.</text>
+
+  <rect x="158" y="148" width="584" height="1240" rx="4" fill="none" stroke="#FFFFFF" stroke-opacity="0.38" stroke-width="3" stroke-dasharray="14 14"/>
+  <rect x="186" y="1416" width="528" height="54" rx="8" fill="#7357D9"/>
+  <text x="450" y="1451" text-anchor="middle" fill="#FFFFFF" font-family="Arial" font-size="18" font-weight="700">CAPTIONS INSIDE SAFE MARGINS</text>
+</svg>

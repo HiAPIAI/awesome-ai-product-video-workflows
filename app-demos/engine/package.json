@@ -1,0 +1,55 @@
+{
+  "name": "awesome-ai-app-demo-video-workflows",
+  "version": "0.1.0",
+  "description": "Executable workflows for turning app screenshots and UI prototypes into product demo videos with optional HiAPI enhancements.",
+  "type": "module",
+  "private": false,
+  "scripts": {
+    "doctor": "tsx src/cli/doctor.ts",
+    "validate": "tsx src/cli/validate.ts",
+    "compile": "tsx src/cli/compile.ts",
+    "render": "tsx src/cli/render.ts",
+    "generate": "tsx src/cli/generate.ts",
+    "typecheck": "tsc --noEmit",
+    "test:unit": "node --import tsx --test tests/*.test.ts",
+    "test:repo": "node scripts/repository-gates.mjs",
+    "test": "npm run typecheck && npm run test:unit && npm run test:repo"
+  },
+  "keywords": [
+    "app-demo",
+    "product-demo",
+    "motion-canvas",
+    "ui-animation",
+    "screenshots",
+    "video-workflows",
+    "hiapi"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HiAPIAI/awesome-ai-app-demo-video-workflows.git"
+  },
+  "homepage": "https://github.com/HiAPIAI/awesome-ai-app-demo-video-workflows#readme",
+  "bugs": {
+    "url": "https://github.com/HiAPIAI/awesome-ai-app-demo-video-workflows/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.18"
+  },
+  "dependencies": {
+    "@motion-canvas/2d": "3.17.2",
+    "@motion-canvas/core": "3.17.2",
+    "@motion-canvas/ffmpeg": "3.17.2",
+    "ajv": "8.17.1",
+    "sharp": "0.35.3",
+    "yaml": "2.8.1"
+  },
+  "devDependencies": {
+    "@motion-canvas/ui": "3.17.2",
+    "@motion-canvas/vite-plugin": "3.17.2",
+    "@types/node": "22.18.6",
+    "tsx": "4.20.6",
+    "typescript": "5.9.2",
+    "vite": "5.4.20"
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "tests": [
+    {
+      "workflow_id": "night-corridor-suspense",
+      "task_id": "tk-hiapi-01KYGS2YVNZKX51N9113NVRJK6",
+      "tested_at": "2026-07-27T03:19:35.000Z",
+      "model": "seedance-2.0",
+      "api_status": "success",
+      "current_revision": false,
+      "prompt_sha256": "d18a4fccb250bb21370955ad6151e2011eba1111c156cfa1eee913951adee1a7",
+      "request": {
+        "mode": "text-to-video",
+        "language": "en",
+        "duration": 8,
+        "resolution": "720p",
+        "aspect_ratio": "16:9",
+        "generate_audio": true
+      },
+      "artifact": {
+        "published": false,
+        "bytes": 3007032,
+        "sha256": "8c865ae9ba918b95da3d4236acdefa5327b14015eb3e55cc570974ed9dca1d4a",
+        "duration_seconds": 8.041667,
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "video_codec": "H.264",
+        "audio_codec": "AAC"
+      },
+      "review": {
+        "overall": "partial-pass",
+        "checks": {
+          "api_contract": "pass",
+          "playable_output": "pass",
+          "duration_and_resolution": "pass",
+          "audio_track": "pass",
+          "subject_continuity": "pass",
+          "camera_direction": "pass",
+          "final_stop": "pass",
+          "two-step_light_sequence": "partial"
+        },
+        "notes_en": "The corridor, rear tracking, progressive darkness, stable subject, audio track, and final stop are present. The requested two separate light switch-offs occur as one near-simultaneous lighting change around 3.5-3.75 seconds.",
+        "notes_zh": "走廊、后方跟拍、逐步变暗、人物稳定、音轨和最后停步均已实现；但要求的两盏灯依次熄灭，在约 3.5-3.75 秒表现为一次近乎同时的灯光变化。"
+      }
+    },
+    {
+      "workflow_id": "night-corridor-suspense",
+      "task_id": "tk-hiapi-01KYGVD8JHJVDPN00CDMSWKGCB",
+      "tested_at": "2026-07-27T03:59:05.000Z",
+      "model": "seedance-2.0",
+      "api_status": "success",
+      "current_revision": true,
+      "prompt_sha256": "6235d5e4edd1a753223a47e9b3ccb61f4b6a919728bce8b320470a9eb76aee1c",
+      "request": {
+        "mode": "text-to-video",
+        "language": "en",
+        "duration": 8,
+        "resolution": "720p",
+        "aspect_ratio": "16:9",
+        "generate_audio": true
+      },
+      "artifact": {
+        "published": false,
+        "bytes": 2600304,
+        "sha256": "db8f9fcdce815e0ebac6de483a016a50c8c7e43773e5d98523a75470f2df3048",
+        "duration_seconds": 8.041667,
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "video_codec": "H.264",
+        "audio_codec": "AAC"
+      },
+      "review": {
+        "overall": "partial-pass",
+        "checks": {
+          "api_contract": "pass",
+          "playable_output": "pass",
+          "duration_and_resolution": "pass",
+          "audio_track": "pass",
+          "subject_continuity": "pass",
+          "camera_direction": "pass",
+          "final_stop": "pass",
+          "isolated_first_light": "pass",
+          "two_step_light_sequence": "partial"
+        },
+        "notes_en": "The revised prompt prevents a global exposure drop: one central ceiling light switches off independently around 3.25-3.5 seconds while the side lights remain stable. A second distinct light switch-off is still not visible, so the two-step sequence remains only partially satisfied.",
+        "notes_zh": "修改后的提示词避免了整体曝光骤降：约 3.25-3.5 秒一盏中央顶灯独立熄灭，侧灯保持稳定；但仍未看到第二盏灯单独熄灭，因此两步灯光节拍仍只达到部分要求。"
+      }
+    },
+    {
+      "workflow_id": "rain-window-reunion",
+      "task_id": "tk-hiapi-01KYGVY9CFFWGN5EMJR2XX6MD4",
+      "tested_at": "2026-07-27T04:09:45.000Z",
+      "model": "seedance-2.0",
+      "api_status": "success",
+      "current_revision": true,
+      "prompt_sha256": "4e62eb45c28efb855a105fac2afa316fdc2fd297f45ca90f9e0fec1649a3eb9d",
+      "request": {
+        "mode": "image-to-video",
+        "language": "en",
+        "duration": 10,
+        "resolution": "720p",
+        "aspect_ratio": "16:9",
+        "generate_audio": true
+      },
+      "source_assets": [
+        {
+          "role": "first_frame_url",
+          "task_id": "tk-hiapi-01KYGVW3JVY6ARF2H580NHCE37",
+          "model": "flux-schnell/text-to-image",
+          "type": "image",
+          "bytes": 225442,
+          "sha256": "e7ec323bac55ac9ac5cf472ec2263b862add4bd46ddb4ca0fe504a2c82f75d41",
+          "width": 1024,
+          "height": 576,
+          "rights": "generated-original",
+          "published": false
+        }
+      ],
+      "artifact": {
+        "published": false,
+        "bytes": 4398584,
+        "sha256": "f0d633cbf0fe2913cc4181cf1bec495681da4ee56797f34ac16a4896ed4f0d33",
+        "duration_seconds": 10.041667,
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "video_codec": "H.264",
+        "audio_codec": "AAC"
+      },
+      "review": {
+        "overall": "partial-pass",
+        "checks": {
+          "api_contract": "pass",
+          "playable_output": "pass",
+          "duration_and_resolution": "pass",
+          "audio_track": "pass",
+          "first_frame_match": "pass",
+          "primary_identity": "pass",
+          "secondary_identity": "partial",
+          "camera_transition": "pass",
+          "no_contact_ending": "pass"
+        },
+        "notes_en": "The generated video preserves the rainy window, cafe layout, standing adult, and first-frame composition, then moves into the requested listener close-up without an embrace. The seated person's face was blurred in the source image, so the detailed final close-up invents facial information that cannot be verified against the reference.",
+        "notes_zh": "成片保留了雨窗、咖啡馆布局、站立人物和首帧构图，并按要求在无拥抱的情况下进入倾听者近景；但源图中坐着人物的脸较模糊，结尾清晰近景补出了无法与参考图核对的面部细节。"
+      }
+    },
+    {
+      "workflow_id": "night-market-walk",
+      "task_id": "tk-hiapi-01KYGVY9P68NYDE7X1MGYSK34Y",
+      "tested_at": "2026-07-27T04:10:59.000Z",
+      "model": "seedance-2.0",
+      "api_status": "success",
+      "current_revision": true,
+      "prompt_sha256": "4ea5aa156671b6a6d653b115c778c7cd9aeac82bc12fa269d4b1f466634b9174",
+      "request": {
+        "mode": "reference-to-video",
+        "language": "en",
+        "duration": 12,
+        "resolution": "720p",
+        "aspect_ratio": "9:16",
+        "generate_audio": true
+      },
+      "source_assets": [
+        {
+          "role": "reference_image_urls",
+          "task_id": "tk-hiapi-01KYGVW3JVY6ARF2H580NHCE37",
+          "model": "flux-schnell/text-to-image",
+          "type": "image",
+          "bytes": 225442,
+          "sha256": "e7ec323bac55ac9ac5cf472ec2263b862add4bd46ddb4ca0fe504a2c82f75d41",
+          "width": 1024,
+          "height": 576,
+          "rights": "generated-original",
+          "published": false
+        }
+      ],
+      "artifact": {
+        "published": false,
+        "bytes": 6216460,
+        "sha256": "164160bd36ce6b5e85060728c76b3f258266dfa946bc039a15656b6fb948d17b",
+        "duration_seconds": 12.041667,
+        "width": 720,
+        "height": 1280,
+        "fps": 24,
+        "video_codec": "H.264",
+        "audio_codec": "AAC"
+      },
+      "review": {
+        "overall": "pass",
+        "checks": {
+          "api_contract": "pass",
+          "playable_output": "pass",
+          "duration_and_resolution": "pass",
+          "audio_track": "pass",
+          "portrait_composition": "pass",
+          "subject_identity": "pass",
+          "wardrobe_continuity": "pass",
+          "rear_side_rear_camera_path": "pass",
+          "night_market_continuity": "pass"
+        },
+        "notes_en": "Using one original image reference and no motion video, the output preserves the adult's face, hair, dark raincoat, and grounded night-market lighting. It follows the requested rear follow, side-profile stall glance, and return-behind sequence while keeping the subject readable in a realistic crowd.",
+        "notes_zh": "在只提供一张原创参考图、未提供动作视频的情况下，成片保持了成年人物的脸、发型、深色雨衣和写实夜市光线，并完成后方跟随、侧面看向摊位、再回到后方的镜头路径，人物在真实人群中始终清晰可辨。"
+      }
+    }
+  ]
+}

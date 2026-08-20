@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">Relay structured launch brief</title>
+  <desc id="desc">A fictional AI workflow brief with brand, audience, and required outputs.</desc>
+  <rect width="1440" height="900" fill="#F2F3F5"/>
+  <rect x="44" y="40" width="1352" height="820" rx="8" fill="#FFFFFF" stroke="#D9DDE3"/>
+  <rect x="44" y="40" width="220" height="820" rx="8" fill="#1B1D22"/>
+  <rect x="76" y="72" width="34" height="34" rx="8" fill="#F06449"/>
+  <text x="124" y="97" fill="#FFFFFF" font-family="Arial" font-size="22" font-weight="700">Relay</text>
+  <text x="76" y="168" fill="#939BA7" font-family="Arial" font-size="12" font-weight="700">WORKFLOWS</text>
+  <rect x="64" y="188" width="176" height="46" rx="6" fill="#30343C"/>
+  <text x="92" y="217" fill="#FFFFFF" font-family="Arial" font-size="15">Launch kit</text>
+  <text x="92" y="270" fill="#B2B9C2" font-family="Arial" font-size="15">Product update</text>
+  <text x="92" y="316" fill="#B2B9C2" font-family="Arial" font-size="15">Campaign recap</text>
+
+  <text x="306" y="100" fill="#17191D" font-family="Arial" font-size="26" font-weight="700">New launch kit</text>
+  <text x="306" y="130" fill="#737B86" font-family="Arial" font-size="14">Define the source of truth before generation starts.</text>
+  <rect x="1218" y="72" width="138" height="42" rx="6" fill="#17191D"/>
+  <text x="1287" y="99" text-anchor="middle" fill="#FFFFFF" font-family="Arial" font-size="14" font-weight="700">Run workflow</text>
+
+  <g font-family="Arial">
+    <text x="306" y="200" fill="#343941" font-size="14" font-weight="700">PRODUCT</text>
+    <rect x="306" y="220" width="498" height="60" rx="6" fill="#FAFAFB" stroke="#D9DDE3"/>
+    <text x="330" y="258" fill="#17191D" font-size="17">Orbit Calendar</text>
+    <text x="836" y="200" fill="#343941" font-size="14" font-weight="700">LAUNCH DATE</text>
+    <rect x="836" y="220" width="250" height="60" rx="6" fill="#FAFAFB" stroke="#D9DDE3"/>
+    <text x="860" y="258" fill="#17191D" font-size="17">August 18</text>
+
+    <text x="306" y="332" fill="#343941" font-size="14" font-weight="700">CORE MESSAGE</text>
+    <rect x="306" y="352" width="780" height="122" rx="6" fill="#FAFAFB" stroke="#D9DDE3"/>
+    <text x="330" y="390" fill="#17191D" font-size="17">Turn scattered availability into one clear team schedule.</text>
+    <text x="330" y="428" fill="#6D7580" font-size="15">Lead with the shared planning view. Avoid generic productivity claims.</text>
+
+    <text x="1120" y="200" fill="#343941" font-size="14" font-weight="700">BRAND</text>
+    <rect x="1120" y="220" width="236" height="254" rx="8" fill="#1B1D22"/>
+    <circle cx="1182" cy="284" r="28" fill="#FFCC66"/>
+    <text x="1228" y="292" fill="#FFFFFF" font-size="20" font-weight="700">Orbit</text>
+    <rect x="1150" y="342" width="176" height="14" rx="7" fill="#4A4F58"/>
+    <rect x="1150" y="378" width="110" height="14" rx="7" fill="#F06449"/>
+    <rect x="1150" y="414" width="76" height="14" rx="7" fill="#58B88B"/>
+
+    <text x="306" y="530" fill="#343941" font-size="14" font-weight="700">AUDIENCE</text>
+    <rect x="306" y="550" width="780" height="62" rx="6" fill="#FAFAFB" stroke="#D9DDE3"/>
+    <rect x="328" y="566" width="142" height="30" rx="8" fill="#FDE9E5"/><text x="399" y="586" text-anchor="middle" fill="#9A4434" font-size="13" font-weight="700">Product teams</text>
+    <rect x="484" y="566" width="156" height="30" rx="8" fill="#E8F5EF"/><text x="562" y="586" text-anchor="middle" fill="#287252" font-size="13" font-weight="700">Remote teams</text>
+    <rect x="654" y="566" width="176" height="30" rx="8" fill="#E9EEF8"/><text x="742" y="586" text-anchor="middle" fill="#365F9C" font-size="13" font-weight="700">Operations leads</text>
+
+    <text x="306" y="674" fill="#343941" font-size="14" font-weight="700">REQUIRED OUTPUTS</text>
+    <rect x="306" y="694" width="780" height="112" rx="6" fill="#FAFAFB" stroke="#D9DDE3"/>
+    <rect x="330" y="718" width="20" height="20" rx="4" fill="#F06449"/><path d="m335 728 5 5 10-12" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+    <text x="366" y="735" fill="#30353C" font-size="15">16:9 launch visual</text>
+    <rect x="588" y="718" width="20" height="20" rx="4" fill="#F06449"/><path d="m593 728 5 5 10-12" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+    <text x="624" y="735" fill="#30353C" font-size="15">9:16 social cut</text>
+    <rect x="330" y="764" width="20" height="20" rx="4" fill="#F06449"/><path d="m335 774 5 5 10-12" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+    <text x="366" y="781" fill="#30353C" font-size="15">Product Hunt gallery copy</text>
+  </g>
+</svg>

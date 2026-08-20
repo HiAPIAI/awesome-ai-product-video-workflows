@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">Ledger invoice queue before redesign</title>
+  <desc id="desc">A fictional dense invoice table with weak hierarchy and separated actions.</desc>
+  <rect width="1440" height="900" fill="#F4F5F6"/>
+  <rect width="184" height="900" fill="#282B30"/>
+  <text x="30" y="58" fill="#FFFFFF" font-family="Arial" font-size="23" font-weight="700">Ledger</text>
+  <g fill="#A9AFB8" font-family="Arial" font-size="14"><text x="30" y="132">Dashboard</text><text x="30" y="176">Invoices</text><text x="30" y="220">Vendors</text><text x="30" y="264">Reports</text><text x="30" y="308">Settings</text></g>
+  <rect x="16" y="148" width="152" height="42" rx="4" fill="#3A3E45"/>
+  <text x="30" y="175" fill="#FFFFFF" font-family="Arial" font-size="14">Invoices</text>
+
+  <rect x="184" width="1256" height="74" fill="#FFFFFF"/>
+  <text x="224" y="47" fill="#1B1D20" font-family="Arial" font-size="21" font-weight="700">Invoice management</text>
+  <rect x="1242" y="18" width="158" height="38" rx="4" fill="#C7564A"/>
+  <text x="1321" y="43" text-anchor="middle" fill="#FFFFFF" font-family="Arial" font-size="13" font-weight="700">Add invoice</text>
+
+  <text x="224" y="130" fill="#1B1D20" font-family="Arial" font-size="27" font-weight="700">All invoices</text>
+  <rect x="224" y="156" width="418" height="44" rx="4" fill="#FFFFFF" stroke="#D5D9DE"/>
+  <text x="248" y="184" fill="#9299A3" font-family="Arial" font-size="14">Search invoices...</text>
+  <rect x="658" y="156" width="124" height="44" rx="4" fill="#FFFFFF" stroke="#D5D9DE"/>
+  <text x="720" y="184" text-anchor="middle" fill="#555C65" font-family="Arial" font-size="14">Status</text>
+  <rect x="794" y="156" width="124" height="44" rx="4" fill="#FFFFFF" stroke="#D5D9DE"/>
+  <text x="856" y="184" text-anchor="middle" fill="#555C65" font-family="Arial" font-size="14">Vendor</text>
+
+  <rect x="224" y="232" width="1176" height="586" fill="#FFFFFF" stroke="#D5D9DE"/>
+  <rect x="224" y="232" width="1176" height="48" fill="#ECEFF2"/>
+  <g fill="#68707A" font-family="Arial" font-size="12" font-weight="700"><text x="246" y="262">INVOICE</text><text x="410" y="262">VENDOR</text><text x="626" y="262">DATE</text><text x="760" y="262">AMOUNT</text><text x="900" y="262">STATUS</text><text x="1054" y="262">OWNER</text><text x="1268" y="262">ACTION</text></g>
+  <g font-family="Arial" font-size="14">
+    <path d="M224 350h1176M224 420h1176M224 490h1176M224 560h1176M224 630h1176M224 700h1176M224 770h1176" stroke="#E3E6E9"/>
+    <text x="246" y="322" fill="#2A2E33">INV-2091</text><text x="410" y="322" fill="#2A2E33">Beacon Studio</text><text x="626" y="322" fill="#626A74">Jul 28</text><text x="760" y="322" fill="#2A2E33">$4,800</text><text x="900" y="322" fill="#9C6A1F">Pending</text><text x="1054" y="322" fill="#626A74">M. Chen</text><text x="1268" y="322" fill="#3872A8">Review</text>
+    <text x="246" y="392" fill="#2A2E33">INV-2090</text><text x="410" y="392" fill="#2A2E33">North Paper</text><text x="626" y="392" fill="#626A74">Jul 27</text><text x="760" y="392" fill="#2A2E33">$980</text><text x="900" y="392" fill="#A8443B">Overdue</text><text x="1054" y="392" fill="#626A74">Unassigned</text><text x="1268" y="392" fill="#3872A8">Review</text>
+    <text x="246" y="462" fill="#2A2E33">INV-2089</text><text x="410" y="462" fill="#2A2E33">Kiln Works</text><text x="626" y="462" fill="#626A74">Jul 26</text><text x="760" y="462" fill="#2A2E33">$12,240</text><text x="900" y="462" fill="#387257">Approved</text><text x="1054" y="462" fill="#626A74">S. Jones</text><text x="1268" y="462" fill="#3872A8">Open</text>
+    <text x="246" y="532" fill="#2A2E33">INV-2088</text><text x="410" y="532" fill="#2A2E33">Cedar Labs</text><text x="626" y="532" fill="#626A74">Jul 24</text><text x="760" y="532" fill="#2A2E33">$2,460</text><text x="900" y="532" fill="#9C6A1F">Pending</text><text x="1054" y="532" fill="#626A74">M. Chen</text><text x="1268" y="532" fill="#3872A8">Review</text>
+    <text x="246" y="602" fill="#2A2E33">INV-2087</text><text x="410" y="602" fill="#2A2E33">Field &amp; Form</text><text x="626" y="602" fill="#626A74">Jul 23</text><text x="760" y="602" fill="#2A2E33">$7,100</text><text x="900" y="602" fill="#A8443B">Overdue</text><text x="1054" y="602" fill="#626A74">Unassigned</text><text x="1268" y="602" fill="#3872A8">Review</text>
+  </g>
+  <rect x="1128" y="842" width="272" height="34" rx="6" fill="#FFE8E4"/>
+  <text x="1264" y="864" text-anchor="middle" fill="#9C4339" font-family="Arial" font-size="13" font-weight="700">BEFORE · DENSE QUEUE</text>
+</svg>

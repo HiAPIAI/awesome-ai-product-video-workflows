@@ -1,0 +1,152 @@
+schemaVersion: demo-v1
+project:
+  id: saas-feature-launch
+  title: SaaS Feature Launch
+  description: Reveal a new automation builder from dashboard context to a measurable outcome.
+canvas:
+  width: 1920
+  height: 1080
+  fps: 30
+  durationFrames: 330
+brand:
+  background: "#F3F5F7"
+  foreground: "#171A1F"
+  accent: "#2D8CFF"
+  fontFamily: "Arial, sans-serif"
+assets:
+  - id: overview
+    type: image
+    path: assets/overview.svg
+    alt: Northstar dashboard overview
+    license: MIT
+  - id: automation-builder
+    type: image
+    path: assets/automation-builder.svg
+    alt: Northstar automation builder
+    license: MIT
+  - id: launch-results
+    type: image
+    path: assets/launch-results.svg
+    alt: Northstar automation performance results
+    license: MIT
+  - id: background-music
+    type: audio
+    path: assets/audio/bgm/bgm_003.wav
+    alt: Original deterministic Northstar music bed
+    license: MIT
+  - id: ui-click
+    type: audio
+    path: assets/audio/sfx/sfx_001.wav
+    alt: Original deterministic crisp UI click
+    license: MIT
+  - id: result-chime
+    type: audio
+    path: assets/audio/sfx/sfx_002.wav
+    alt: Original deterministic soft result confirmation chime
+    license: MIT
+scenes:
+  - id: feature-title
+    kind: title
+    startFrame: 0
+    durationFrames: 45
+    heading: Automations, without the busywork
+    body: Build, test, and ship a customer journey from one canvas.
+    transitionIn: fade
+    transitionOut: slide-up
+  - id: dashboard-context
+    kind: screen
+    startFrame: 45
+    durationFrames: 90
+    assetId: overview
+    fit: contain
+    from:
+      scale: 0.96
+      opacity: 0
+    to:
+      scale: 1
+      opacity: 1
+    easing: ease-out
+    cursor:
+      from: {x: 330, y: 250}
+      to: {x: 515, y: 330}
+      clickFrames: [62]
+    transitionIn: scale
+    transitionOut: fade
+  - id: build-automation
+    kind: screen
+    startFrame: 135
+    durationFrames: 120
+    assetId: automation-builder
+    fit: contain
+    from:
+      x: 28
+      scale: 1.04
+    to:
+      x: -18
+      scale: 1.08
+    easing: ease-in-out
+    cursor:
+      from: {x: 580, y: 460}
+      to: {x: 1110, y: 575}
+      clickFrames: [84]
+    callouts:
+      - text: Test every branch
+        at: {x: 750, y: 790}
+        startFrame: 42
+        durationFrames: 56
+        accent: "#2D8CFF"
+    transitionIn: fade
+    transitionOut: fade
+  - id: prove-impact
+    kind: screen
+    startFrame: 255
+    durationFrames: 45
+    assetId: launch-results
+    fit: contain
+    from:
+      scale: 1.08
+    to:
+      scale: 1.02
+    easing: ease-out
+    transitionIn: fade
+    transitionOut: fade
+  - id: launch-outro
+    kind: outro
+    startFrame: 300
+    durationFrames: 30
+    heading: Ship the journey, not the busywork
+    body: Northstar Automations
+    transitionIn: fade
+audio:
+  - id: music-bed
+    assetId: background-music
+    startFrame: 0
+    volume: 1.3
+    fadeInFrames: 12
+    fadeOutFrames: 24
+  - id: dashboard-click
+    assetId: ui-click
+    startFrame: 107
+    volume: 1.25
+  - id: builder-click
+    assetId: ui-click
+    startFrame: 219
+    volume: 1.25
+  - id: result-confirmation
+    assetId: result-chime
+    startFrame: 255
+    volume: 1.25
+outputs:
+  - id: landscape
+    width: 1920
+    height: 1080
+    fps: 30
+    fileName: saas-feature-launch-landscape.mp4
+  - id: vertical
+    width: 1080
+    height: 1920
+    fps: 30
+    fileName: saas-feature-launch-vertical.mp4
+hiapi:
+  enabled: false
+  enhancements: []

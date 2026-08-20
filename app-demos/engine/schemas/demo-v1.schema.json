@@ -1,0 +1,220 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/HiAPIAI/awesome-ai-app-demo-video-workflows/schemas/demo-v1.schema.json",
+  "title": "App demo source specification v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "project", "canvas", "brand", "assets", "scenes", "outputs"],
+  "properties": {
+    "schemaVersion": {"const": "demo-v1"},
+    "project": {"$ref": "#/$defs/project"},
+    "canvas": {"$ref": "#/$defs/canvas"},
+    "brand": {"$ref": "#/$defs/brand"},
+    "assets": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/asset"}
+    },
+    "scenes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/scene"}
+    },
+    "audio": {
+      "type": "array",
+      "default": [],
+      "items": {"$ref": "#/$defs/audioTrack"}
+    },
+    "outputs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/output"}
+    },
+    "hiapi": {"$ref": "#/$defs/hiapi"}
+  },
+  "$defs": {
+    "identifier": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "color": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}(?:[0-9A-Fa-f]{2})?$"
+    },
+    "point": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y"],
+      "properties": {
+        "x": {"type": "number"},
+        "y": {"type": "number"}
+      }
+    },
+    "transform": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "x": {"type": "number", "default": 0},
+        "y": {"type": "number", "default": 0},
+        "scale": {"type": "number", "exclusiveMinimum": 0, "maximum": 8, "default": 1},
+        "opacity": {"type": "number", "minimum": 0, "maximum": 1, "default": 1}
+      }
+    },
+    "project": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "title": {"type": "string", "minLength": 1, "maxLength": 120},
+        "description": {"type": "string", "maxLength": 500}
+      }
+    },
+    "canvas": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["width", "height", "fps", "durationFrames"],
+      "properties": {
+        "width": {"type": "integer", "minimum": 320, "maximum": 4096},
+        "height": {"type": "integer", "minimum": 320, "maximum": 4096},
+        "fps": {"type": "integer", "enum": [24, 25, 30, 50, 60]},
+        "durationFrames": {"type": "integer", "minimum": 1, "maximum": 108000}
+      }
+    },
+    "brand": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["background", "foreground", "accent", "fontFamily"],
+      "properties": {
+        "background": {"$ref": "#/$defs/color"},
+        "foreground": {"$ref": "#/$defs/color"},
+        "accent": {"$ref": "#/$defs/color"},
+        "fontFamily": {"type": "string", "minLength": 1, "maxLength": 160},
+        "logoAssetId": {"$ref": "#/$defs/identifier"}
+      }
+    },
+    "asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "path"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "type": {"enum": ["image", "video", "audio", "font"]},
+        "path": {"type": "string", "minLength": 1, "maxLength": 260},
+        "alt": {"type": "string", "maxLength": 200},
+        "license": {"type": "string", "maxLength": 120}
+      }
+    },
+    "cursor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["from", "to"],
+      "properties": {
+        "from": {"$ref": "#/$defs/point"},
+        "to": {"$ref": "#/$defs/point"},
+        "clickFrames": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "integer", "minimum": 0}
+        }
+      }
+    },
+    "callout": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text", "at", "startFrame", "durationFrames"],
+      "properties": {
+        "text": {"type": "string", "minLength": 1, "maxLength": 160},
+        "at": {"$ref": "#/$defs/point"},
+        "startFrame": {"type": "integer", "minimum": 0},
+        "durationFrames": {"type": "integer", "minimum": 1},
+        "accent": {"$ref": "#/$defs/color"}
+      }
+    },
+    "scene": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "startFrame", "durationFrames"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "kind": {"enum": ["title", "screen", "comparison", "outro"]},
+        "startFrame": {"type": "integer", "minimum": 0},
+        "durationFrames": {"type": "integer", "minimum": 1},
+        "assetId": {"$ref": "#/$defs/identifier"},
+        "secondaryAssetId": {"$ref": "#/$defs/identifier"},
+        "heading": {"type": "string", "maxLength": 120},
+        "body": {"type": "string", "maxLength": 280},
+        "fit": {"enum": ["contain", "cover", "fill"]},
+        "from": {"$ref": "#/$defs/transform"},
+        "to": {"$ref": "#/$defs/transform"},
+        "easing": {"enum": ["linear", "ease-in", "ease-out", "ease-in-out", "spring"]},
+        "cursor": {"$ref": "#/$defs/cursor"},
+        "callouts": {"type": "array", "items": {"$ref": "#/$defs/callout"}},
+        "transitionIn": {"enum": ["none", "fade", "slide-left", "slide-up", "scale"]},
+        "transitionOut": {"enum": ["none", "fade", "slide-left", "slide-up", "scale"]}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"kind": {"const": "screen"}}, "required": ["kind"]},
+          "then": {"properties": {"assetId": {}}, "required": ["assetId"]}
+        },
+        {
+          "if": {"properties": {"kind": {"const": "comparison"}}, "required": ["kind"]},
+          "then": {"properties": {"assetId": {}, "secondaryAssetId": {}}, "required": ["assetId", "secondaryAssetId"]}
+        },
+        {
+          "if": {"properties": {"kind": {"enum": ["title", "outro"]}}, "required": ["kind"]},
+          "then": {"properties": {"heading": {}}, "required": ["heading"]}
+        }
+      ]
+    },
+    "audioTrack": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "assetId", "startFrame", "volume"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "assetId": {"$ref": "#/$defs/identifier"},
+        "startFrame": {"type": "integer", "minimum": 0},
+        "volume": {"type": "number", "minimum": 0, "maximum": 2},
+        "fadeInFrames": {"type": "integer", "minimum": 0},
+        "fadeOutFrames": {"type": "integer", "minimum": 0}
+      }
+    },
+    "output": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "width", "height", "fps", "fileName"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "width": {"type": "integer", "minimum": 320, "maximum": 4096},
+        "height": {"type": "integer", "minimum": 320, "maximum": 4096},
+        "fps": {"type": "integer", "enum": [24, 25, 30, 50, 60]},
+        "fileName": {"type": "string", "pattern": "^[a-zA-Z0-9._-]+\\.mp4$"}
+      }
+    },
+    "enhancement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "model", "purpose", "prompt"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "model": {"type": "string", "minLength": 1, "maxLength": 120},
+        "purpose": {"enum": ["background", "intro", "transition", "outro"]},
+        "prompt": {"type": "string", "minLength": 1, "maxLength": 4000},
+        "inputAssetIds": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/identifier"}}
+      }
+    },
+    "hiapi": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["enabled", "enhancements"],
+      "properties": {
+        "enabled": {"type": "boolean"},
+        "enhancements": {"type": "array", "items": {"$ref": "#/$defs/enhancement"}}
+      }
+    }
+  }
+}

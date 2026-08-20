@@ -1,0 +1,44 @@
+schemaVersion: demo-v1
+project:
+  id: minimal-dashboard
+  title: Minimal Dashboard Reveal
+canvas:
+  width: 1920
+  height: 1080
+  fps: 30
+  durationFrames: 180
+brand:
+  background: "#F4F6F8"
+  foreground: "#121417"
+  accent: "#1F6FEB"
+  fontFamily: "Inter, Arial, sans-serif"
+assets:
+  - id: dashboard
+    type: image
+    path: assets/dashboard.svg
+    alt: Abstract dashboard fixture
+    license: MIT
+scenes:
+  - id: dashboard-reveal
+    kind: screen
+    startFrame: 0
+    durationFrames: 180
+    assetId: dashboard
+    fit: contain
+    from:
+      scale: 0.96
+      opacity: 0
+    to:
+      scale: 1
+      opacity: 1
+    easing: ease-out
+    transitionIn: fade
+outputs:
+  - id: landscape
+    width: 1920
+    height: 1080
+    fps: 30
+    fileName: minimal-dashboard.mp4
+hiapi:
+  enabled: false
+  enhancements: []

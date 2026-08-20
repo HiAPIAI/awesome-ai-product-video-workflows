@@ -1,0 +1,43 @@
+{
+  "name": "awesome-codex-blender-seedance-workflows",
+  "version": "0.1.0",
+  "description": "Turn natural-language shot briefs into verified Blender previs and manual Seedance handoff bundles.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "doctor": "node scripts/doctor.mjs",
+    "validate": "node scripts/validate.mjs",
+    "compile": "node scripts/compile.mjs",
+    "render": "node scripts/render.mjs",
+    "generate": "node scripts/submit.mjs",
+    "test:unit": "node --test tests/*.test.mjs",
+    "test:schema": "node --test tests/schema.test.mjs",
+    "test:repo": "node scripts/repository-gates.mjs",
+    "test": "node --test tests/*.test.mjs && node scripts/validate.mjs && node scripts/compile.mjs examples/warehouse-pursuit/shot.json --check"
+  },
+  "keywords": [
+    "codex",
+    "blender",
+    "seedance",
+    "seedance-2-0",
+    "hiapi",
+    "previs",
+    "ai-filmmaking",
+    "reference-video"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HiAPIAI/awesome-codex-blender-seedance-workflows.git"
+  },
+  "homepage": "https://github.com/HiAPIAI/awesome-codex-blender-seedance-workflows#readme",
+  "bugs": {
+    "url": "https://github.com/HiAPIAI/awesome-codex-blender-seedance-workflows/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1"
+  }
+}

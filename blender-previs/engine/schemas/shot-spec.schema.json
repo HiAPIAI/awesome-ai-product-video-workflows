@@ -1,0 +1,152 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/HiAPIAI/awesome-codex-blender-seedance-workflows/main/schemas/shot-spec.schema.json",
+  "$comment": "scripts/lib/spec.mjs additionally enforces cross-field render-budget, frame-mapping, and aspect-ratio rules that JSON Schema cannot express.",
+  "title": "Codex Blender Seedance Shot Spec",
+  "type": "object",
+  "required": ["version", "id", "title", "intent", "duration", "fps", "resolution", "world", "objects", "camera", "seedance"],
+  "properties": {
+    "$schema": { "type": "string", "minLength": 1, "maxLength": 500 },
+    "version": { "const": 1 },
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "title": { "type": "string", "minLength": 3, "maxLength": 160 },
+    "intent": { "type": "string", "minLength": 20, "maxLength": 2000 },
+    "duration": { "type": "integer", "minimum": 4, "maximum": 15 },
+    "fps": { "type": "integer", "minimum": 12, "maximum": 60 },
+    "resolution": {
+      "type": "object",
+      "required": ["width", "height"],
+      "properties": {
+        "width": { "type": "integer", "minimum": 256, "maximum": 4096, "multipleOf": 2 },
+        "height": { "type": "integer", "minimum": 256, "maximum": 4096, "multipleOf": 2 }
+      },
+      "additionalProperties": false
+    },
+    "world": {
+      "type": "object",
+      "required": ["background", "groundColor", "groundSize", "lighting"],
+      "properties": {
+        "background": { "$ref": "#/$defs/color" },
+        "groundColor": { "$ref": "#/$defs/color" },
+        "groundSize": { "$ref": "#/$defs/vec2Positive" },
+        "lighting": { "type": "string", "minLength": 5, "maxLength": 1000 },
+        "render": {
+          "type": "object",
+          "required": ["engine", "samples"],
+          "properties": {
+            "engine": { "enum": ["workbench", "cycles"] },
+            "samples": { "type": "integer", "minimum": 1, "maximum": 128 },
+            "volumeDensity": { "type": "number", "minimum": 0, "maximum": 0.05 }
+          },
+          "additionalProperties": false
+        },
+        "lights": {
+          "type": "array",
+          "maxItems": 16,
+          "items": { "$ref": "#/$defs/light" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "objects": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "items": {
+        "type": "object",
+        "required": ["id", "primitive", "role", "dimensions", "color", "keyframes"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+          "primitive": { "enum": ["cube", "sphere", "cylinder", "cone"] },
+          "role": { "type": "string", "minLength": 5, "maxLength": 500 },
+          "dimensions": { "$ref": "#/$defs/vec3Positive" },
+          "color": { "$ref": "#/$defs/color" },
+          "materialPreset": { "enum": ["matte", "painted-metal", "brushed-metal", "glass", "liquid", "rubber", "fabric", "skin", "hazmat", "emissive", "desert", "dust"] },
+          "bevel": { "type": "number", "minimum": 0, "maximum": 1 },
+          "smooth": { "type": "boolean" },
+          "keyframes": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 256,
+            "items": {
+              "type": "object",
+              "required": ["time", "location"],
+              "properties": {
+                "time": { "type": "number", "minimum": 0 },
+                "location": { "$ref": "#/$defs/vec3Position" },
+                "rotation": { "$ref": "#/$defs/vec3Rotation" }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "camera": {
+      "type": "object",
+      "required": ["lensMm", "sensorWidthMm", "rig", "keyframes"],
+      "properties": {
+        "lensMm": { "type": "number", "minimum": 12, "maximum": 300 },
+        "sensorWidthMm": { "type": "number", "minimum": 8, "maximum": 70 },
+        "fStop": { "type": "number", "minimum": 0.7, "maximum": 32 },
+        "rig": { "type": "string", "minLength": 3, "maxLength": 500 },
+        "keyframes": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 256,
+          "items": {
+            "type": "object",
+            "required": ["time", "location", "target"],
+            "properties": {
+              "time": { "type": "number", "minimum": 0 },
+              "location": { "$ref": "#/$defs/vec3Position" },
+              "target": { "$ref": "#/$defs/vec3Position" },
+              "lensMm": { "type": "number", "minimum": 12, "maximum": 300 }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "seedance": {
+      "type": "object",
+      "required": ["model", "resolution", "aspectRatio", "generateAudio", "style", "continuity", "avoid"],
+      "properties": {
+        "model": { "const": "seedance-2.0" },
+        "resolution": { "enum": ["480p", "720p", "1080p", "4k"] },
+        "aspectRatio": { "enum": ["16:9", "9:16", "1:1", "4:3", "3:4", "21:9", "adaptive"] },
+        "generateAudio": { "type": "boolean" },
+        "style": { "type": "string", "minLength": 20, "maxLength": 2000 },
+        "continuity": { "type": "array", "minItems": 1, "maxItems": 32, "items": { "type": "string", "minLength": 5, "maxLength": 500 } },
+        "avoid": { "type": "array", "minItems": 1, "maxItems": 32, "items": { "type": "string", "minLength": 3, "maxLength": 500 } },
+        "seed": { "type": "integer", "minimum": 0, "maximum": 2147483647 }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "light": {
+      "type": "object",
+      "required": ["id", "type", "color", "energy", "location", "rotation"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+        "type": { "enum": ["area", "point", "sun", "spot"] },
+        "color": { "$ref": "#/$defs/color" },
+        "energy": { "type": "number", "minimum": 0, "maximum": 100000 },
+        "location": { "$ref": "#/$defs/vec3Position" },
+        "rotation": { "$ref": "#/$defs/vec3Rotation" },
+        "size": { "type": "number", "exclusiveMinimum": 0, "maximum": 1000 },
+        "spotSize": { "type": "number", "minimum": 1, "maximum": 179 }
+      },
+      "additionalProperties": false
+    },
+    "vec2Positive": { "type": "array", "prefixItems": [{ "type": "number", "exclusiveMinimum": 0, "maximum": 10000 }, { "type": "number", "exclusiveMinimum": 0, "maximum": 10000 }], "minItems": 2, "maxItems": 2 },
+    "vec3Position": { "type": "array", "prefixItems": [{ "type": "number", "minimum": -10000, "maximum": 10000 }, { "type": "number", "minimum": -10000, "maximum": 10000 }, { "type": "number", "minimum": -10000, "maximum": 10000 }], "minItems": 3, "maxItems": 3 },
+    "vec3Rotation": { "type": "array", "prefixItems": [{ "type": "number", "minimum": -36000, "maximum": 36000 }, { "type": "number", "minimum": -36000, "maximum": 36000 }, { "type": "number", "minimum": -36000, "maximum": 36000 }], "minItems": 3, "maxItems": 3 },
+    "vec3Positive": { "type": "array", "prefixItems": [{ "type": "number", "exclusiveMinimum": 0, "maximum": 10000 }, { "type": "number", "exclusiveMinimum": 0, "maximum": 10000 }, { "type": "number", "exclusiveMinimum": 0, "maximum": 10000 }], "minItems": 3, "maxItems": 3 },
+    "color": { "type": "array", "prefixItems": [{ "type": "number", "minimum": 0, "maximum": 1 }, { "type": "number", "minimum": 0, "maximum": 1 }, { "type": "number", "minimum": 0, "maximum": 1 }], "minItems": 3, "maxItems": 3 }
+  },
+  "additionalProperties": false
+}

@@ -6,6 +6,10 @@ Open workflows and worked cases for turning **product images into AI product vid
 
 [简体中文](README.zh-CN.md) · [Explore the six workflows](#product-image-to-video-workflows) · [See the real UGC case](#real-ugc-clip-light-ad)
 
+This checkout also contains a local content-integration draft. Browse the [domain
+index](docs/content-integration.md) before using the sibling engines; they retain
+their own schemas and runners and are not part of the root install command yet.
+
 [![Tests](https://github.com/HiAPIAI/awesome-ai-product-video-workflows/actions/workflows/test.yml/badge.svg)](https://github.com/HiAPIAI/awesome-ai-product-video-workflows/actions/workflows/test.yml)
 [![GitHub stars](https://img.shields.io/github/stars/HiAPIAI/awesome-ai-product-video-workflows?style=flat&logo=github&label=Stars)](https://github.com/HiAPIAI/awesome-ai-product-video-workflows/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-121417.svg)](LICENSE)
@@ -41,6 +45,23 @@ You get:
 - a dated audit of high-signal GitHub repositories and license boundaries
 - a real authenticated UGC video-ad case with artifact and QC evidence
 - an installable `SKILL.md` for Codex and Claude Code
+
+## Content domains
+
+The repository is being organized around four content domains. The root package owns
+the product-ad path; the other domains are isolated until their contracts are ready
+for a shared release.
+
+| Domain | Entry point | Current role |
+| --- | --- | --- |
+| Product ads | [`product-ads/`](product-ads/) | Source-grounded product image to ad workflows (root contract) |
+| App demos | [`app-demos/`](app-demos/) | Deterministic UI demo compiler and renderer; examples remain `spec-only` |
+| Live action | [`live-action/`](live-action/) | 15 Seedance 2.0 live-action workflows with dry-run runner and render evidence |
+| Blender previs | [`blender-previs/`](blender-previs/) | Codex-to-Blender shot contracts and manual Seedance handoff (branch snapshot) |
+
+See [Content Integration Draft](docs/content-integration.md) for ownership boundaries,
+validation gates, and migration risks. This index does not imply that the sibling
+repositories have been renamed or archived.
 
 ## Product image to video workflows
 
@@ -171,8 +192,13 @@ The checks rebuild the bilingual workflow documents, validate repository discove
 │   ├── projects.json
 │   └── workflows.json
 ├── docs/
+│   ├── content-integration.md
 │   ├── open-source-foundations.md
 │   └── github-discovery-strategy.md
+├── product-ads/
+├── app-demos/engine/       # isolated demo-v1 schema and CLI
+├── live-action/engine/     # isolated Seedance runner and catalog
+├── blender-previs/engine/  # isolated shot schema and Blender renderer
 ├── examples/
 ├── schemas/workflow.schema.json
 ├── scripts/

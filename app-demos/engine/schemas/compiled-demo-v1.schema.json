@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/HiAPIAI/awesome-ai-app-demo-video-workflows/schemas/compiled-demo-v1.schema.json",
+  "title": "Compiled app demo v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "source", "project", "canvas", "brand", "assets", "scenes", "audio", "outputs", "hiapiRequests"],
+  "properties": {
+    "schemaVersion": {"const": "compiled-demo-v1"},
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schemaVersion", "path", "sha256"],
+      "properties": {
+        "schemaVersion": {"const": "demo-v1"},
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "project": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "title": {"type": "string", "minLength": 1},
+        "description": {"type": "string"}
+      }
+    },
+    "canvas": {"$ref": "#/$defs/canvas"},
+    "brand": {"type": "object"},
+    "assets": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/compiledAsset"}},
+    "scenes": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/compiledScene"}},
+    "audio": {"type": "array", "items": {"type": "object"}},
+    "outputs": {"type": "array", "minItems": 1, "items": {"type": "object"}},
+    "hiapiRequests": {"type": "array", "items": {"$ref": "#/$defs/hiapiRequest"}}
+  },
+  "$defs": {
+    "identifier": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "canvas": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["width", "height", "fps", "durationFrames", "durationSeconds"],
+      "properties": {
+        "width": {"type": "integer", "minimum": 320},
+        "height": {"type": "integer", "minimum": 320},
+        "fps": {"type": "integer", "minimum": 1},
+        "durationFrames": {"type": "integer", "minimum": 1},
+        "durationSeconds": {"type": "number", "exclusiveMinimum": 0}
+      }
+    },
+    "compiledAsset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "path", "sha256", "bytes"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "type": {"enum": ["image", "video", "audio", "font"]},
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "bytes": {"type": "integer", "minimum": 1},
+        "width": {"type": "integer", "minimum": 1},
+        "height": {"type": "integer", "minimum": 1},
+        "durationSeconds": {"type": "number", "exclusiveMinimum": 0},
+        "alt": {"type": "string"},
+        "license": {"type": "string"}
+      }
+    },
+    "compiledScene": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["id", "kind", "startFrame", "endFrame", "durationFrames"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "kind": {"enum": ["title", "screen", "comparison", "outro"]},
+        "startFrame": {"type": "integer", "minimum": 0},
+        "endFrame": {"type": "integer", "minimum": 1},
+        "durationFrames": {"type": "integer", "minimum": 1}
+      }
+    },
+    "hiapiRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "endpoint", "model", "purpose", "body"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "endpoint": {"const": "/v1/tasks"},
+        "model": {"type": "string", "minLength": 1},
+        "purpose": {"enum": ["background", "intro", "transition", "outro"]},
+        "inputAssetIds": {"type": "array", "items": {"$ref": "#/$defs/identifier"}},
+        "body": {"type": "object"}
+      }
+    }
+  }
+}

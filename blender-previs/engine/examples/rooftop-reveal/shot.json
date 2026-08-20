@@ -1,0 +1,101 @@
+{
+  "$schema": "../../schemas/shot-spec.schema.json",
+  "version": 1,
+  "id": "rooftop-reveal",
+  "title": "Rooftop Signal Reveal",
+  "intent": "A lone radio operator reaches a rain-soaked rooftop antenna as the camera cranes up to reveal an enormous blackout across the city.",
+  "duration": 8,
+  "fps": 24,
+  "resolution": { "width": 640, "height": 360 },
+  "world": {
+    "background": [0.015, 0.02, 0.04],
+    "groundColor": [0.11, 0.13, 0.17],
+    "groundSize": [22, 16],
+    "lighting": "Storm-blue ambient sky, one pulsing red aviation beacon, distant lightning, and reflected rain on tar roofing."
+  },
+  "objects": [
+    {
+      "id": "operator",
+      "primitive": "cylinder",
+      "role": "exhausted radio operator in a dark waterproof coat approaching the antenna",
+      "dimensions": [0.72, 0.72, 1.82],
+      "color": [0.18, 0.4, 0.68],
+      "keyframes": [
+        { "time": 0, "location": [-5.5, -2.2, 0.91], "rotation": [0, 0, 15] },
+        { "time": 4, "location": [-1.8, -0.8, 0.91], "rotation": [0, 0, 8] },
+        { "time": 8, "location": [0.2, 0.1, 0.91], "rotation": [0, 0, 0] }
+      ]
+    },
+    {
+      "id": "antenna-mast",
+      "primitive": "cylinder",
+      "role": "weathered rooftop radio mast with cables and a blinking red beacon",
+      "dimensions": [0.35, 0.35, 7.5],
+      "color": [0.62, 0.65, 0.68],
+      "keyframes": [{ "time": 0, "location": [1.4, 0.4, 3.75], "rotation": [0, 0, 0] }]
+    },
+    {
+      "id": "utility-room",
+      "primitive": "cube",
+      "role": "small concrete rooftop utility room behind the operator",
+      "dimensions": [4.2, 3.2, 2.8],
+      "color": [0.2, 0.22, 0.25],
+      "keyframes": [{ "time": 0, "location": [-5.7, 3.2, 1.4], "rotation": [0, 0, 0] }]
+    },
+    {
+      "id": "nearby-tower",
+      "primitive": "cube",
+      "role": "dark neighboring office tower establishing the blackout scale",
+      "dimensions": [6, 6, 16],
+      "color": [0.06, 0.07, 0.1],
+      "keyframes": [{ "time": 0, "location": [9, 7, -2], "rotation": [0, 0, 4] }]
+    },
+    {
+      "id": "mid-distance-tower",
+      "primitive": "cube",
+      "role": "unlit mid-distance residential tower creating a second depth layer beyond the neighboring office",
+      "dimensions": [4.5, 4.5, 12],
+      "color": [0.045, 0.052, 0.075],
+      "keyframes": [{ "time": 0, "location": [12, -2, -4], "rotation": [0, 0, -7] }]
+    },
+    {
+      "id": "far-skyline-tower",
+      "primitive": "cube",
+      "role": "very distant dark high-rise silhouette establishing the outer scale of the citywide blackout",
+      "dimensions": [5, 5, 21],
+      "color": [0.025, 0.03, 0.05],
+      "keyframes": [{ "time": 0, "location": [15, 13, -7], "rotation": [0, 0, 3] }]
+    }
+  ],
+  "camera": {
+    "lensMm": 35,
+    "sensorWidthMm": 36,
+    "rig": "slow stabilized crane rising from an intimate medium follow into a wide city reveal",
+    "keyframes": [
+      { "time": 0, "location": [-7.2, -5.5, 1.7], "target": [-4.8, -1.8, 1.15], "lensMm": 44 },
+      { "time": 4, "location": [-3.2, -5.2, 3.0], "target": [-0.8, -0.2, 1.4], "lensMm": 36 },
+      { "time": 8, "location": [-1.0, -8.5, 8.5], "target": [4.2, 2.0, 2.0], "lensMm": 24 }
+    ]
+  },
+  "seedance": {
+    "model": "seedance-2.0",
+    "resolution": "1080p",
+    "aspectRatio": "16:9",
+    "generateAudio": true,
+    "style": "Large-format disaster drama with realistic rain, deep city scale, subdued cyan-gray color, precise red beacon accents, and a patient escalating reveal.",
+    "continuity": [
+      "one continuous crane shot with no cut",
+      "the operator stops beside the same antenna mast",
+      "the city remains almost entirely dark except emergency lights",
+      "rain direction and coat wetness remain consistent",
+      "the neighboring, mid-distance, and far towers remain distinct depth layers throughout the final reveal"
+    ],
+    "avoid": [
+      "daylight",
+      "cyberpunk neon overload",
+      "camera teleportation",
+      "retaining proxy geometry",
+      "an exploding skyline"
+    ]
+  }
+}

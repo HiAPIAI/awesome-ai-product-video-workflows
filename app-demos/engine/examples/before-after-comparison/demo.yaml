@@ -1,0 +1,85 @@
+schemaVersion: demo-v1
+project:
+  id: before-after-comparison
+  title: Before / After Comparison
+  description: Compare a cluttered invoice queue with a redesigned action-first workspace using matched framing.
+canvas:
+  width: 1920
+  height: 1080
+  fps: 30
+  durationFrames: 240
+brand:
+  background: "#F4F5F6"
+  foreground: "#1B1D20"
+  accent: "#C7564A"
+  fontFamily: "Arial, sans-serif"
+assets:
+  - id: before-state
+    type: image
+    path: assets/before-state.svg
+    alt: Ledger invoice queue before redesign
+    license: MIT
+  - id: after-state
+    type: image
+    path: assets/after-state.svg
+    alt: Ledger invoice queue after redesign
+    license: MIT
+scenes:
+  - id: comparison-title
+    kind: title
+    startFrame: 0
+    durationFrames: 30
+    heading: Same queue. Clearer next action.
+    body: Compare matched states instead of hiding the old experience.
+    transitionIn: fade
+    transitionOut: fade
+  - id: matched-comparison
+    kind: comparison
+    startFrame: 30
+    durationFrames: 150
+    assetId: before-state
+    secondaryAssetId: after-state
+    fit: contain
+    from: {scale: 0.98, opacity: 0}
+    to: {scale: 1, opacity: 1}
+    easing: ease-in-out
+    callouts:
+      - text: Priority and owner now share one scan line
+        at: {x: 1120, y: 420}
+        startFrame: 86
+        durationFrames: 50
+        accent: "#C7564A"
+    transitionIn: fade
+    transitionOut: fade
+  - id: after-detail
+    kind: screen
+    startFrame: 180
+    durationFrames: 30
+    assetId: after-state
+    fit: contain
+    from: {scale: 1.08}
+    to: {scale: 1.04}
+    easing: ease-out
+    transitionIn: fade
+    transitionOut: fade
+  - id: comparison-outro
+    kind: outro
+    startFrame: 210
+    durationFrames: 30
+    heading: Find the invoice that needs you
+    body: Ledger queue redesign
+    transitionIn: fade
+outputs:
+  - id: landscape
+    width: 1920
+    height: 1080
+    fps: 30
+    fileName: before-after-comparison-landscape.mp4
+  - id: vertical
+    width: 1080
+    height: 1920
+    fps: 30
+    fileName: before-after-comparison-vertical.mp4
+hiapi:
+  enabled: false
+  enhancements: []
