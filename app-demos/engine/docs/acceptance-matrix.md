@@ -7,8 +7,8 @@ This is the execution ledger for the first integrated render pass. A catalog ent
 - Rejected first-pass baseline: integration `d3a8c34c333d035a8d32848441203cb1e78ddd4d`, content merge `b3decf1c584651ed10eeaf5ef0f991f8c4f97089`, and frozen sample source commit `f36e38f58082de76eb9604509c7bb05b38232bd3`.
 - Final candidate: integration `2e06275660043b36c5442db298c808f8fd661e71` with workflow source commit `46fd48487fd85e614045886372a0c4dee6fd8db6`.
 - All five examples pass `validate -> compile -> render`; all seven outputs pass structural probe and complete decode. Node.js 20 and 22 CI pass at the final candidate commit.
-- Machine acceptance, frame-by-frame visual review, full normal-speed playback, and normal-volume audio review are complete. The release owner approved the videos and the main release on 2026-07-31.
-- All five workflows passed every declared gate and were promoted from `spec-only` to `verified` after that approval.
+- Machine acceptance and local frame extraction are complete, but the current renders failed product-quality review. They are deterministic SVG proof renders, not publication-ready product demos.
+- The catalog remains `spec-only` until the visual composition is improved and every workflow declares and passes its intended audio policy.
 
 ## Declared outputs
 
@@ -16,13 +16,13 @@ The suite contains five workflows, seven outputs, 2,010 frames, and 67 seconds o
 
 | Workflow | Output ID | File | Required media | Audio | Current state |
 | --- | --- | --- | --- | --- | --- |
-| SaaS Feature Launch | `landscape` | `saas-feature-launch-landscape.mp4` | 1920x1080, 30 fps, 330 frames / 11s | Four-track local mix, no narration | Verified: machine, playback, and audio review pass |
-| SaaS Feature Launch | `vertical` | `saas-feature-launch-vertical.mp4` | 1080x1920, 30 fps, 330 frames / 11s | Same locked mix and cue frames | Verified: machine, playback, and audio review pass |
-| Mobile Onboarding | `vertical` | `mobile-onboarding-vertical.mp4` | 1080x1920, 30 fps, 300 frames / 10s | No source audio tracks | Verified: machine and playback review pass |
-| AI Workflow Demo | `landscape` | `ai-workflow-demo-landscape.mp4` | 1920x1080, 30 fps, 360 frames / 12s | No source audio tracks | Verified: machine and playback review pass |
-| Before / After Comparison | `landscape` | `before-after-comparison-landscape.mp4` | 1920x1080, 30 fps, 240 frames / 8s | No source audio tracks | Verified: machine and playback review pass |
-| Before / After Comparison | `vertical` | `before-after-comparison-vertical.mp4` | 1080x1920, 30 fps, 240 frames / 8s | No source audio tracks | Verified: machine and playback review pass |
-| Vertical Social Feature | `vertical` | `vertical-social-feature.mp4` | 1080x1920, 30 fps, 210 frames / 7s | No source audio tracks | Verified: machine and playback review pass |
+| SaaS Feature Launch | `landscape` | `saas-feature-launch-landscape.mp4` | 1920x1080, 30 fps, 330 frames / 11s | Four-track local mix, no narration | Spec-only: structural render pass; visual/audio sign-off pending |
+| SaaS Feature Launch | `vertical` | `saas-feature-launch-vertical.mp4` | 1080x1920, 30 fps, 330 frames / 11s | Same locked mix and cue frames | Spec-only: structural render pass; visual/audio sign-off pending |
+| Mobile Onboarding | `vertical` | `mobile-onboarding-vertical.mp4` | 1080x1920, 30 fps, 300 frames / 10s | No source audio tracks | Spec-only: missing audio policy and visual sign-off |
+| AI Workflow Demo | `landscape` | `ai-workflow-demo-landscape.mp4` | 1920x1080, 30 fps, 360 frames / 12s | No source audio tracks | Spec-only: missing audio policy and visual sign-off |
+| Before / After Comparison | `landscape` | `before-after-comparison-landscape.mp4` | 1920x1080, 30 fps, 240 frames / 8s | No source audio tracks | Spec-only: missing audio policy and visual sign-off |
+| Before / After Comparison | `vertical` | `before-after-comparison-vertical.mp4` | 1080x1920, 30 fps, 240 frames / 8s | No source audio tracks | Spec-only: missing audio policy and visual sign-off |
+| Vertical Social Feature | `vertical` | `vertical-social-feature.mp4` | 1080x1920, 30 fps, 210 frames / 7s | No source audio tracks | Spec-only: missing audio policy and visual sign-off |
 
 ## Machine acceptance
 
@@ -85,4 +85,4 @@ Reviewers must watch each complete video at normal speed and intended display si
 
 ## Status promotion
 
-All five workflows were promoted from `spec-only` to `verified` after every declared output received machine evidence and full-video human approval. `verified` applies only to the frozen local assets, manifests, render pipeline, and hashes recorded above; it does not authorize a paid HiAPI request or certify future source changes.
+No workflow is currently promoted to `verified`. The recorded outputs prove that the render pipeline can produce deterministic MP4 files, but they do not pass the publication-quality bar. `verified` will require full-video human review, intentional audio policy, readable product content at target size, and no misleading claims.

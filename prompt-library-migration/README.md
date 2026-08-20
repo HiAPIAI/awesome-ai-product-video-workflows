@@ -32,5 +32,8 @@ node prompt-library-migration/migrate-prompts.mjs \
 ```
 
 Without `--out`, the script only prints a count and first normalized record. It
-never combines 2.0 and 2.5 inputs. A later implementation still needs schema
-validation, duplicate detection, media-link checks, and a human rights review.
+never combines 2.0 and 2.5 inputs. The normalized record deliberately keeps only a
+short theme summary: it does not copy third-party prompt text, even when the source
+JSON contains a `prompt_en` field. A later implementation still needs schema
+validation, duplicate detection, media-link checks, and a human rights review before
+any record can become a downloadable prompt asset.

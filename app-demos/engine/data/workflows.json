@@ -12,7 +12,7 @@
       "aspectRatios": ["16:9", "9:16"],
       "difficulty": "starter",
       "path": "examples/saas-feature-launch",
-      "status": "verified"
+      "status": "spec-only"
     },
     {
       "id": "mobile-onboarding",
@@ -25,7 +25,7 @@
       "aspectRatios": ["9:16"],
       "difficulty": "starter",
       "path": "examples/mobile-onboarding",
-      "status": "verified"
+      "status": "spec-only"
     },
     {
       "id": "ai-workflow-demo",
@@ -38,7 +38,7 @@
       "aspectRatios": ["16:9"],
       "difficulty": "intermediate",
       "path": "examples/ai-workflow-demo",
-      "status": "verified"
+      "status": "spec-only"
     },
     {
       "id": "before-after-comparison",
@@ -51,7 +51,7 @@
       "aspectRatios": ["16:9", "9:16"],
       "difficulty": "starter",
       "path": "examples/before-after-comparison",
-      "status": "verified"
+      "status": "spec-only"
     },
     {
       "id": "vertical-social-feature",
@@ -64,7 +64,7 @@
       "aspectRatios": ["9:16"],
       "difficulty": "starter",
       "path": "examples/vertical-social-feature",
-      "status": "verified"
+      "status": "spec-only"
     }
   ]
 }

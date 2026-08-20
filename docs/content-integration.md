@@ -20,9 +20,14 @@ schema.
 
 ## App demo gate
 
-The app-demo README now records one verified local render (`SaaS Feature Launch`).
-The remaining four examples are still `spec-only`. Before presenting the whole
-domain as production-ready, complete all of the following in the app-demo engine:
+The app-demo renderer and contracts are integrated, but every catalog entry remains
+`spec-only`. The local MP4s are deterministic proof renders built from fictional SVG
+screens; they are not publication-quality flagship media. The flagship app-demo
+case is intentionally deferred until its product source, composition, interaction
+rhythm, and audio mix are redesigned together.
+
+Before presenting the domain as production-ready, complete all of the following in
+the app-demo engine:
 
 1. Render one landscape and one portrait example with a supported FFmpeg build for
    each remaining catalog entry.
@@ -37,10 +42,24 @@ domain as production-ready, complete all of the following in the app-demo engine
    Vite 6+ compatible plugin.
 
 The local macOS run uses Homebrew `ffmpeg-full` 9.0.1 with `libfreetype`. All five
-catalog examples now render locally, including the required landscape and portrait
-outputs; automated decode and review-frame checks pass. Normal-volume audio
-listening remains a human review task before changing the public status of every
-example.
+catalog examples render locally, including the required landscape and portrait
+outputs; automated decode and review-frame checks pass. This is engineering evidence
+only. The visual-quality review found oversized title cards, low-information static
+screen holds, and five silent outputs, so no catalog entry is promoted to `verified`.
+
+## Deferred flagship work
+
+The flagship app-demo case is a separate workstream and is intentionally not a
+prerequisite for finishing the rest of this integration. Do not spend paid API
+credits or publish generated MP4s while it is deferred. The next flagship review
+must start from one approved, public product flow and pass the following gates:
+
+1. Real or explicitly fictional product source is named, licensed, and linked.
+2. The first second shows a useful product result rather than a title-only card.
+3. Screen states change because of an interaction; screenshots are not merely
+   cross-faded.
+4. Audio policy is explicit: a deliberate silent export or a measured BGM/SFX mix.
+5. Full-speed human review passes at the intended landscape or portrait display size.
 
 The app-demo CLI and repository gates do not start a Vite development server during
 normal validation or rendering. The residual advisories are tracked as a toolchain

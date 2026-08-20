@@ -27,6 +27,15 @@ function list(value) {
   return Array.isArray(value) ? [...new Set(value.filter((item) => typeof item === "string" && item))] : [];
 }
 
+function themeSummary(item, fallback = "Source prompt") {
+  const theme = asText(item.prompt_theme_en) ?? asText(item.capability) ?? asText(item.title_en);
+  return theme ? `Prompt withheld; indexed theme: ${theme}` : `${fallback} withheld pending rights review`;
+}
+
+function themeSummaryZh(item) {
+  return asText(item.prompt_theme_zh) ?? asText(item.title_zh);
+}
+
 function normalize20(item, categories) {
   return {
     schema_version: "1.0",
@@ -41,9 +50,9 @@ function normalize20(item, categories) {
     },
     title: { en: asText(item.title_en) ?? item.id, zh: asText(item.title_zh) },
     prompt: {
-      en: asText(item.prompt_en) ?? "",
-      zh: asText(item.prompt_zh),
-      availability: "mirrored",
+      en: themeSummary(item),
+      zh: themeSummaryZh(item),
+      availability: "theme-only",
     },
     capability: asText(item.capability) ?? "unknown",
     duration_seconds: Number.isInteger(item.duration_seconds) ? item.duration_seconds : null,
@@ -74,9 +83,9 @@ function normalize25Case(item) {
     },
     title: { en: asText(item.title_en) ?? item.id, zh: asText(item.title_zh) },
     prompt: {
-      en: asText(item.prompt_en) ?? asText(item.prompt_theme_en) ?? "",
-      zh: asText(item.prompt_zh) ?? asText(item.prompt_theme_zh),
-      availability: item.prompt_mirrored ? "mirrored" : "theme-only",
+      en: themeSummary(item, "Official prompt"),
+      zh: themeSummaryZh(item),
+      availability: "theme-only",
     },
     capability: asText(item.capability) ?? "unknown",
     duration_seconds: Number.isInteger(item.duration_seconds) ? item.duration_seconds : null,
@@ -106,7 +115,7 @@ function normalize25Template(item) {
       attribution: "Confirm the repository license before publishing",
     },
     title: { en: asText(item.title_en) ?? item.id, zh: asText(item.title_zh) },
-    prompt: { en: asText(item.prompt) ?? "", zh: null, availability: "mirrored" },
+    prompt: { en: themeSummary(item, "Template prompt"), zh: themeSummaryZh(item), availability: "theme-only" },
     capability: asText(item.capability) ?? "unknown",
     duration_seconds: Number.parseInt(item.seconds, 10) || null,
     aspect_ratio: asText(item.aspect_ratio),

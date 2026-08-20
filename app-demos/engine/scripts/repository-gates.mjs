@@ -96,7 +96,7 @@ const validateSource = ajv.compile(sourceSchema);
 const svgFiles = new Set(['assets/cover.svg']);
 
 for (const entry of catalog.workflows) {
-  assert.equal(entry.status, 'verified', `${entry.id} must stay verified after full-video review`);
+  assert(['spec-only', 'verified'].includes(entry.status), `${entry.id} must use a supported catalog status`);
   assert.equal(entry.path, `examples/${entry.id}`, `${entry.id} path must match its ID`);
   assertSafeRelativePath(entry.path, `${entry.id} catalog path`);
 

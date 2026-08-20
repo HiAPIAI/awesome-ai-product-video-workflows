@@ -24,8 +24,9 @@
   },
   "humanReview": {
     "contactSheetsReviewed": true,
-    "audioListening": "pending",
-    "publicationStatus": "do-not-publish-as-finished-until-audio-review"
+    "audioListening": "failed: only SaaS Feature Launch declares an audio mix; remaining five outputs are silent",
+    "visualReview": "failed: current outputs are deterministic SVG proof renders, not publication-quality product demos",
+    "publicationStatus": "do-not-publish"
   },
   "mediaPolicy": "MP4 files stay local and are intentionally not committed."
 }

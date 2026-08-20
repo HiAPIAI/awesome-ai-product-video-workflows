@@ -1,0 +1,35 @@
+# Awesome Seedance 2.0 Live-Action Workflows
+
+Canonical data: data/workflows.json
+Model: seedance-2.0
+Create task: POST https://api.hiapi.ai/v1/tasks
+Read task: GET https://api.hiapi.ai/v1/tasks/{taskId}
+Runner: npm run generate -- <workflow-id> [--dry-run] [--media key=url]
+Resume task: npm run generate -- --task-id TASK_ID [--output-dir outputs]
+Research notes: docs/research-notes.md
+Verified render evidence: data/render-tests.json
+API key: https://www.hiapi.ai/en/register?utm_source=github&utm_medium=readme&utm_campaign=awesome-seedance-2-0-live-action-workflows
+Agent skill: https://github.com/HiAPIAI/hiapi-seedance-2-0-video-skill
+
+Workflow index:
+- rain-window-reunion: workflows/rain-window-reunion.md | image-to-video | 10s | 16:9
+- night-corridor-suspense: workflows/night-corridor-suspense.md | text-to-video | 8s | 16:9
+- one-take-apartment-arrival: workflows/one-take-apartment-arrival.md | image-to-video | 15s | 16:9
+- morning-kitchen-routine: workflows/morning-kitchen-routine.md | image-to-video | 10s | 9:16
+- after-work-elevator: workflows/after-work-elevator.md | text-to-video | 8s | 9:16
+- night-market-walk: workflows/night-market-walk.md | reference-to-video | 12s | 9:16
+- cafe-unspoken-apology: workflows/cafe-unspoken-apology.md | image-to-video | 12s | 16:9
+- office-resignation: workflows/office-resignation.md | image-to-video | 12s | 9:16
+- doorstep-reconciliation: workflows/doorstep-reconciliation.md | image-to-video | 15s | 16:9
+- restrained-camera-monologue: workflows/restrained-camera-monologue.md | image-to-video | 12s | 16:9
+- street-dance-rehearsal: workflows/street-dance-rehearsal.md | reference-to-video | 10s | 9:16
+- acoustic-room-performance: workflows/acoustic-room-performance.md | reference-to-video | 15s | 16:9
+- street-interview-answer: workflows/street-interview-answer.md | text-to-video | 10s | 9:16
+- kitchen-product-testimonial: workflows/kitchen-product-testimonial.md | image-to-video | 10s | 9:16
+- workshop-day-in-life: workflows/workshop-day-in-life.md | text-to-video | 15s | 16:9
+
+Rules:
+- Preserve the asset role map before rewriting prompts.
+- Keep identity, wardrobe, props, light direction, and screen geography stable.
+- On retake, change one variable and preserve accepted footage decisions.
+- Do not claim a template has been rendered unless a reviewed preview is present.

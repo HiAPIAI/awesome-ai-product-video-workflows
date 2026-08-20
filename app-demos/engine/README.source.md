@@ -6,13 +6,13 @@ Open, reproducible workflows for turning app screenshots and exported UI prototy
 
 [简体中文](README.zh-CN.md) · [Setup](docs/setup.md) · [Authoring](docs/authoring.md) · [Schema reference](docs/schema-reference.md) · [Render acceptance](docs/acceptance-matrix.md) · [HiAPI safety](docs/hiapi-safety.md)
 
-> Integration status: the `demo-v1` and `compiled-demo-v1` contracts and CLI names are frozen. `SaaS Feature Launch` has a locally verified landscape and portrait export; the remaining examples stay `spec-only` until they pass the same render and review gate.
+> Integration status: the `demo-v1` and `compiled-demo-v1` contracts and CLI names are frozen. All examples remain `spec-only`: local MP4 proof renders exist, but the visual-quality and audio review gate is not complete.
 
 ## Workflow catalog
 
 | Workflow | Format | Length | What it demonstrates | Status |
 | --- | --- | ---: | --- | --- |
-| [SaaS Feature Launch](examples/saas-feature-launch/) | 16:9, 9:16 | 11s | Context, decisive interaction, measurable outcome | `verified-local-render` |
+| [SaaS Feature Launch](examples/saas-feature-launch/) | 16:9, 9:16 | 11s | Context, decisive interaction, measurable outcome | `spec-only` |
 | [Mobile Onboarding](examples/mobile-onboarding/) | 9:16 | 10s | Welcome, preference setup, first value | `spec-only` |
 | [AI Workflow Demo](examples/ai-workflow-demo/) | 16:9 | 12s | Structured input, execution, reviewed output | `spec-only` |
 | [Before / After Comparison](examples/before-after-comparison/) | 16:9, 9:16 | 8s | Honest comparison with matched content and framing | `spec-only` |
