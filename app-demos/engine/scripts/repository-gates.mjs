@@ -193,9 +193,9 @@ for (const entry of catalog.workflows) {
     assert.equal(JSON.stringify(demo).includes('bgm_002'), false, 'rejected bgm_002 must not be referenced');
     assert.deepEqual(demo.audio, [
       {id: 'music-bed', assetId: 'background-music', startFrame: 0, volume: 1.3, fadeInFrames: 12, fadeOutFrames: 24},
-      {id: 'dashboard-click', assetId: 'ui-click', startFrame: 107, volume: 1.25},
-      {id: 'builder-click', assetId: 'ui-click', startFrame: 219, volume: 1.25},
-      {id: 'result-confirmation', assetId: 'result-chime', startFrame: 255, volume: 1.25},
+      {id: 'dashboard-click', assetId: 'ui-click', startFrame: 62, volume: 1.25},
+      {id: 'builder-click', assetId: 'ui-click', startFrame: 174, volume: 1.25},
+      {id: 'result-confirmation', assetId: 'result-chime', startFrame: 210, volume: 1.25},
     ], 'SaaS sample audio plan must stay frozen');
   }
 }

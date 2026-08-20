@@ -297,12 +297,12 @@ export function buildFfmpegComposition(options: CompositionOptions): FfmpegCompo
     current = outputLabel;
   };
 
-  const drawDeviceFrame = (rect: ContentRect, start: number, end: number): void => {
+  const drawDeviceFrame = (rect: ContentRect, start: number, end: number, revealDelay = 0): void => {
     const border = Math.max(6, Math.round(Math.min(width, height) * 0.012));
     const outputLabel = `device${labelIndex++}`;
     filters.push(
       `[${current}]drawbox=x=${rect.x - border}:y=${rect.y - border}:w=${rect.width + border * 2}:` +
-        `h=${rect.height + border * 2}:color=0x11151B:t=fill:enable='between(n,${start},${end})'[${outputLabel}]`,
+        `h=${rect.height + border * 2}:color=0x11151B:t=fill:enable='between(n,${start + revealDelay},${end})'[${outputLabel}]`,
     );
     current = outputLabel;
     features.deviceFrame = true;
@@ -345,7 +345,7 @@ export function buildFfmpegComposition(options: CompositionOptions): FfmpegCompo
     const shiftedLabel = `shifted${labelIndex++}`;
     const visualLabel = `visual${labelIndex++}`;
     const requestedFit = scene.fit ?? 'contain';
-    const fit = responsivePortraitFocus && requestedFit === 'contain' ? 'cover' : requestedFit;
+    const fit = requestedFit;
     const sourceWidth = asset.width ?? compiled.canvas.width;
     const sourceHeight = asset.height ?? compiled.canvas.height;
     const focusPoints = [
@@ -421,7 +421,10 @@ export function buildFfmpegComposition(options: CompositionOptions): FfmpegCompo
       const hasFocusPoints = scene.cursor !== undefined || (scene.callouts?.length ?? 0) > 0;
       const responsivePortraitFocus = height > width && sourceAspectRatio > 1 && hasFocusPoints;
       const rect = screenRect(width, height, sourceAspectRatio, responsivePortraitFocus);
-      drawDeviceFrame(rect, sceneStart, sceneEnd - 1);
+      const revealDelay = scene.transitionIn === 'fade' || transformValue(scene.from, 'opacity', 1) === 0
+        ? Math.min(TRANSITION_FRAMES, Math.max(1, Math.floor((sceneEnd - sceneStart) / 3)))
+        : 0;
+      drawDeviceFrame(rect, sceneStart, sceneEnd - 1, revealDelay);
       sceneVisualTransform = addVisual(scene, scene.assetId, rect, responsivePortraitFocus);
     } else if (scene.kind === 'comparison' && scene.assetId && scene.secondaryAssetId) {
       const rects = comparisonRects(width, height);

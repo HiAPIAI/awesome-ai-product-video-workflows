@@ -4,7 +4,7 @@
   <rect width="1440" height="900" fill="#EEF1F4"/>
   <rect width="1440" height="70" fill="#FFFFFF"/>
   <rect x="24" y="18" width="34" height="34" rx="8" fill="#55C995"/>
-  <text x="72" y="43" fill="#171A1F" font-family="Arial" font-size="20" font-weight="700">Trial activation</text>
+  <text x="72" y="43" fill="#171A1F" font-family="Arial" font-size="20" font-weight="700">Example workflow</text>
   <text x="72" y="60" fill="#7A838F" font-family="Arial" font-size="12">Draft saved</text>
   <rect x="1164" y="16" width="108" height="38" rx="6" fill="#F0F3F6" stroke="#D8DEE6"/>
   <text x="1218" y="41" text-anchor="middle" fill="#343A43" font-family="Arial" font-size="14" font-weight="700">Test run</text>

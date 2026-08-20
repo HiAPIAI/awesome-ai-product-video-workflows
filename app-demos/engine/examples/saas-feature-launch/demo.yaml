@@ -45,23 +45,15 @@ assets:
     alt: Original deterministic soft result confirmation chime
     license: MIT
 scenes:
-  - id: feature-title
-    kind: title
-    startFrame: 0
-    durationFrames: 45
-    heading: Automations, without the busywork
-    body: Build, test, and ship a customer journey from one canvas.
-    transitionIn: fade
-    transitionOut: slide-up
   - id: dashboard-context
     kind: screen
-    startFrame: 45
+    startFrame: 0
     durationFrames: 90
     assetId: overview
     fit: contain
     from:
-      scale: 0.96
-      opacity: 0
+      scale: 1
+      opacity: 1
     to:
       scale: 1
       opacity: 1
@@ -70,11 +62,11 @@ scenes:
       from: {x: 330, y: 250}
       to: {x: 515, y: 330}
       clickFrames: [62]
-    transitionIn: scale
+    transitionIn: none
     transitionOut: fade
   - id: build-automation
     kind: screen
-    startFrame: 135
+    startFrame: 90
     durationFrames: 120
     assetId: automation-builder
     fit: contain
@@ -99,8 +91,8 @@ scenes:
     transitionOut: fade
   - id: prove-impact
     kind: screen
-    startFrame: 255
-    durationFrames: 45
+    startFrame: 210
+    durationFrames: 90
     assetId: launch-results
     fit: contain
     from:
@@ -126,15 +118,15 @@ audio:
     fadeOutFrames: 24
   - id: dashboard-click
     assetId: ui-click
-    startFrame: 107
+    startFrame: 62
     volume: 1.25
   - id: builder-click
     assetId: ui-click
-    startFrame: 219
+    startFrame: 174
     volume: 1.25
   - id: result-confirmation
     assetId: result-chime
-    startFrame: 255
+    startFrame: 210
     volume: 1.25
 outputs:
   - id: landscape
