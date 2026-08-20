@@ -109,6 +109,8 @@ npx -y github:HiAPIAI/awesome-ai-product-video-workflows -y
 
 精确 Star 快照、许可证文件和代码采用边界见 [开源基础调研](docs/open-source-foundations.md)。AGPL、Elastic、自定义许可证或无许可证项目默认只用于方法研究，除非下游项目明确接受对应条款。
 
+Prompt 来源素材单独做权利核查：复制任何第三方 Prompt 原文或媒体前，请先看 [Prompt 来源审计](docs/prompt-provenance-audit.md)。
+
 ## 安装为 Agent Skill
 
 ```bash

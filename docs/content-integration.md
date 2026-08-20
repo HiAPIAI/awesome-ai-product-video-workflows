@@ -36,11 +36,11 @@ domain as production-ready, complete all of the following in the app-demo engine
    its development server. They must be revisited when Motion Canvas publishes a
    Vite 6+ compatible plugin.
 
-The local macOS run passes typecheck and the non-media unit tests. This machine's
-PATH FFmpeg lacks `drawtext`, so the doctor exits non-zero in strict mode and the
-two real-media tests are reported as skipped. This integration still does not
-claim a successful app-demo render until a supported FFmpeg build produces the
-required review artifacts.
+The local macOS run uses Homebrew `ffmpeg-full` 9.0.1 with `libfreetype`. All five
+catalog examples now render locally, including the required landscape and portrait
+outputs; automated decode and review-frame checks pass. Normal-volume audio
+listening remains a human review task before changing the public status of every
+example.
 
 The app-demo CLI and repository gates do not start a Vite development server during
 normal validation or rendering. The residual advisories are tracked as a toolchain
@@ -74,3 +74,8 @@ upgrade and failed-download rollback paths.
 
 The local copy intentionally leaves source READMEs under each `engine/` directory so
 that these rewrites can be reviewed separately from the content merge.
+
+Prompt provenance findings are recorded in
+[`docs/prompt-provenance-audit.md`](prompt-provenance-audit.md). The current source
+licenses support attribution-preserving indexing, not blanket redistribution of
+third-party prompts or media.

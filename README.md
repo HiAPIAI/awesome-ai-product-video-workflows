@@ -117,6 +117,8 @@ This repository does not start from a blank slate. The current research combines
 
 Exact star snapshots, license files, and code-reuse boundaries are documented in [Open-source foundations](docs/open-source-foundations.md). AGPL, Elastic, custom-license, and no-license repositories are method references only unless a downstream project deliberately accepts their terms.
 
+Prompt-source rights are handled separately: see the [prompt provenance audit](docs/prompt-provenance-audit.md) before copying any third-party prompt text or media.
+
 ## Install as an agent skill
 
 ```bash

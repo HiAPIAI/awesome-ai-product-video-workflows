@@ -14,6 +14,8 @@ examples remain `spec-only` until they receive the same render and review eviden
 
 See [`reviews/saas-feature-launch-render.json`](reviews/saas-feature-launch-render.json)
 for the reproducible tool versions, output dimensions, hashes, and review status.
+The complete local batch result is summarized in
+[`reviews/catalog-render-summary.json`](reviews/catalog-render-summary.json).
 
 The render path requires an FFmpeg build with the `drawtext` filter (usually
 provided by `libfreetype`). Run `npm --prefix app-demos/engine run doctor -- --strict`
