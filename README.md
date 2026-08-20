@@ -22,6 +22,10 @@ npx -y github:HiAPIAI/awesome-ai-product-video-workflows -y
 
 Then give the skill one approved product image and its current product page. It will build the product truth sheet first and stop before any paid generation.
 
+The installer stages a fresh checkout before replacing an existing copy. A failed
+download leaves the previous Skill in place, and an existing `.env` file is carried
+forward. This makes the public `npx github:` entry safe to use for upgrades.
+
 ## Why star this repository
 
 - **One source-to-ad path:** product image → commercial hero visual → storyboard → video ad → platform variants.

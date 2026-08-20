@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 
 import { execFileSync } from "node:child_process";
-import { existsSync, mkdirSync, rmSync } from "node:fs";
+import { copyFileSync, existsSync, mkdirSync, renameSync, rmSync } from "node:fs";
 import { homedir } from "node:os";
 import { join, resolve } from "node:path";
 import { argv, env, exit, stdin, stdout } from "node:process";
 import readline from "node:readline/promises";
+import { fileURLToPath } from "node:url";
 
 const displayName = "Awesome AI Product Video Workflows";
 const skillFolder = "awesome-ai-product-video-workflows";
@@ -71,25 +72,45 @@ async function resolveTargets() {
   throw new Error("Invalid target choice.");
 }
 
-function installTarget(target) {
-  mkdirSync(target.directory, { recursive: true });
-  const destination = join(target.directory, skillFolder);
-  if (existsSync(destination)) {
-    console.log(`[${displayName}] Replacing ${destination}`);
-    rmSync(destination, { recursive: true, force: true });
-  }
-  console.log(`[${displayName}] Installing → ${destination}`);
+function cloneRepository(destination) {
   execFileSync("git", ["clone", "--depth", "1", skillRepo, destination], {
     stdio: "inherit",
   });
 }
 
-try {
-  execFileSync("git", ["--version"], { stdio: "ignore" });
-  const targets = await resolveTargets();
-  for (const target of targets) installTarget(target);
-  console.log(`[${displayName}] Done. Restart the agent if it caches skills.`);
-} catch (error) {
-  console.error(`[${displayName}] Failed: ${error.message}`);
-  exit(1);
+export function installTarget(target, { clone = cloneRepository, id = `${process.pid}-${Date.now()}` } = {}) {
+  mkdirSync(target.directory, { recursive: true });
+  const destination = join(target.directory, skillFolder);
+  const staging = `${destination}.staging-${id}`;
+  const backup = `${destination}.backup-${id}`;
+  rmSync(staging, { recursive: true, force: true });
+  rmSync(backup, { recursive: true, force: true });
+
+  try {
+    console.log(`[${displayName}] Downloading → ${staging}`);
+    clone(staging);
+    const existingEnv = join(destination, ".env");
+    if (existsSync(existingEnv)) copyFileSync(existingEnv, join(staging, ".env"));
+
+    if (existsSync(destination)) renameSync(destination, backup);
+    renameSync(staging, destination);
+    rmSync(backup, { recursive: true, force: true });
+    console.log(`[${displayName}] Installed → ${destination}`);
+  } catch (error) {
+    rmSync(staging, { recursive: true, force: true });
+    if (existsSync(backup) && !existsSync(destination)) renameSync(backup, destination);
+    throw error;
+  }
+}
+
+if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1])) {
+  try {
+    execFileSync("git", ["--version"], { stdio: "ignore" });
+    const targets = await resolveTargets();
+    for (const target of targets) installTarget(target);
+    console.log(`[${displayName}] Done. Restart the agent if it caches skills.`);
+  } catch (error) {
+    console.error(`[${displayName}] Failed: ${error.message}`);
+    exit(1);
+  }
 }

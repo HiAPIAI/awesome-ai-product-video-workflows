@@ -59,5 +59,10 @@ Before any upstream rename or archive:
 - keep model/provider links optional in the first screen of domain READMEs;
 - run each engine's own tests from its subdirectory and the root `npm run check`.
 
+The root installer is part of the compatibility surface. Its upgrade path stages a
+fresh checkout, preserves an existing `.env`, and restores the previous directory
+if cloning or replacement fails. `tests/install.test.mjs` covers both the successful
+upgrade and failed-download rollback paths.
+
 The local copy intentionally leaves source READMEs under each `engine/` directory so
 that these rewrites can be reviewed separately from the content merge.
