@@ -1,0 +1,37 @@
+# Awesome AI App Demo Video Workflows
+
+> Open demo-v1 specifications for turning app screenshots and exported UI prototype states into deterministic, reviewable product demo videos.
+
+Canonical repository: https://github.com/HiAPIAI/awesome-ai-app-demo-video-workflows
+English overview: README.md
+Chinese overview: README.zh-CN.md
+Workflow catalog: data/workflows.json
+Setup: docs/setup.md
+Authoring: docs/authoring.md
+Source schema guide: docs/schema-reference.md
+Render acceptance matrix: docs/acceptance-matrix.md
+HiAPI safety: docs/hiapi-safety.md
+Launch assets: docs/launch-kit.md
+Source contract: schemas/demo-v1.schema.json
+Compiled contract: schemas/compiled-demo-v1.schema.json
+Contribution guide: CONTRIBUTING.md
+Security policy: SECURITY.md
+
+## Important constraints
+
+- Workflow source uses schemaVersion demo-v1; renderer input uses compiled-demo-v1.
+- Rendering consumes compiled JSON and does not independently reinterpret YAML.
+- Critical UI, text, cursors, callouts, metrics, and comparison evidence are deterministic local layers.
+- HiAPI is optional and may enhance only a background, intro, transition, or outro.
+- Paid generation requires explicit approval, current preflight confirmation, idempotency, and a pending journal.
+- Examples are spec-only until every complete rendered output passes human review.
+- Do not infer that fictional example products or metrics are real customers or measured claims.
+- Do not expose credentials, signed URLs, customer screenshots, private prototypes, or generated binaries.
+
+## Examples
+
+- examples/saas-feature-launch/
+- examples/mobile-onboarding/
+- examples/ai-workflow-demo/
+- examples/before-after-comparison/
+- examples/vertical-social-feature/
