@@ -29,14 +29,21 @@ engine:
    artifact from the example README.
 3. Keep `drawtext` as an explicit doctor check. A missing filter is an environment
    failure and must produce an actionable message before the render test starts.
-4. Resolve or document the six dependency audit findings reported by the current
-   `npm ci` run (3 moderate and 3 high).
+4. Resolve or document the four remaining dependency audit findings reported by
+   the current `npm ci` run. `ajv`, `yaml`, `fast-uri`, and `nanoid` are upgraded;
+   the remaining advisories come from the Motion Canvas Vite 5 toolchain and affect
+   its development server. They must be revisited when Motion Canvas publishes a
+   Vite 6+ compatible plugin.
 
 The local macOS run passes typecheck and the non-media unit tests. This machine's
 PATH FFmpeg lacks `drawtext`, so the doctor exits non-zero in strict mode and the
 two real-media tests are reported as skipped. This integration still does not
 claim a successful app-demo render until a supported FFmpeg build produces the
 required review artifacts.
+
+The app-demo CLI and repository gates do not start a Vite development server during
+normal validation or rendering. The residual advisories are tracked as a toolchain
+upgrade item, rather than being hidden by suppressing audit output.
 
 ## Blender branch gate
 

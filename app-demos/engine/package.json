@@ -40,9 +40,9 @@
     "@motion-canvas/2d": "3.17.2",
     "@motion-canvas/core": "3.17.2",
     "@motion-canvas/ffmpeg": "3.17.2",
-    "ajv": "8.17.1",
+    "ajv": "8.20.0",
     "sharp": "0.35.3",
-    "yaml": "2.8.1"
+    "yaml": "2.9.0"
   },
   "devDependencies": {
     "@motion-canvas/ui": "3.17.2",
@@ -50,6 +50,6 @@
     "@types/node": "22.18.6",
     "tsx": "4.20.6",
     "typescript": "5.9.2",
-    "vite": "5.4.20"
+    "vite": "5.4.21"
   }
 }
