@@ -1,6 +1,7 @@
 import {spawnSync} from 'node:child_process';
 import {parseArgs} from 'node:util';
 import {assertSchemasLoad} from '../compiler/schema.js';
+import {checkFfmpegFilterSync} from '../render/tools.js';
 import {fail} from './common.js';
 
 try {
@@ -22,6 +23,7 @@ try {
     checkNode(),
     checkSchemas(),
     checkExecutable('ffmpeg'),
+    checkFfmpegFilter('drawtext'),
     checkExecutable('ffprobe'),
   ];
   console.log(JSON.stringify({
@@ -66,5 +68,15 @@ function checkExecutable(command: string): DoctorCheck {
     ok: result.status === 0 && !result.error,
     required: false,
     detail: result.error?.message ?? firstLine ?? 'unavailable',
+  };
+}
+
+function checkFfmpegFilter(filter: string): DoctorCheck {
+  const check = checkFfmpegFilterSync(filter);
+  return {
+    name: `ffmpeg-filter:${filter}`,
+    ok: check.ok,
+    required: false,
+    detail: check.detail,
   };
 }

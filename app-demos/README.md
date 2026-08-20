@@ -12,11 +12,12 @@ validation, offline render path, and paid-generation preflight are available, bu
 integration should not advertise a finished demo export until at least one example
 has a downloadable MP4 and human review report.
 
-The upstream render test also requires an FFmpeg build with the `drawtext` filter
-(usually provided by `libfreetype`). A local test run without that filter fails at
-media rendering even when TypeScript, contract, and offline tests pass. See
-[`docs/content-integration.md`](../docs/content-integration.md#app-demo-gate) for the
-acceptance gate.
+The render path requires an FFmpeg build with the `drawtext` filter (usually
+provided by `libfreetype`). Run `npm --prefix app-demos/engine run doctor -- --strict`
+first. If the filter is unavailable, the real-media tests are reported as skipped
+and rendering exits with an actionable environment error; TypeScript, contract,
+and offline tests can still run. See [`docs/content-integration.md`](../docs/content-integration.md#app-demo-gate)
+for the acceptance gate.
 
 ## Run the isolated engine
 

@@ -20,6 +20,12 @@ npm run doctor -- --strict
 
 `doctor` checks the local runtime. Strict mode is recommended in CI and before rendering. During the multi-branch v1 integration, a command may still expose only its frozen help contract until its implementation branch is merged.
 
+The doctor also checks the FFmpeg `drawtext` filter required by the renderer. If
+`ffmpeg-filter:drawtext` is not available, install an FFmpeg build with
+`libfreetype` support and run the strict doctor check again. Unit tests that do
+not invoke media rendering remain runnable, while real-media tests report a
+skip for this environment condition.
+
 ## Validate, compile, and render
 
 ```bash

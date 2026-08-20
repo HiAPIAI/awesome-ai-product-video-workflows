@@ -24,6 +24,10 @@
 
 需要 Node.js 20.18 或更高版本、FFmpeg 和 FFprobe。
 
+渲染器要求 FFmpeg 包含 `drawtext` 滤镜（通常由 `libfreetype` 提供）。运行
+渲染前先执行 `npm run doctor -- --strict`。如果环境缺少该滤镜，媒体渲染测试
+会明确标记为跳过，直接渲染时会给出可操作的环境错误，不会误报为渲染器代码失败。
+
 ```bash
 npm ci
 npm run doctor -- --strict

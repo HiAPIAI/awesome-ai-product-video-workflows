@@ -32,9 +32,11 @@ engine:
 4. Resolve or document the six dependency audit findings reported by the current
    `npm ci` run (3 moderate and 3 high).
 
-The local macOS run passed typecheck and 28 of 29 unit tests. The remaining render
-test failed with `No such filter: 'drawtext'`, so this integration does not claim a
-successful app-demo render.
+The local macOS run passes typecheck and the non-media unit tests. This machine's
+PATH FFmpeg lacks `drawtext`, so the doctor exits non-zero in strict mode and the
+two real-media tests are reported as skipped. This integration still does not
+claim a successful app-demo render until a supported FFmpeg build produces the
+required review artifacts.
 
 ## Blender branch gate
 

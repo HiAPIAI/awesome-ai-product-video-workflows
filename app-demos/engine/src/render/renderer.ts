@@ -17,6 +17,7 @@ import {
   type RenderReport,
 } from './report.js';
 import {createReviewArtifacts} from './review.js';
+import {assertFfmpegFilter} from './tools.js';
 
 export interface RenderProjectOptions {
   compiledPath: string;
@@ -94,6 +95,7 @@ export async function renderProject(options: RenderProjectOptions): Promise<Rend
   const outputDirectory = resolve(options.outputDirectory);
   const workingDirectory = resolve(options.workingDirectory ?? process.cwd());
   const progress = options.onProgress ?? (() => undefined);
+  await assertFfmpegFilter('drawtext');
   await mkdir(outputDirectory, {recursive: true});
   const workDirectory = await mkdtemp(join(outputDirectory, '.render-work-'));
 

@@ -6,6 +6,7 @@ import test from 'node:test';
 import {stringify} from 'yaml';
 import {compileDemoFile, writeCompiledDemo} from '../src/compiler/compile.js';
 import {renderProject} from '../src/render/renderer.js';
+import {checkFfmpegFilterSync} from '../src/render/tools.js';
 
 const FIXTURE_PNG = Buffer.from(
   'iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAEUlEQVQImWNQSDjwH4QZYAwASvQI/ccIh+oAAAAASUVORK5CYII=',
@@ -51,7 +52,7 @@ test('refuses to replace a packaged asset whose bytes changed after compilation'
   }
 });
 
-test('renders from the compiled package after the source project is removed', async () => {
+test('renders from the compiled package after the source project is removed', {skip: !checkFfmpegFilterSync('drawtext').ok}, async () => {
   const sourceDirectory = makeRenderableProject();
   const packageDirectory = fs.mkdtempSync(path.join(os.tmpdir(), 'app-demo-package-'));
   try {

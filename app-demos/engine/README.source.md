@@ -24,6 +24,12 @@ The machine-readable catalog is [`data/workflows.json`](data/workflows.json). Ev
 
 Prerequisites: Node.js 20.18 or newer, FFmpeg, and FFprobe.
 
+The renderer requires an FFmpeg build that includes the `drawtext` filter
+(usually provided by `libfreetype`). Run `npm run doctor -- --strict` before a
+render. When the filter is unavailable, media-render tests are skipped and the
+render command stops with an actionable environment error rather than reporting
+a renderer failure.
+
 ```bash
 npm ci
 npm run doctor -- --strict

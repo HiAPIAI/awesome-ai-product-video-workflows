@@ -20,6 +20,7 @@ import {parseRenderArguments} from '../src/cli/render.js';
 import {resolveAndVerifyAssets} from '../src/media/assets.js';
 import {rasterizeSvgAssets} from '../src/media/rasterize.js';
 import {renderProject} from '../src/render/renderer.js';
+import {checkFfmpegFilterSync} from '../src/render/tools.js';
 
 async function command(executable: string, args: readonly string[]): Promise<void> {
   await new Promise<void>((resolve, reject) => {
@@ -258,7 +259,7 @@ test('keeps long headings, body copy, and callouts inside landscape and portrait
   }
 });
 
-test('renders repeatable landscape and portrait H.264/AAC outputs with review artifacts', async () => {
+test('renders repeatable landscape and portrait H.264/AAC outputs with review artifacts', {skip: !checkFfmpegFilterSync('drawtext').ok}, async () => {
   const fixtureDirectory = await mkdtemp(join(tmpdir(), 'app-demo-render-fixture-'));
   try {
     const firstImage = join(fixtureDirectory, 'screen-a.svg');
