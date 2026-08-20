@@ -1,13 +1,14 @@
 # Content Integration Draft
 
-This document records a local, content-only integration plan. It is not a release
-plan and no GitHub repository has been renamed, archived, deleted, or pushed.
+This document records the content integration and repository lifecycle. The root
+repository is now the canonical `awesome-ai-video-workflows` name; the old name
+remains a GitHub redirect for existing installs.
 
 ## Domain boundaries
 
 | Domain | Local path | Upstream source | Root package ownership |
 | --- | --- | --- | --- |
-| Product ads | `workflows/`, `product-ads/` | `awesome-ai-product-video-workflows` | Yes |
+| Product ads | `workflows/`, `product-ads/` | `awesome-ai-video-workflows` (renamed from `awesome-ai-product-video-workflows`) | Yes |
 | App demos | `app-demos/engine/` | `awesome-ai-app-demo-video-workflows` | No |
 | Live action | `live-action/engine/` | `awesome-seedance-2-0-live-action-workflows` | No |
 | Blender previs | `blender-previs/engine/` | `awesome-codex-blender-seedance-workflows` | No |

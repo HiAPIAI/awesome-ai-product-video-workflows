@@ -10,7 +10,7 @@ import { fileURLToPath } from "node:url";
 
 const displayName = "Awesome AI Product Video Workflows";
 const skillFolder = "awesome-ai-product-video-workflows";
-const skillRepo = "https://github.com/HiAPIAI/awesome-ai-product-video-workflows.git";
+const skillRepo = "https://github.com/HiAPIAI/awesome-ai-video-workflows.git";
 const args = argv.slice(2);
 const yes = args.includes("-y") || args.includes("--yes") || !stdin.isTTY;
 
