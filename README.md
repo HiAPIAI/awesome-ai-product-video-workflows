@@ -1,4 +1,8 @@
-# AI Product Video Workflows: Product Images to Video Ads
+# AI Video Workflows: Product Images to Video Ads
+
+This repository was renamed from `awesome-ai-product-video-workflows` after
+absorbing the app-demo, live-action, and Blender previs workflow domains. The
+old GitHub URL remains a redirect for existing installs.
 
 ![AI product video workflow from a product image and commercial hero visual to a vertical ecommerce video ad](assets/ai-product-video-workflows-social-preview.jpg)
 
@@ -10,14 +14,14 @@ This checkout also contains a local content-integration draft. Browse the [domai
 index](docs/content-integration.md) before using the sibling engines; they retain
 their own schemas and runners and are not part of the root install command yet.
 
-[![Tests](https://github.com/HiAPIAI/awesome-ai-product-video-workflows/actions/workflows/test.yml/badge.svg)](https://github.com/HiAPIAI/awesome-ai-product-video-workflows/actions/workflows/test.yml)
-[![GitHub stars](https://img.shields.io/github/stars/HiAPIAI/awesome-ai-product-video-workflows?style=flat&logo=github&label=Stars)](https://github.com/HiAPIAI/awesome-ai-product-video-workflows/stargazers)
+[![Tests](https://github.com/HiAPIAI/awesome-ai-video-workflows/actions/workflows/test.yml/badge.svg)](https://github.com/HiAPIAI/awesome-ai-video-workflows/actions/workflows/test.yml)
+[![GitHub stars](https://img.shields.io/github/stars/HiAPIAI/awesome-ai-video-workflows?style=flat&logo=github&label=Stars)](https://github.com/HiAPIAI/awesome-ai-video-workflows/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-121417.svg)](LICENSE)
 
 ## Start in 30 seconds
 
 ```bash
-npx -y github:HiAPIAI/awesome-ai-product-video-workflows -y
+npx -y github:HiAPIAI/awesome-ai-video-workflows -y
 ```
 
 Then give the skill one approved product image and its current product page. It will build the product truth sheet first and stop before any paid generation.
@@ -122,15 +126,15 @@ Prompt-source rights are handled separately: see the [prompt provenance audit](d
 ## Install as an agent skill
 
 ```bash
-npx -y github:HiAPIAI/awesome-ai-product-video-workflows -y
+npx -y github:HiAPIAI/awesome-ai-video-workflows -y
 ```
 
 Choose a specific agent or skills directory:
 
 ```bash
-npx -y github:HiAPIAI/awesome-ai-product-video-workflows --codex
-npx -y github:HiAPIAI/awesome-ai-product-video-workflows --claude
-npx -y github:HiAPIAI/awesome-ai-product-video-workflows --target=/path/to/skills
+npx -y github:HiAPIAI/awesome-ai-video-workflows --codex
+npx -y github:HiAPIAI/awesome-ai-video-workflows --claude
+npx -y github:HiAPIAI/awesome-ai-video-workflows --target=/path/to/skills
 ```
 
 Then ask your agent:

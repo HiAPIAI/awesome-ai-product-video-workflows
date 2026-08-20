@@ -1,4 +1,6 @@
-# AI 商品视频工作流：从商品图到广告视频
+# AI 视频工作流：从商品图到广告视频
+
+本仓库由 `awesome-ai-product-video-workflows` 改名而来，已吸收 App Demo、真人实拍和 Blender 预演三个内容域。旧 GitHub 地址会保留重定向，已有安装不受影响。
 
 ![从商品图、商业主视觉到竖屏电商广告视频的 AI 商品视频工作流](assets/ai-product-video-workflows-social-preview.jpg)
 
@@ -8,14 +10,14 @@
 
 当前工作树还包含一份本地内容整合草案。使用其他执行器前，请先阅读[内容整合说明](docs/content-integration.md)；它们保留各自的 Schema 和 Runner，暂时不属于根目录安装命令。
 
-[![Tests](https://github.com/HiAPIAI/awesome-ai-product-video-workflows/actions/workflows/test.yml/badge.svg)](https://github.com/HiAPIAI/awesome-ai-product-video-workflows/actions/workflows/test.yml)
-[![GitHub stars](https://img.shields.io/github/stars/HiAPIAI/awesome-ai-product-video-workflows?style=flat&logo=github&label=Stars)](https://github.com/HiAPIAI/awesome-ai-product-video-workflows/stargazers)
+[![Tests](https://github.com/HiAPIAI/awesome-ai-video-workflows/actions/workflows/test.yml/badge.svg)](https://github.com/HiAPIAI/awesome-ai-video-workflows/actions/workflows/test.yml)
+[![GitHub stars](https://img.shields.io/github/stars/HiAPIAI/awesome-ai-video-workflows?style=flat&logo=github&label=Stars)](https://github.com/HiAPIAI/awesome-ai-video-workflows/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-121417.svg)](LICENSE)
 
 ## 30 秒开始
 
 ```bash
-npx -y github:HiAPIAI/awesome-ai-product-video-workflows -y
+npx -y github:HiAPIAI/awesome-ai-video-workflows -y
 ```
 
 然后提供一张已获授权的商品图和当前商品页。技能会先建立商品事实卡，并停在任何付费生成之前。
@@ -114,15 +116,15 @@ Prompt 来源素材单独做权利核查：复制任何第三方 Prompt 原文�
 ## 安装为 Agent Skill
 
 ```bash
-npx -y github:HiAPIAI/awesome-ai-product-video-workflows -y
+npx -y github:HiAPIAI/awesome-ai-video-workflows -y
 ```
 
 指定 Agent 或技能目录：
 
 ```bash
-npx -y github:HiAPIAI/awesome-ai-product-video-workflows --codex
-npx -y github:HiAPIAI/awesome-ai-product-video-workflows --claude
-npx -y github:HiAPIAI/awesome-ai-product-video-workflows --target=/path/to/skills
+npx -y github:HiAPIAI/awesome-ai-video-workflows --codex
+npx -y github:HiAPIAI/awesome-ai-video-workflows --claude
+npx -y github:HiAPIAI/awesome-ai-video-workflows --target=/path/to/skills
 ```
 
 安装后可以这样提问：

@@ -6,7 +6,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HiAPIAI/awesome-ai-product-video-workflows.git"
+    "url": "git+https://github.com/HiAPIAI/awesome-ai-video-workflows.git"
   },
   "bin": {
     "awesome-ai-product-video-workflows": "./scripts/install.mjs"
