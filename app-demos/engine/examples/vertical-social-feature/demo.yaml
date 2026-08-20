@@ -1,0 +1,83 @@
+schemaVersion: demo-v1
+project:
+  id: vertical-social-feature
+  title: Vertical Social Feature
+  description: Demonstrate one mobile auto-caption feature from raw clip to publish-ready short in seven seconds.
+canvas:
+  width: 1080
+  height: 1920
+  fps: 30
+  durationFrames: 210
+brand:
+  background: "#EEEFF2"
+  foreground: "#181A1F"
+  accent: "#7357D9"
+  fontFamily: "Arial, sans-serif"
+assets:
+  - id: caption-editor
+    type: image
+    path: assets/caption-editor.svg
+    alt: Clipnote mobile caption editor
+    license: MIT
+  - id: publish-ready
+    type: image
+    path: assets/publish-ready.svg
+    alt: Clipnote publish-ready vertical video
+    license: MIT
+scenes:
+  - id: social-hook
+    kind: title
+    startFrame: 0
+    durationFrames: 30
+    heading: Caption the clip before the scroll
+    body: One tap turns a raw take into a readable vertical cut.
+    transitionIn: scale
+    transitionOut: fade
+  - id: edit-captions
+    kind: screen
+    startFrame: 30
+    durationFrames: 60
+    assetId: caption-editor
+    fit: contain
+    from: {scale: 1.08, opacity: 0}
+    to: {scale: 1, opacity: 1}
+    easing: spring
+    cursor:
+      from: {x: 480, y: 1290}
+      to: {x: 650, y: 1430}
+      clickFrames: [40]
+    transitionIn: scale
+    transitionOut: fade
+  - id: show-result
+    kind: screen
+    startFrame: 90
+    durationFrames: 90
+    assetId: publish-ready
+    fit: contain
+    from: {y: 30, opacity: 0}
+    to: {y: 0, opacity: 1}
+    easing: ease-out
+    callouts:
+      - text: Safe margins keep every word inside the social UI
+        at: {x: 540, y: 560}
+        startFrame: 28
+        durationFrames: 48
+        accent: "#7357D9"
+    transitionIn: slide-up
+    transitionOut: fade
+  - id: social-outro
+    kind: outro
+    startFrame: 180
+    durationFrames: 30
+    heading: Ready to post in seven seconds
+    body: Clipnote Auto Captions
+    transitionIn: fade
+outputs:
+  - id: vertical
+    width: 1080
+    height: 1920
+    fps: 30
+    fileName: vertical-social-feature.mp4
+hiapi:
+  enabled: false
+  enhancements: []

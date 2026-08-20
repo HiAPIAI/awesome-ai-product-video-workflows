@@ -6,6 +6,8 @@
 
 [English](README.md) · [查看六条完整流程](#从商品图到广告视频的完整流程) · [查看真实 UGC 案例](#真实夹灯-ugc-广告)
 
+当前工作树还包含一份本地内容整合草案。使用其他执行器前，请先阅读[内容整合说明](docs/content-integration.md)；它们保留各自的 Schema 和 Runner，暂时不属于根目录安装命令。
+
 [![Tests](https://github.com/HiAPIAI/awesome-ai-product-video-workflows/actions/workflows/test.yml/badge.svg)](https://github.com/HiAPIAI/awesome-ai-product-video-workflows/actions/workflows/test.yml)
 [![GitHub stars](https://img.shields.io/github/stars/HiAPIAI/awesome-ai-product-video-workflows?style=flat&logo=github&label=Stars)](https://github.com/HiAPIAI/awesome-ai-product-video-workflows/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-121417.svg)](LICENSE)
@@ -17,6 +19,8 @@ npx -y github:HiAPIAI/awesome-ai-product-video-workflows -y
 ```
 
 然后提供一张已获授权的商品图和当前商品页。技能会先建立商品事实卡，并停在任何付费生成之前。
+
+安装器会先把新版本下载到临时目录，再替换已有副本。下载失败时会保留旧 Skill，已有的 `.env` 文件也会继续保留，因此公开的 `npx github:` 安装入口可以安全用于升级。
 
 ## 为什么值得 Star
 
@@ -41,6 +45,19 @@ npx -y github:HiAPIAI/awesome-ai-product-video-workflows -y
 - 带时间戳的 GitHub 高信号项目和许可证边界调研
 - 一个有真实 task、成片、转写和 QC 证据的 UGC 广告案例
 - 可供 Codex 与 Claude Code 安装的 `SKILL.md`
+
+## 内容域
+
+仓库正在按四个内容域整理。根目录只负责商品广告链路，其他域在契约完成前保持独立执行器。
+
+| 内容域 | 入口 | 当前职责 |
+| --- | --- | --- |
+| 商品广告 | [`product-ads/`](product-ads/) | 有来源依据的商品图到广告工作流（根目录契约） |
+| App Demo | [`app-demos/`](app-demos/) | 确定性的 UI 演示编译与渲染；示例仍标记为 `spec-only` |
+| 真人实拍 | [`live-action/`](live-action/) | 15 条 Seedance 2.0 真人工作流、dry-run Runner 与成片证据 |
+| Blender 预演 | [`blender-previs/`](blender-previs/) | Codex 到 Blender 的镜头契约与手动 Seedance 交接（分支快照） |
+
+详细边界、验证门槛和迁移风险见[内容整合说明](docs/content-integration.md)。这份索引不代表相关仓库已经改名或归档。
 
 ## 从商品图到广告视频的完整流程
 
@@ -91,6 +108,8 @@ npx -y github:HiAPIAI/awesome-ai-product-video-workflows -y
 - [Open AI UGC](https://github.com/Anil-matcha/Open-AI-UGC)：自托管创作者式视频广告
 
 精确 Star 快照、许可证文件和代码采用边界见 [开源基础调研](docs/open-source-foundations.md)。AGPL、Elastic、自定义许可证或无许可证项目默认只用于方法研究，除非下游项目明确接受对应条款。
+
+Prompt 来源素材单独做权利核查：复制任何第三方 Prompt 原文或媒体前，请先看 [Prompt 来源审计](docs/prompt-provenance-audit.md)。
 
 ## 安装为 Agent Skill
 

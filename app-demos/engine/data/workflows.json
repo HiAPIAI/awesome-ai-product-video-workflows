@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "workflow-catalog-v1",
+  "workflows": [
+    {
+      "id": "saas-feature-launch",
+      "title": "SaaS Feature Launch",
+      "titleZh": "SaaS 功能发布",
+      "category": "SaaS launch",
+      "description": "Reveal one new automation feature from dashboard context to a measurable outcome.",
+      "audience": ["indie developers", "SaaS teams", "product marketers"],
+      "durationSeconds": 11,
+      "aspectRatios": ["16:9", "9:16"],
+      "difficulty": "starter",
+      "path": "examples/saas-feature-launch",
+      "status": "spec-only"
+    },
+    {
+      "id": "mobile-onboarding",
+      "title": "Mobile Onboarding",
+      "titleZh": "移动端 Onboarding",
+      "category": "mobile onboarding",
+      "description": "Turn three onboarding states into a concise first-run product story.",
+      "audience": ["mobile teams", "growth teams", "product designers"],
+      "durationSeconds": 10,
+      "aspectRatios": ["9:16"],
+      "difficulty": "starter",
+      "path": "examples/mobile-onboarding",
+      "status": "spec-only"
+    },
+    {
+      "id": "ai-workflow-demo",
+      "title": "AI Workflow Demo",
+      "titleZh": "AI 工作流演示",
+      "category": "AI workflow",
+      "description": "Show an AI task moving from a structured brief through execution to reviewed output.",
+      "audience": ["AI product teams", "developer tools", "automation platforms"],
+      "durationSeconds": 12,
+      "aspectRatios": ["16:9"],
+      "difficulty": "intermediate",
+      "path": "examples/ai-workflow-demo",
+      "status": "spec-only"
+    },
+    {
+      "id": "before-after-comparison",
+      "title": "Before / After Comparison",
+      "titleZh": "Before / After 对比",
+      "category": "comparison",
+      "description": "Make a product improvement legible with matched framing and a restrained comparison reveal.",
+      "audience": ["product managers", "design teams", "conversion teams"],
+      "durationSeconds": 8,
+      "aspectRatios": ["16:9", "9:16"],
+      "difficulty": "starter",
+      "path": "examples/before-after-comparison",
+      "status": "spec-only"
+    },
+    {
+      "id": "vertical-social-feature",
+      "title": "Vertical Social Feature",
+      "titleZh": "9:16 社媒功能短片",
+      "category": "social short",
+      "description": "Deliver one mobile feature hook, one interaction, and one result inside seven seconds.",
+      "audience": ["indie developers", "social teams", "launch teams"],
+      "durationSeconds": 7,
+      "aspectRatios": ["9:16"],
+      "difficulty": "starter",
+      "path": "examples/vertical-social-feature",
+      "status": "spec-only"
+    }
+  ]
+}

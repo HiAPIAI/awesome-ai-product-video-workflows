@@ -1,0 +1,574 @@
+{
+  "name": "Awesome Seedance 2.0 Live-Action Workflows",
+  "model": "seedance-2.0",
+  "updated_at": "2026-07-27",
+  "categories": [
+    {
+      "id": "cinematic-shots",
+      "en": "Cinematic Shots",
+      "zh": "电影镜头",
+      "description_en": "Grounded narrative shots built around motivated camera, practical light, and one visible dramatic turn.",
+      "description_zh": "围绕有动机的镜头、真实光源和一个可见戏剧转折设计的写实电影镜头。"
+    },
+    {
+      "id": "everyday-life",
+      "en": "Everyday Life",
+      "zh": "生活场景",
+      "description_en": "Believable routines and public-space moments with natural movement, texture, and ambient sound.",
+      "description_zh": "包含自然动作、生活质感和环境声的日常活动与公共空间片段。"
+    },
+    {
+      "id": "dialogue-scenes",
+      "en": "Dialogue Scenes",
+      "zh": "对话场景",
+      "description_en": "Short two-person scenes that protect eyelines, performance restraint, dialogue timing, and reaction shots.",
+      "description_zh": "保护视线、克制表演、台词时长和反应镜头的双人短场景。"
+    },
+    {
+      "id": "performance",
+      "en": "Performance",
+      "zh": "人物表演",
+      "description_en": "Actor, musician, and movement workflows where body rhythm and micro-expression carry the clip.",
+      "description_zh": "由身体节奏和微表情承担叙事的人物、音乐与动作表演工作流。"
+    },
+    {
+      "id": "documentary-ugc",
+      "en": "Documentary / UGC",
+      "zh": "纪实与 UGC",
+      "description_en": "Creator-style and observational footage that feels captured rather than staged.",
+      "description_zh": "强调被记录感而非摆拍感的创作者视频与观察式纪实片段。"
+    }
+  ],
+  "workflows": [
+    {
+      "id": "rain-window-reunion",
+      "category": "cinematic-shots",
+      "title_en": "Rain-Window Reunion",
+      "title_zh": "雨窗重逢",
+      "summary_en": "A restrained reunion told through one glance, one step, and a reflection crossing the rain-streaked glass.",
+      "summary_zh": "用一次对视、一步靠近和雨窗反射完成克制的重逢。",
+      "intent_en": "Move the relationship from uncertainty to recognition without a hug, speech, or melodramatic reveal.",
+      "intent_zh": "不靠拥抱、长台词或煽情揭示，让关系从不确定转为彼此确认。",
+      "mode": "image-to-video",
+      "duration": 10,
+      "aspect_ratio": "16:9",
+      "resolution": "720p",
+      "difficulty": "intermediate",
+      "asset_roles": [
+        { "slot": "@Image1", "required": true, "en": "First-frame reference containing both adults, wardrobe, window position, and practical lamp.", "zh": "包含两位成年人物、服装、窗户位置和实景灯的首帧参考。" },
+        { "slot": "room-tone", "required": false, "en": "Optional rain and quiet cafe ambience reference.", "zh": "可选的雨声与安静咖啡馆环境声参考。" }
+      ],
+      "beats": [
+        { "time": "0-3s", "en": "Hold a medium two-shot through wet glass; both notice each other but remain still.", "zh": "隔着湿润玻璃保持双人中景；两人发现彼此但暂时不动。" },
+        { "time": "3-7s", "en": "A slow lateral slide clears the window frame as one person takes a single cautious step.", "zh": "镜头缓慢横移越过窗框，其中一人只谨慎迈出一步。" },
+        { "time": "7-10s", "en": "End on the listener's held breath and softened eyes; no embrace, cut before contact.", "zh": "停在另一人屏住呼吸、眼神变软的反应上；不拥抱，在接触前切断。" }
+      ],
+      "sound_en": "Rain on glass, low room tone, one chair scrape, no score, no dialogue.",
+      "sound_zh": "雨滴打在玻璃上，低声场，一次椅脚摩擦；无配乐、无台词。",
+      "prompt_en": "@Image1 is the exact first frame and identity reference for both adults, their wardrobe, the cafe layout, the rain-streaked window, and the warm practical lamp. Preserve faces, age, hair, clothing, seating positions, and left-right screen geography. 0-3s: hold a quiet medium two-shot through the wet glass; both notice each other and remain still, only breathing and a tiny eye movement. 3-7s: one slow lateral camera slide clears the window frame while the standing person takes one cautious step forward. 7-10s: settle into a close reaction on the seated person; their jaw releases, eyes soften, and they hold one breath. Cut before any embrace or touch. Natural skin, restrained acting, physically motivated warm lamp and cool rain light. Sound: rain, room tone, one chair scrape. No dialogue, no score, no text, no face drift, no wardrobe change.",
+      "prompt_zh": "@Image1 是两位成年人物、服装、咖啡馆布局、雨窗和暖色实景灯的精确首帧与身份参考。锁定脸、年龄、发型、服装、座位和左右空间关系。0-3 秒：隔着湿润玻璃保持安静双人中景，两人发现彼此但不移动，只保留呼吸和极轻微的眼神变化。3-7 秒：镜头只做一次缓慢横移，越过窗框；站着的人谨慎向前迈一步。7-10 秒：落到坐着人物的近景反应，下颌放松、眼神变软、屏住一次呼吸。在任何拥抱或触碰前切断。真实皮肤、克制表演、暖灯与冷雨光均有物理来源。声音只有雨、室内底噪和一次椅脚摩擦。无台词、无配乐、无文字、无变脸、无换装。",
+      "continuity_en": "Keep both identities, wardrobe, window reflections, lamp position, and screen direction fixed. The only story change is one step and one softened reaction.",
+      "continuity_zh": "固定两人身份、服装、窗户反射、灯位和画面方向。唯一叙事变化是一人迈步和另一人的软化反应。",
+      "failures": [
+        { "symptom_en": "The scene becomes an instant hug.", "fix_en": "Retake only the ending: explicitly cut before contact and hold the listener's reaction.", "symptom_zh": "场景直接变成拥抱。", "fix_zh": "只重做结尾：明确在接触前切断，并停留在倾听者反应上。" },
+        { "symptom_en": "Faces drift during the slide.", "fix_en": "Reduce the lateral move and restate identity preservation; change no acting direction.", "symptom_zh": "横移时人物变脸。", "fix_zh": "减小横移幅度并重申身份锁定；不要同时修改表演。" }
+      ],
+      "media": { "first_frame_url": "asset://rain-window-reunion-first-frame" }
+    },
+    {
+      "id": "night-corridor-suspense",
+      "category": "cinematic-shots",
+      "title_en": "Night Corridor Suspense",
+      "title_zh": "夜间走廊悬念",
+      "summary_en": "A one-person suspense beat driven by practical lights turning off behind the subject.",
+      "summary_zh": "由人物身后实景灯逐盏熄灭推动的单人悬念镜头。",
+      "intent_en": "Create dread through spatial change behind the actor, not through a visible threat or jump scare.",
+      "intent_zh": "通过演员身后的空间变化制造恐惧，不展示威胁，也不使用突发惊吓。",
+      "mode": "text-to-video",
+      "duration": 8,
+      "aspect_ratio": "16:9",
+      "resolution": "720p",
+      "difficulty": "starter",
+      "asset_roles": [
+        { "slot": "text-only", "required": true, "en": "No reference asset required; keep the subject description generic and original.", "zh": "无需参考素材；人物描述保持原创且通用。" }
+      ],
+      "beats": [
+        { "time": "0-3s", "en": "Rear medium tracking shot as an adult walks down a narrow apartment corridor.", "zh": "成年人物走过狭窄公寓走廊，镜头从后方中景跟随。" },
+        { "time": "3-4s", "en": "Only the nearest visible ceiling light behind the walker switches off; every other light stays unchanged.", "zh": "只有人物身后最近的一盏可见顶灯熄灭；其他灯光保持不变。" },
+        { "time": "4-6s", "en": "After a clearly visible pause, only the second farther light switches off; there is no global dimming.", "zh": "经过清晰可见的停顿后，只有更远的第二盏灯熄灭；画面不得整体变暗。" },
+        { "time": "6-8s", "en": "The subject stops without turning; camera stops half a beat later and holds.", "zh": "人物停下但不回头；镜头晚半拍停住并保持。" }
+      ],
+      "sound_en": "Fluorescent hum, soft footsteps, two separate relay clicks with at least one second of room tone between them; no music, no voice.",
+      "sound_zh": "荧光灯电流声、轻脚步、两次分开的继电器咔哒声，中间至少保留一秒环境声；无音乐、无人声。",
+      "prompt_en": "Grounded live-action suspense in a narrow apartment corridor at night. One adult in ordinary dark outerwear walks away from camera. Rear medium tracking shot at shoulder height, slow and stable, no dramatic lens distortion. 0-3s: follow the subject past practical ceiling lights; natural footsteps and fluorescent hum. 3-4s: only the nearest visible ceiling light behind the subject switches fully off with one small relay click; all other lights, exposure, and wall brightness remain unchanged. 4-6s: preserve a clearly visible pause of at least one second, then only the second farther ceiling light switches fully off with a separate relay click. Do not fade the whole frame and do not switch both lights together. The subject keeps the same pace and does not react theatrically. 6-8s: the subject stops without turning around. The camera stops half a beat later and holds on the dark space behind them. Real walls, real skin, subtle breathing, restrained exposure. No visible attacker, no shadow figure, no jump scare, no whip pan, no text, no score, no flicker beyond the two specified lights.",
+      "prompt_zh": "写实真人悬念片，夜间狭窄公寓走廊。一名穿普通深色外套的成年人背对镜头行走。肩高后方中景稳定跟拍，速度缓慢，不使用夸张广角。0-3 秒：跟随人物经过实景顶灯，只听自然脚步和荧光灯电流声。3-4 秒：只有人物身后最近的一盏可见顶灯完全熄灭，并伴随一次轻微继电器咔哒声；其他灯、曝光和墙面亮度全部保持不变。4-6 秒：保留至少一秒清晰可见的间隔，然后只有更远的第二盏顶灯完全熄灭，并伴随另一次独立的咔哒声。不要让整个画面渐暗，也不要让两盏灯同时熄灭。人物保持原速度，不做戏剧化反应。6-8 秒：人物停下但不回头，镜头晚半拍停住，保持在其身后的黑暗空间。真实墙面、真实皮肤、轻微呼吸、克制曝光。不要展示袭击者、黑影或鬼脸，不要突发惊吓、甩镜、文字、配乐，也不要让指定两盏灯之外的画面闪烁。",
+      "continuity_en": "The corridor layout, walking direction, exposure, and unaffected lights never change. Only the two named rear fixtures switch off separately; the actor never turns around.",
+      "continuity_zh": "走廊布局、行走方向、曝光和未指定灯光始终不变。只有身后指定的两盏灯分别熄灭；演员始终不回头。",
+      "failures": [
+        { "symptom_en": "A monster or shadow appears.", "fix_en": "Retake with the explicit rule: threat remains off-screen; preserve every other beat.", "symptom_zh": "画面出现怪物或黑影。", "fix_zh": "重做时只增加一条：威胁始终在画外；其余节拍保持。" },
+        { "symptom_en": "The actor overreacts.", "fix_en": "Replace the reaction with a stop and one held breath; keep camera and light timing unchanged.", "symptom_zh": "演员反应过度。", "fix_zh": "把反应改为停步和一次屏息；镜头与灯光时序不变。" },
+        { "symptom_en": "Both lights switch off together or the whole corridor dims.", "fix_en": "Retake only the lighting beat: isolate the nearest fixture in 3-4s, hold every other light unchanged for one second, then isolate the farther fixture in 4-6s.", "symptom_zh": "两盏灯同时熄灭或整条走廊一起变暗。", "fix_zh": "只重做灯光节拍：3-4 秒单独熄灭最近灯，其他灯保持一秒不变，再在 4-6 秒单独熄灭远处灯。" }
+      ],
+      "media": {}
+    },
+    {
+      "id": "one-take-apartment-arrival",
+      "category": "cinematic-shots",
+      "title_en": "One-Take Apartment Arrival",
+      "title_zh": "公寓归来一镜到底",
+      "summary_en": "A 15-second continuous arrival that moves from hallway isolation to a warm occupied room.",
+      "summary_zh": "15 秒连续镜头，从走廊的孤立感进入有人等待的暖色房间。",
+      "intent_en": "Reveal that the apartment is not empty through blocking and sound before showing the second person.",
+      "intent_zh": "先通过调度和声音暗示房间并非空置，再展示第二个人。",
+      "mode": "image-to-video",
+      "duration": 15,
+      "aspect_ratio": "16:9",
+      "resolution": "720p",
+      "difficulty": "advanced",
+      "asset_roles": [
+        { "slot": "@Image1", "required": true, "en": "First frame with the returning adult, hallway, apartment door, wardrobe, and key prop.", "zh": "包含归家成年人、走廊、房门、服装和钥匙道具的首帧。" },
+        { "slot": "@Image2", "required": false, "en": "Optional identity reference for the person waiting inside; bind only identity and wardrobe.", "zh": "可选的屋内等待者身份参考；只绑定身份与服装。" }
+      ],
+      "beats": [
+        { "time": "0-5s", "en": "Follow behind as the subject unlocks the door with one natural action.", "zh": "从后方跟随人物，用一个自然动作开门。" },
+        { "time": "5-10s", "en": "Camera crosses the threshold and arcs to profile; warm room tone replaces hallway hum.", "zh": "镜头跨过门槛并绕到侧面；暖色室内声替代走廊底噪。" },
+        { "time": "10-15s", "en": "A voice says one short line off-screen, then the waiting person is revealed at the edge of frame.", "zh": "画外传来一句短台词，随后等待者在画面边缘被揭示。" }
+      ],
+      "sound_en": "Keys, lock, door seal, hallway hum transitioning to room tone; one off-screen line: 'You're late.'",
+      "sound_zh": "钥匙、门锁、门封、走廊底噪过渡到室内声；画外一句：“你回来晚了。”",
+      "prompt_en": "@Image1 is the exact first frame for the returning adult, hallway, apartment door, wardrobe, and keys. If @Image2 is supplied, use it only for the waiting adult's identity and wardrobe. One continuous 15-second live-action shot, no cuts. 0-5s: controlled handheld follow from behind as the subject unlocks and opens the door in one natural action. 5-10s: the camera crosses the threshold and makes one smooth arc to the subject's profile; cool hallway light gives way to warm practical room light, and hallway hum gives way to quiet room tone. 10-15s: before the second person is visible, an off-screen adult voice says, 'You're late.' The camera continues the same arc and reveals the waiting person seated only at the edge of frame. The returning subject pauses and exhales; no embrace and no second line. Preserve identity, door geometry, keys, wardrobe, light direction, and continuous camera path. No cuts, no teleporting, no extra rooms, no text.",
+      "prompt_zh": "@Image1 是归家成年人、走廊、房门、服装和钥匙的精确首帧。若提供 @Image2，只用于屋内等待者的身份与服装。15 秒真人写实一镜到底，不切镜。0-5 秒：受控手持从后方跟随，人物用一个自然动作开锁并推门。5-10 秒：镜头跨过门槛，只做一次平滑弧线移动到人物侧面；冷色走廊光过渡为暖色实景灯，走廊底噪过渡为安静室内声。10-15 秒：第二个人尚未入画前，成年画外音说：“你回来晚了。” 镜头沿同一弧线继续，等待者只在画面边缘被揭示。归家者停住并呼气；不拥抱、不加第二句台词。锁定身份、门体几何、钥匙、服装、光向和连续镜头路径。无切镜、无瞬移、无多余房间、无文字。",
+      "continuity_en": "Treat the doorway as the spatial anchor. The camera has one uninterrupted path and the waiting person stays off-screen until the final beat.",
+      "continuity_zh": "以门口为固定空间锚点。镜头只有一条不中断路径，等待者在最后节拍前始终不入画。",
+      "failures": [
+        { "symptom_en": "The camera cuts or teleports inside.", "fix_en": "Retake only camera continuity: one follow plus one arc, no new framing instructions.", "symptom_zh": "镜头切断或瞬移进屋。", "fix_zh": "只重做镜头连续性：一次跟随加一次弧线，不增加新机位。" },
+        { "symptom_en": "The waiting person appears too early.", "fix_en": "Keep them fully off-screen until after the line; preserve dialogue and actor timing.", "symptom_zh": "等待者过早出现。", "fix_zh": "让其在台词说完前完全处于画外；保留台词和演员时序。" }
+      ],
+      "media": { "first_frame_url": "asset://apartment-arrival-first-frame" }
+    },
+    {
+      "id": "morning-kitchen-routine",
+      "category": "everyday-life",
+      "title_en": "Morning Kitchen Routine",
+      "title_zh": "清晨厨房日常",
+      "summary_en": "A vertical lifestyle clip built from three small continuous actions instead of a montage of unrelated gestures.",
+      "summary_zh": "由三个连续小动作构成的竖屏生活片，而不是无关联动作拼贴。",
+      "intent_en": "Make an ordinary routine feel observed and tactile without turning it into a glossy advertisement.",
+      "intent_zh": "让普通日常显得被真实观察且有触感，而不是光鲜广告。",
+      "mode": "image-to-video",
+      "duration": 10,
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "difficulty": "starter",
+      "asset_roles": [
+        { "slot": "@Image1", "required": true, "en": "First-frame identity, kitchen layout, mug, kettle, and morning wardrobe.", "zh": "锁定人物身份、厨房布局、杯子、水壶和晨间服装的首帧。" }
+      ],
+      "beats": [
+        { "time": "0-3s", "en": "Subject enters frame, opens the curtain, and lets window light expand naturally.", "zh": "人物入画并拉开窗帘，让窗光自然增强。" },
+        { "time": "3-7s", "en": "They pour hot water once; steam catches the side light while the camera drifts closer.", "zh": "只倒一次热水；蒸汽被侧光照亮，镜头轻微靠近。" },
+        { "time": "7-10s", "en": "They wrap both hands around the mug and look out of frame, ending on a quiet exhale.", "zh": "双手握杯看向画外，以一次安静呼气结束。" }
+      ],
+      "sound_en": "Curtain rings, kettle pour, cup contact, distant street ambience; no music and no speech.",
+      "sound_zh": "窗帘环、倒水、杯子接触桌面、远处街声；无音乐、无说话。",
+      "prompt_en": "@Image1 is the exact first frame and identity reference for the adult, kitchen layout, mug, kettle, and morning wardrobe. Vertical 9:16, natural lifestyle realism, eye-level controlled handheld camera with only a slow inward drift. 0-3s: the subject enters the existing frame and opens the curtain in one continuous motion; real window light expands across the counter. 3-7s: they pour hot water once into the same mug; steam catches the side light while the camera moves slightly closer. 7-10s: they set the kettle down, wrap both hands around the mug, and look just off camera, ending on one quiet exhale. Preserve face, hair, clothing, mug color, kettle, counter objects, and window direction. Sound: curtain rings, water pour, cup contact, distant street ambience. No dialogue, no music, no beauty retouching, no product hero shot, no extra food, no jump cuts, no text.",
+      "prompt_zh": "@Image1 是成年人身份、厨房布局、杯子、水壶和晨间服装的精确首帧。竖屏 9:16，自然生活写实，视线高度受控手持，镜头只缓慢向内漂移。0-3 秒：人物进入既有画面，用一个连续动作拉开窗帘，真实窗光逐渐铺到台面。3-7 秒：只向同一个杯子倒一次热水；蒸汽被侧光照亮，镜头略微靠近。7-10 秒：放下水壶，双手握住杯子，看向镜头旁边，以一次安静呼气结束。锁定脸、头发、服装、杯子颜色、水壶、台面物件和窗光方向。声音：窗帘环、倒水、杯子接触、远处街声。无台词、无音乐、无磨皮、无产品英雄镜头、无额外食物、无跳切、无文字。",
+      "continuity_en": "The mug, kettle, window, and subject remain in the same kitchen geometry. Each action flows into the next without resetting hands or props.",
+      "continuity_zh": "杯子、水壶、窗户和人物始终处于同一厨房空间。每个动作自然衔接，不重置手势或道具。",
+      "failures": [
+        { "symptom_en": "The result looks like a beverage commercial.", "fix_en": "Remove hero framing and keep the mug secondary; do not change the action sequence.", "symptom_zh": "成片像饮品广告。", "fix_zh": "去掉产品英雄构图，让杯子保持次要；动作顺序不变。" },
+        { "symptom_en": "Hands or props reset between beats.", "fix_en": "Retake with one continuous hand path from kettle to mug to hold; keep camera fixed.", "symptom_zh": "节拍之间手或道具重置。", "fix_zh": "重做时指定手从水壶到杯子再到握杯的一条连续路径；镜头不改。" }
+      ],
+      "media": { "first_frame_url": "asset://morning-kitchen-first-frame" }
+    },
+    {
+      "id": "after-work-elevator",
+      "category": "everyday-life",
+      "title_en": "After-Work Elevator",
+      "title_zh": "下班电梯",
+      "summary_en": "A quiet vertical micro-story where public composure drops only after the elevator doors close.",
+      "summary_zh": "电梯门关闭后才卸下公共场合克制的竖屏微故事。",
+      "intent_en": "Show the difference between a performed social face and a private exhausted face in one locked composition.",
+      "intent_zh": "在同一固定构图中表现社交表情与私人疲惫表情的差异。",
+      "mode": "text-to-video",
+      "duration": 8,
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "difficulty": "starter",
+      "asset_roles": [
+        { "slot": "text-only", "required": true, "en": "No reference required; use an original adult office-worker description.", "zh": "无需参考；使用原创成年上班族描述。" }
+      ],
+      "beats": [
+        { "time": "0-3s", "en": "Front medium shot; subject gives a polite small nod to someone outside the elevator.", "zh": "正面中景；人物向电梯外的人礼貌轻点头。" },
+        { "time": "3-5s", "en": "Doors close symmetrically while the polite expression remains.", "zh": "电梯门对称关闭，礼貌表情保持不变。" },
+        { "time": "5-8s", "en": "Once fully closed, shoulders drop and the subject silently exhales, eyes lowering.", "zh": "门完全关闭后，肩膀下沉、无声呼气、视线降低。" }
+      ],
+      "sound_en": "Office corridor murmur, elevator chime, door motor, ventilation hum; no dialogue or score.",
+      "sound_zh": "办公走廊人声、电梯提示音、门机声、通风底噪；无台词、无配乐。",
+      "prompt_en": "Vertical 9:16 grounded live-action micro-story inside a modern office elevator. One adult office worker stands centered in a front medium shot, realistic tired skin and slightly creased work clothes. Camera is locked at chest height. 0-3s: the doors are open; the subject gives one polite small nod and a restrained social smile toward someone outside frame. 3-5s: the elevator doors close symmetrically while that polite expression remains. 5-8s: only after the doors are fully closed, the smile disappears, shoulders drop, eyes lower, and the subject releases one silent exhausted breath. Keep the same face, posture axis, lighting, elevator reflections, and centered framing. Sound: distant office murmur, one chime, door motor, ventilation hum. No dialogue, no crying, no collapse, no phone, no mirror duplicate, no camera move, no text.",
+      "prompt_zh": "竖屏 9:16，现代办公楼电梯内的写实真人微故事。一名成年上班族居中站立，正面中景，保留真实疲惫皮肤和略有褶皱的工作服。镜头固定在胸口高度。0-3 秒：电梯门打开，人物向画外的人礼貌轻点头并保持克制社交微笑。3-5 秒：电梯门对称关闭，礼貌表情仍不改变。5-8 秒：只有在门完全关闭后，微笑消失、肩膀下沉、视线降低，并无声地疲惫呼气一次。固定同一张脸、姿态轴线、灯光、电梯反射和居中构图。声音：远处办公人声、一次提示音、门机声、通风底噪。无台词、不哭、不瘫倒、不看手机、不生成镜像分身、镜头不动、无文字。",
+      "continuity_en": "Use one locked shot. The emotional change happens only after the doors fully meet.",
+      "continuity_zh": "全程一个固定镜头。情绪变化只能发生在电梯门完全闭合之后。",
+      "failures": [
+        { "symptom_en": "The expression changes before the doors close.", "fix_en": "Retake only the timing: hold the social smile until full closure.", "symptom_zh": "门未关完表情就变化。", "fix_zh": "只重做时序：社交微笑保持到门完全闭合。" },
+        { "symptom_en": "The performance becomes tearful or dramatic.", "fix_en": "Limit the change to shoulders, eyes, and one breath; keep all other motion identical.", "symptom_zh": "表演变成哭泣或戏剧化。", "fix_zh": "只保留肩膀、视线和一次呼气的变化；其余动作不变。" }
+      ],
+      "media": {}
+    },
+    {
+      "id": "night-market-walk",
+      "category": "everyday-life",
+      "title_en": "Night Market Walk",
+      "title_zh": "夜市漫步",
+      "summary_en": "A reference-driven vertical walk that prioritizes crowd realism, sensory detail, and a stable subject.",
+      "summary_zh": "优先保证人群真实、感官细节和主体稳定的参考驱动竖屏漫步。",
+      "intent_en": "Make the viewer feel present in a busy place while keeping the main subject readable and unhurried.",
+      "intent_zh": "让观众感到置身繁忙现场，同时主角始终清晰且不慌乱。",
+      "mode": "reference-to-video",
+      "duration": 12,
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "difficulty": "intermediate",
+      "asset_roles": [
+        { "slot": "@Image1", "required": true, "en": "Main adult identity and wardrobe reference.", "zh": "成年主角身份与服装参考。" },
+        { "slot": "@Image2", "required": false, "en": "Night-market location and lighting reference; do not transfer people.", "zh": "夜市地点与灯光参考；不要迁移其中人物。" },
+        { "slot": "@Video1", "required": false, "en": "Reference only the slow handheld walking rhythm, not identity or exact scene content.", "zh": "只参考缓慢手持行走节奏，不迁移身份或具体场景内容。" }
+      ],
+      "beats": [
+        { "time": "0-4s", "en": "Follow behind at shoulder height as the subject enters the market stream.", "zh": "肩高从后方跟随主角进入夜市人流。" },
+        { "time": "4-8s", "en": "Move to a side profile while the subject briefly looks at steam rising from a stall.", "zh": "移动到侧面，主角短暂看向摊位升起的蒸汽。" },
+        { "time": "8-12s", "en": "Return behind as the subject keeps walking and disappears slightly deeper into the crowd.", "zh": "回到后方，主角继续前行并稍微融入更深处人群。" }
+      ],
+      "sound_en": "Layered vendor calls, footsteps, cooking sizzle, distant scooters, no added score and no clear branded speech.",
+      "sound_zh": "摊贩叫卖、脚步、烹饪滋滋声、远处车辆声；不加配乐，不出现清晰品牌口播。",
+      "prompt_en": "Use @Image1 only for the main adult's exact identity, hair, body proportions, and wardrobe. Use @Image2 only for night-market architecture, stall density, practical light colors, and atmosphere; do not transfer people or signage. If @Video1 is supplied, use only its slow shoulder-height handheld walking rhythm. Vertical 9:16, realistic crowded night market, no staged extras. 0-4s: follow behind as the subject enters the pedestrian stream at an unhurried pace. 4-8s: drift to one side profile while the subject briefly turns toward steam rising from a food stall; no purchase and no pose. 8-12s: return behind and let the subject walk slightly deeper into the crowd while remaining readable. Preserve identity, wardrobe, walking pace, stall geography, and light direction. Sound: layered vendor calls, footsteps, cooking sizzle, distant scooters. No music, no brand logos, no text overlays, no crowd duplication, no collisions, no sudden running.",
+      "prompt_zh": "@Image1 只绑定成年主角的精确身份、发型、身体比例和服装。@Image2 只参考夜市建筑、摊位密度、实景灯颜色和氛围；不要迁移其中人物或招牌。若提供 @Video1，只参考其肩高缓慢手持行走节奏。竖屏 9:16，真实拥挤夜市，不要摆拍群众。0-4 秒：从后方跟随主角以不慌不忙的速度进入人流。4-8 秒：缓慢移动到侧面，主角短暂看向食物摊升起的蒸汽；不购买、不摆姿势。8-12 秒：回到后方，让主角继续走向人群更深处，同时保持可辨识。锁定身份、服装、行走速度、摊位空间和光向。声音：摊贩叫卖、脚步、烹饪滋滋声、远处车辆声。无音乐、无品牌标志、无文字叠加、无人群复制、无碰撞、无突然奔跑。",
+      "continuity_en": "Identity comes only from @Image1; location comes only from @Image2; motion cadence comes only from @Video1. Do not cross-transfer roles.",
+      "continuity_zh": "身份只来自 @Image1，地点只来自 @Image2，运动节奏只来自 @Video1。不要跨角色迁移。",
+      "failures": [
+        { "symptom_en": "Background people inherit the main face.", "fix_en": "Strengthen the role map: @Image1 controls only the main subject; keep crowd instructions unchanged.", "symptom_zh": "背景人物复制主角面孔。", "fix_zh": "强化角色表：@Image1 只控制主角；人群指令不变。" },
+        { "symptom_en": "The walk becomes too fast and chaotic.", "fix_en": "Retake motion only with an unhurried pace and one side drift; preserve scene and sound.", "symptom_zh": "行走过快且混乱。", "fix_zh": "只重做运动：不慌不忙的步速加一次侧移；场景和声音保留。" }
+      ],
+      "media": {
+        "reference_image_urls": ["asset://night-market-subject", "asset://night-market-location"],
+        "reference_video_urls": ["asset://slow-handheld-walk"]
+      }
+    },
+    {
+      "id": "cafe-unspoken-apology",
+      "category": "dialogue-scenes",
+      "title_en": "Cafe Unspoken Apology",
+      "title_zh": "咖啡馆未说出口的道歉",
+      "summary_en": "A two-person dialogue scene where the apology lands through a failed sentence and the listener's reaction.",
+      "summary_zh": "道歉通过一句没说完的话和倾听者反应落地的双人对话场景。",
+      "intent_en": "Let silence and a small gesture carry more weight than a complete explanatory speech.",
+      "intent_zh": "让沉默和小动作比完整解释性台词更有重量。",
+      "mode": "image-to-video",
+      "duration": 12,
+      "aspect_ratio": "16:9",
+      "resolution": "720p",
+      "difficulty": "intermediate",
+      "asset_roles": [
+        { "slot": "@Image1", "required": true, "en": "First frame with both adults, table, cups, wardrobe, and eyeline geography.", "zh": "包含两位成年人、桌子、杯子、服装和视线空间的首帧。" }
+      ],
+      "beats": [
+        { "time": "0-4s", "en": "Single on the speaker: fingers tighten around the cup; they begin one short line.", "zh": "说话者单人镜头：手指握紧杯子，开始一句短台词。" },
+        { "time": "4-8s", "en": "Cut to listener before the line finishes; hold a restrained reaction and one blink.", "zh": "台词未说完就切到倾听者，保持克制反应和一次眨眼。" },
+        { "time": "8-12s", "en": "Return to a wider two-shot as the speaker slides the cup away and gives up finishing the sentence.", "zh": "回到较宽双人镜头，说话者把杯子推开，放弃说完。" }
+      ],
+      "sound_en": "Low cafe room tone, cup ceramic scrape, line: 'I should have...' then silence.",
+      "sound_zh": "低咖啡馆底噪、陶瓷杯摩擦；台词：“我那时候应该……”随后沉默。",
+      "prompt_en": "@Image1 is the exact first frame for both adult identities, wardrobe, table, cups, seating, and eyelines. Grounded live-action cafe dialogue, restrained acting, practical window light, natural skin. 0-4s: clean medium single on the speaker; their fingers tighten once around the cup and they say quietly, 'I should have...' 4-8s: cut to the listener before the sentence finishes; hold the listener's face, one blink, a small jaw shift, no reply. 8-12s: cut back to a wider two-shot; the speaker slides the cup a few centimeters away and stops trying to finish. Keep dialogue exactly one incomplete line. Preserve faces, clothing, cup positions, left-right eyelines, window direction, and table geography. Sound: low cafe room tone and one ceramic scrape. No score, no crying, no hand holding, no reconciliation hug, no subtitles, no background face duplication, no lip movement after the line ends.",
+      "prompt_zh": "@Image1 是两位成年人物身份、服装、桌子、杯子、座位和视线关系的精确首帧。写实真人咖啡馆对话，表演克制，使用真实窗光和自然皮肤。0-4 秒：说话者干净中景单人镜头，手指只握紧杯子一次，轻声说：“我那时候应该……” 4-8 秒：句子未说完就切到倾听者；停留在对方脸上，只出现一次眨眼和轻微下颌变化，不回答。8-12 秒：切回较宽双人镜头；说话者把杯子推开几厘米，放弃说完。台词严格只有这一句未完成的话。锁定脸、服装、杯子位置、左右视线、窗光方向和桌面空间。声音只有低咖啡馆底噪和一次陶瓷摩擦。无配乐、不哭、不牵手、不拥抱和解、无字幕、无背景变脸、台词结束后不再动嘴。",
+      "continuity_en": "Protect shot-reverse-shot eyelines and cup positions. The listener never speaks; the line stays incomplete.",
+      "continuity_zh": "保护正反打视线和杯子位置。倾听者始终不说话；台词始终未完成。",
+      "failures": [
+        { "symptom_en": "The speaker completes a long apology.", "fix_en": "Retake audio/dialogue only: keep exactly 'I should have...' and cut away before completion.", "symptom_zh": "说话者完成了长篇道歉。", "fix_zh": "只重做声音/台词：严格保留“我那时候应该……”，未说完就切走。" },
+        { "symptom_en": "The listener overacts or cries.", "fix_en": "Limit reaction to one blink and jaw shift; preserve all edit timing.", "symptom_zh": "倾听者过度表演或哭泣。", "fix_zh": "反应只保留一次眨眼和下颌变化；剪辑时序不变。" }
+      ],
+      "media": { "first_frame_url": "asset://cafe-apology-first-frame" }
+    },
+    {
+      "id": "office-resignation",
+      "category": "dialogue-scenes",
+      "title_en": "Office Resignation Turn",
+      "title_zh": "办公室辞职反转",
+      "summary_en": "A vertical two-person micro-drama with a first-two-second hook and an unanswered final reveal.",
+      "summary_zh": "前两秒钩子加未解答结尾揭示的竖屏双人微短剧。",
+      "intent_en": "Open on the decision, not the setup, and end on a new question rather than resolving the conflict.",
+      "intent_zh": "从决定本身开场，不做铺垫；以新问题结束，而不是解决冲突。",
+      "mode": "image-to-video",
+      "duration": 12,
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "difficulty": "advanced",
+      "asset_roles": [
+        { "slot": "@Image1", "required": true, "en": "First-frame reference with both adults, desk, resignation envelope, wardrobe, and vertical face-safe framing.", "zh": "包含两位成年人、办公桌、辞职信封、服装和竖屏面部安全构图的首帧。" }
+      ],
+      "beats": [
+        { "time": "0-2s", "en": "Cold open: employee places the envelope down and says, 'I'm done.'",
+          "zh": "冷开场：员工放下信封并说：“我不干了。”" },
+        { "time": "2-8s", "en": "Clean reverse single on the manager, then back to the employee; one short reply each.", "zh": "经理干净反打，再回员工；每人只说一句短话。" },
+        { "time": "8-12s", "en": "Manager slides a photo partly from a folder; hold the employee's frozen reaction and cut.", "zh": "经理从文件夹里推出现半张照片；停在员工僵住的反应上并切断。" }
+      ],
+      "sound_en": "Envelope slap, restrained office room tone, three short lines total, no melodramatic score.",
+      "sound_zh": "信封落桌声、克制办公室底噪、总共三句短台词；无煽情配乐。",
+      "prompt_en": "@Image1 is the exact first frame for both adult identities, wardrobe, desk, office layout, resignation envelope, and vertical 9:16 eyelines. Grounded short-form drama, faces large in frame, restrained performance. 0-2s cold open: the employee places the envelope firmly on the desk and says, 'I'm done.' 2-5s: clean reverse medium close-up on the manager, who replies, 'You picked today?' 5-8s: return to the employee; after one breath they say, 'You knew why.' 8-12s: back to the manager, who silently slides a folder forward and reveals only half of a photograph. Cut immediately to the employee's frozen reaction before the photo is explained. Preserve identities, wardrobe, desk objects, left-right eyelines, envelope position, and vertical face-safe framing. Sound: envelope impact, office room tone, three lines only. No yelling, no tears, no pointing, no extra dialogue, no subtitle, no full photo reveal, no resolution.",
+      "prompt_zh": "@Image1 是两位成年人物身份、服装、办公桌、办公室布局、辞职信封和竖屏 9:16 视线关系的精确首帧。写实微短剧，人物脸在画面中足够大，表演克制。0-2 秒冷开场：员工把信封坚定放在桌上，说：“我不干了。” 2-5 秒：经理中近景干净反打，回答：“偏偏选今天？” 5-8 秒：回到员工，呼吸一次后说：“你明知道为什么。” 8-12 秒：回到经理，经理不说话，把文件夹推向前，只露出半张照片。在照片得到解释前立刻切到员工僵住的反应。锁定身份、服装、桌面物件、左右视线、信封位置和竖屏面部安全构图。声音：信封落桌、办公室底噪、严格三句台词。无喊叫、无哭泣、无指人、无额外台词、无字幕、不完整展示照片、不解决冲突。",
+      "continuity_en": "Keep the envelope fixed after the cold open and reveal only half the photo. The edit axis never crosses.",
+      "continuity_zh": "冷开场后信封位置固定，照片只露出一半。剪辑轴线始终不跨越。",
+      "failures": [
+        { "symptom_en": "The opening spends time establishing the office.", "fix_en": "Retake only the first two seconds: start on the envelope impact and first line.", "symptom_zh": "开场花时间交代办公室。", "fix_zh": "只重做前两秒：从信封落桌和第一句台词直接开始。" },
+        { "symptom_en": "The photo or conflict is fully explained.", "fix_en": "Hide half the photo and end on reaction; remove all added explanation.", "symptom_zh": "照片或冲突被完整解释。", "fix_zh": "遮住半张照片并停在反应上；删掉所有新增解释。" }
+      ],
+      "media": { "first_frame_url": "asset://office-resignation-first-frame" }
+    },
+    {
+      "id": "doorstep-reconciliation",
+      "category": "dialogue-scenes",
+      "title_en": "Doorstep Reconciliation",
+      "title_zh": "门口和解",
+      "summary_en": "A two-person doorstep scene that ends with permission to enter, not a complete emotional resolution.",
+      "summary_zh": "以允许进门而非彻底和解结束的双人门口场景。",
+      "intent_en": "Turn rejection into a small opening while keeping the relationship unresolved.",
+      "intent_zh": "把拒绝转为一个小小入口，但关系仍未完全解决。",
+      "mode": "image-to-video",
+      "duration": 15,
+      "aspect_ratio": "16:9",
+      "resolution": "720p",
+      "difficulty": "intermediate",
+      "asset_roles": [
+        { "slot": "@Image1", "required": true, "en": "First frame with both adults separated by the doorway, wardrobe, bag prop, and porch light.", "zh": "包含被门口分隔的两位成年人、服装、包和门廊灯的首帧。" }
+      ],
+      "beats": [
+        { "time": "0-5s", "en": "Visitor stands outside and says one direct line; resident keeps the door partly closed.", "zh": "来访者站在门外说一句直接台词；屋内人保持门半关。" },
+        { "time": "5-10s", "en": "Hold on the resident's silent reaction; hand relaxes on the door edge.", "zh": "停在屋内人的沉默反应上；扶门的手逐渐放松。" },
+        { "time": "10-15s", "en": "Door opens only one step wider and resident says, 'Five minutes.' Visitor nods once.", "zh": "门只再开一步，屋内人说：“五分钟。” 来访者只点头一次。" }
+      ],
+      "sound_en": "Night insects, distant traffic, soft porch-light buzz, two short lines, no score.",
+      "sound_zh": "夜虫、远处车辆、门廊灯轻微电流声、两句短台词；无配乐。",
+      "prompt_en": "@Image1 is the exact first frame for both adult identities, wardrobe, bag, doorway geometry, porch light, and inside-outside screen positions. Grounded live-action night scene, practical porch light, restrained acting. 0-5s: the visitor remains outside and says quietly, 'I didn't come to make excuses.' The resident keeps the door partly closed and gives no answer. 5-10s: hold a close reaction on the resident; one breath, eyes lower, fingers relax slightly on the door edge. 10-15s: return to the two-shot; the resident opens the door only one step wider and says, 'Five minutes.' The visitor nods once but does not enter before the cut. Preserve identities, wardrobe, bag, door hinge direction, threshold geography, and light direction. Sound: night insects, distant traffic, porch-light buzz. Exactly two lines. No hug, no crying, no touching, no full door opening, no entry, no score, no subtitles.",
+      "prompt_zh": "@Image1 是两位成年人物身份、服装、包、门口几何、门廊灯和内外画面位置的精确首帧。写实真人夜景，使用实景门廊灯，表演克制。0-5 秒：来访者始终站在门外，轻声说：“我不是来找借口的。” 屋内人保持门半关，不回答。5-10 秒：停在屋内人的近景反应；呼吸一次、视线降低、扶在门边的手指略微放松。10-15 秒：回到双人镜头；屋内人只把门再打开一步，说：“五分钟。” 来访者只点头一次，在切断前不进门。锁定身份、服装、包、门铰链方向、门槛空间和光向。声音：夜虫、远处车辆、门廊灯电流声。严格两句台词。无拥抱、无哭泣、无触碰、不完全开门、不进屋、无配乐、无字幕。",
+      "continuity_en": "The threshold remains the boundary for the entire clip. The visitor does not cross it, and the door opens only slightly.",
+      "continuity_zh": "门槛全程是边界。来访者不跨过门槛，门只略微打开。",
+      "failures": [
+        { "symptom_en": "The scene resolves with a hug or entry.", "fix_en": "Retake only the ending: one-step door opening, one nod, cut before crossing.", "symptom_zh": "场景以拥抱或进门解决。", "fix_zh": "只重做结尾：门开一步、点头一次、跨过门槛前切断。" },
+        { "symptom_en": "Dialogue expands into an argument.", "fix_en": "Keep exactly two short lines and move the emotional work back to the resident's hand and eyes.", "symptom_zh": "台词扩展成争吵。", "fix_zh": "严格两句短台词，把情绪重新交给屋内人的手和眼神。" }
+      ],
+      "media": { "first_frame_url": "asset://doorstep-reconciliation-first-frame" }
+    },
+    {
+      "id": "restrained-camera-monologue",
+      "category": "performance",
+      "title_en": "Restrained Camera Monologue",
+      "title_zh": "克制镜头独白",
+      "summary_en": "A single-performer close shot where voice rhythm, breathing, and eye focus matter more than gestures.",
+      "summary_zh": "声音节奏、呼吸和视线比手势更重要的单人近景表演。",
+      "intent_en": "Keep the viewer with a difficult thought without adding coverage, music, or theatrical movement.",
+      "intent_zh": "不增加补充镜头、音乐或戏剧化动作，让观众停留在一个艰难想法上。",
+      "mode": "image-to-video",
+      "duration": 12,
+      "aspect_ratio": "16:9",
+      "resolution": "720p",
+      "difficulty": "intermediate",
+      "asset_roles": [
+        { "slot": "@Image1", "required": true, "en": "Exact adult identity, wardrobe, chair, background, and eye-line reference.", "zh": "成年人物身份、服装、椅子、背景和视线的精确参考。" }
+      ],
+      "beats": [
+        { "time": "0-4s", "en": "Performer looks just beside camera, begins the first short clause, hands still.", "zh": "表演者看向镜头旁边，开始第一句短分句，双手不动。" },
+        { "time": "4-8s", "en": "A breath interrupts the sentence; gaze briefly meets lens, then moves away.", "zh": "一次呼吸打断句子；视线短暂看镜头后移开。" },
+        { "time": "8-12s", "en": "Finish with a quieter final clause and a held silence, no smile or tear.", "zh": "用更轻的最后分句结束并保持沉默；不微笑、不流泪。" }
+      ],
+      "sound_en": "Close natural voice, room tone, clothing movement, no music. Line: 'I kept waiting for it to feel like the right choice. It never did.'",
+      "sound_zh": "近距离自然人声、室内底噪、轻微衣料声；无音乐。台词：“我一直等它变成一个正确的选择。可它从来没有。”",
+      "prompt_en": "@Image1 is the exact identity, wardrobe, chair, background, and eye-line reference for one adult performer. Live-action medium close-up, camera locked with an almost invisible breath-like float, practical soft side light, natural skin texture. 0-4s: performer looks just beside camera, hands still, and says, 'I kept waiting for it to feel like the right choice.' 4-8s: one breath interrupts the thought; their eyes briefly meet the lens, then move away. 8-12s: they finish more quietly, 'It never did.' Hold two seconds of silence after the final word. Preserve face, hair, wardrobe, posture, chair, background, and light direction. Voice is close and natural, with room tone and slight clothing movement. No music, no cutaway, no zoom, no hand gesture, no smile, no tears, no subtitles, no beauty retouching, no extra words.",
+      "prompt_zh": "@Image1 是一名成年表演者身份、服装、椅子、背景和视线的精确参考。真人中近景，镜头基本固定，只保留几乎不可见的呼吸式漂移；柔和实景侧光，自然皮肤纹理。0-4 秒：表演者看向镜头旁边，双手不动，说：“我一直等它变成一个正确的选择。” 4-8 秒：一次呼吸打断想法；视线短暂看向镜头，然后移开。8-12 秒：更轻地说：“可它从来没有。” 最后一个字后保持两秒沉默。锁定脸、头发、服装、姿态、椅子、背景和光向。人声近而自然，带室内底噪和轻微衣料声。无音乐、无切景、无变焦、无手势、无微笑、无眼泪、无字幕、无磨皮、无额外台词。",
+      "continuity_en": "Keep hands still and framing unchanged. The emotional arc is carried only by breath, lens contact, and vocal volume.",
+      "continuity_zh": "双手保持不动，构图不变。情绪弧线只由呼吸、短暂看镜头和音量变化承担。",
+      "failures": [
+        { "symptom_en": "The performer gestures or cries.", "fix_en": "Retake performance only: hands still, no tears, one breath and one lens glance.", "symptom_zh": "表演者挥手或哭泣。", "fix_zh": "只重做表演：双手不动、不流泪，只保留一次呼吸和一次看镜头。" },
+        { "symptom_en": "The line runs too fast.", "fix_en": "Insert the breath after the first sentence and hold two seconds after the last word; keep framing fixed.", "symptom_zh": "台词说得太快。", "fix_zh": "在第一句后插入呼吸，最后一字后保持两秒；构图固定。" }
+      ],
+      "media": { "first_frame_url": "asset://restrained-monologue-first-frame" }
+    },
+    {
+      "id": "street-dance-rehearsal",
+      "category": "performance",
+      "title_en": "Street Dance Rehearsal",
+      "title_zh": "街舞排练",
+      "summary_en": "A motion-reference workflow that transfers rhythm and blocking without transferring the source dancer's identity.",
+      "summary_zh": "迁移动作节奏和走位但不迁移源舞者身份的动作参考工作流。",
+      "intent_en": "Make the clip feel like a rehearsal take with recoveries and breath, not a perfect music-video performance.",
+      "intent_zh": "让片段像有调整和呼吸的排练，而不是完美音乐录像表演。",
+      "mode": "reference-to-video",
+      "duration": 10,
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "difficulty": "advanced",
+      "asset_roles": [
+        { "slot": "@Image1", "required": true, "en": "Target adult dancer identity, body proportions, and rehearsal wardrobe.", "zh": "目标成年舞者身份、身体比例和排练服装。" },
+        { "slot": "@Video1", "required": true, "en": "Transfer only choreography timing, weight shifts, and camera distance; never identity, face, or clothing.", "zh": "只迁移编舞时序、重心变化和镜头距离；绝不迁移身份、脸或服装。" },
+        { "slot": "@Audio1", "required": false, "en": "Optional beat reference; use rhythm only, not vocals or copyrighted lyrics.", "zh": "可选节拍参考；只用节奏，不复制人声或受版权保护的歌词。" }
+      ],
+      "beats": [
+        { "time": "0-3s", "en": "Dancer marks the first phrase at half energy, checking floor position.", "zh": "舞者以半力度标记第一段动作，同时确认地面位置。" },
+        { "time": "3-7s", "en": "Run the main phrase at full energy with one lateral camera track.", "zh": "全力度完成主要动作段，镜头只做一次侧向跟移。" },
+        { "time": "7-10s", "en": "Dancer misses the final accent slightly, recovers, and exhales with a small nod.", "zh": "舞者最后一个重拍略微失误，恢复后呼气并轻点头。" }
+      ],
+      "sound_en": "Shoe contact, breath, room reflections, optional non-vocal beat reference; no crowd and no applause.",
+      "sound_zh": "鞋底触地、呼吸、房间反射声、可选无歌词节拍；无人群、无掌声。",
+      "prompt_en": "Use @Image1 only for the target adult dancer's exact identity, face, hair, body proportions, and rehearsal wardrobe. Use @Video1 only for choreography timing, weight shifts, floor path, and camera distance; do not transfer the source dancer's identity, clothing, room, or face. If @Audio1 is supplied, use only its beat structure, not vocals or lyrics. Vertical 9:16 rehearsal studio, realistic mirrors without duplicate bodies, practical overhead light. 0-3s: dancer marks the first phrase at half energy and checks floor position. 3-7s: dancer performs the main phrase at full energy while camera makes one smooth lateral track. 7-10s: the final accent lands slightly late; dancer recovers naturally, exhales, and gives one small self-aware nod. Keep identity, wardrobe, body scale, floor marks, mirror geometry, and movement direction stable. Sound: shoes, breath, room reflections. No crowd, no applause, no stage lighting, no perfect music-video finish, no face transfer, no extra limbs, no text.",
+      "prompt_zh": "@Image1 只绑定目标成年舞者的精确身份、脸、发型、身体比例和排练服装。@Video1 只参考编舞时序、重心变化、地面路径和镜头距离；不要迁移源舞者身份、服装、房间或面孔。若提供 @Audio1，只使用节拍结构，不复制人声或歌词。竖屏 9:16 排练室，镜面真实但不生成重复身体，使用实景顶灯。0-3 秒：舞者以半力度标记第一段动作并确认地面位置。3-7 秒：全力度完成主要动作段，镜头只做一次平滑侧向跟移。7-10 秒：最后一个重拍略微晚到，舞者自然恢复、呼气并带一点自知地轻点头。锁定身份、服装、身体比例、地面标记、镜面几何和运动方向。声音：鞋底、呼吸、房间反射。无人群、无掌声、无舞台灯、不做完美 MV 收尾、不迁移面孔、无多余肢体、无文字。",
+      "continuity_en": "Identity belongs to @Image1; movement belongs to @Video1; beat belongs to @Audio1. Preserve those boundaries on every retake.",
+      "continuity_zh": "身份属于 @Image1，动作属于 @Video1，节拍属于 @Audio1。每次重做都保持这些边界。",
+      "failures": [
+        { "symptom_en": "The source dancer's face or clothes transfer.", "fix_en": "Retake role binding only: @Video1 controls motion, never identity; keep choreography unchanged.", "symptom_zh": "源舞者的脸或服装被迁移。", "fix_zh": "只重做角色绑定：@Video1 只控制动作，不控制身份；编舞不变。" },
+        { "symptom_en": "The take looks too polished and staged.", "fix_en": "Restore the half-energy mark and slightly late final accent; do not change camera or wardrobe.", "symptom_zh": "成片过于完美和摆拍。", "fix_zh": "恢复半力度标记和略晚的最后重拍；镜头和服装不变。" }
+      ],
+      "media": {
+        "reference_image_urls": ["asset://target-dancer"],
+        "reference_video_urls": ["asset://choreography-reference"],
+        "reference_audio_urls": ["asset://beat-reference"]
+      }
+    },
+    {
+      "id": "acoustic-room-performance",
+      "category": "performance",
+      "title_en": "Acoustic Room Performance",
+      "title_zh": "房间原声演奏",
+      "summary_en": "A single-take musician workflow that keeps hands, instrument, voice, and room acoustics coherent.",
+      "summary_zh": "保持手、乐器、人声和房间声学一致的单镜头音乐人工作流。",
+      "intent_en": "Capture an intimate first take, including breath and small finger noise, without concert spectacle.",
+      "intent_zh": "捕捉带呼吸和轻微指尖噪声的亲密第一遍演奏，不制造演唱会奇观。",
+      "mode": "reference-to-video",
+      "duration": 15,
+      "aspect_ratio": "16:9",
+      "resolution": "720p",
+      "difficulty": "advanced",
+      "asset_roles": [
+        { "slot": "@Image1", "required": true, "en": "Adult musician identity, instrument, hand placement, wardrobe, chair, and room reference.", "zh": "成年音乐人身份、乐器、手位、服装、椅子和房间参考。" },
+        { "slot": "@Audio1", "required": true, "en": "Original or licensed 15-second performance audio; bind timing and voice only.", "zh": "原创或已授权的 15 秒演奏音频；只绑定时序和声音。" }
+      ],
+      "beats": [
+        { "time": "0-5s", "en": "Musician settles, inhales, and begins the first phrase without a count-in.", "zh": "音乐人坐稳、吸气，不数拍直接开始第一句。" },
+        { "time": "5-11s", "en": "Camera makes one slow push; hands follow the supplied audio rhythm exactly.", "zh": "镜头只做一次缓慢推进；双手严格跟随提供音频节奏。" },
+        { "time": "11-15s", "en": "Finish the phrase, let the final resonance decay, and keep the musician still.", "zh": "结束乐句，让最后余音自然衰减，音乐人保持不动。" }
+      ],
+      "sound_en": "Use @Audio1 exactly for timing and performance; preserve room resonance and finger noise, add no score.",
+      "sound_zh": "严格使用 @Audio1 的时序与表演；保留房间混响和指尖噪声，不添加配乐。",
+      "prompt_en": "Use @Image1 only for the adult musician's exact identity, instrument, hand placement, wardrobe, chair, and room. Use @Audio1 as the exact 15-second timing and performance reference; preserve its voice or instrument phrase and natural room resonance. One continuous live-action medium shot, no cuts. 0-5s: musician settles, inhales once, and begins without a count-in. 5-11s: camera makes one very slow push while hands and mouth follow @Audio1 precisely; keep finger contact physically plausible and instrument geometry stable. 11-15s: finish the phrase, stop moving, and let the final resonance decay naturally. Practical window or lamp light, natural skin, intimate room scale. No concert lighting, no audience, no applause, no extra instrument, no hand duplication, no lyric text, no subtitles, no camera orbit, no added music, no audio remix beyond spatially matching the room.",
+      "prompt_zh": "@Image1 只绑定成年音乐人的精确身份、乐器、手位、服装、椅子和房间。@Audio1 作为精确的 15 秒时序与表演参考；保留其中人声或乐器乐句和自然房间混响。真人中景一镜到底，不切镜。0-5 秒：音乐人坐稳、吸气一次，不数拍直接开始。5-11 秒：镜头只做一次非常缓慢的推进，双手与口型严格跟随 @Audio1；指尖接触符合物理，乐器几何稳定。11-15 秒：结束乐句、停止动作，让最后余音自然衰减。使用实景窗光或灯光、自然皮肤、亲密房间尺度。无演唱会灯光、无观众、无掌声、无额外乐器、无手部复制、无歌词文字、无字幕、无环绕镜头、无新增音乐，不对声音做超出房间空间匹配的重混。",
+      "continuity_en": "The supplied audio is the master clock. Instrument geometry and finger contact must remain stable across the entire take.",
+      "continuity_zh": "提供的音频是主时钟。乐器几何和指尖接触在整个镜头中必须稳定。",
+      "failures": [
+        { "symptom_en": "Hands do not match the performance.", "fix_en": "Retake synchronization only using @Audio1 as master timing; keep camera and lighting identical.", "symptom_zh": "手部与演奏不匹配。", "fix_zh": "只重做同步：以 @Audio1 为主时钟；镜头和灯光不变。" },
+        { "symptom_en": "The room turns into a concert stage.", "fix_en": "Remove audience and stage lighting; preserve performance, framing, and audio.", "symptom_zh": "房间变成演唱会舞台。", "fix_zh": "移除观众和舞台灯；表演、构图和音频保持。" }
+      ],
+      "media": {
+        "reference_image_urls": ["asset://acoustic-performer"],
+        "reference_audio_urls": ["asset://licensed-performance-audio"]
+      }
+    },
+    {
+      "id": "street-interview-answer",
+      "category": "documentary-ugc",
+      "title_en": "Street Interview Answer",
+      "title_zh": "街头采访回答",
+      "summary_en": "A vertical creator-style answer with a believable pause, one concise sentence, and ambient interruptions.",
+      "summary_zh": "带真实停顿、一句简洁回答和环境干扰的竖屏创作者采访。",
+      "intent_en": "Feel like an actual captured response, not a polished host script or advertisement.",
+      "intent_zh": "像真实记录下来的回答，而不是精修主持稿或广告。",
+      "mode": "text-to-video",
+      "duration": 10,
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "difficulty": "starter",
+      "asset_roles": [
+        { "slot": "text-only", "required": true, "en": "No reference required; use an original adult interview subject and generic handheld microphone.", "zh": "无需参考；使用原创成年受访者和通用手持麦克风。" }
+      ],
+      "beats": [
+        { "time": "0-3s", "en": "Interviewer asks one short off-camera question; subject thinks before answering.", "zh": "采访者在画外问一句短问题；受访者思考后再回答。" },
+        { "time": "3-8s", "en": "Subject answers one sentence with natural eye movement and a small restart.", "zh": "受访者用一句话回答，带自然视线变化和一次轻微重启。" },
+        { "time": "8-10s", "en": "A passerby crosses deep background; subject finishes and gives a small nod.", "zh": "远处背景有人经过；受访者说完并轻点头。" }
+      ],
+      "sound_en": "Real street ambience, off-camera question, one answer, distant traffic; no music and no crowd cheering.",
+      "sound_zh": "真实街声、画外问题、一句回答、远处车辆声；无音乐、无人群欢呼。",
+      "prompt_en": "Vertical 9:16 authentic street interview, handheld phone-camera realism with controlled small movement, one adult interview subject in ordinary clothing, generic unbranded handheld microphone entering from the lower edge. 0-3s: off-camera interviewer asks, 'What changed your mind?' The subject looks aside, takes one breath, and thinks before speaking. 3-8s: subject answers naturally, 'Honestly... I realized I was staying because leaving felt harder.' Include one small restart after 'Honestly,' realistic mouth timing, and subtle eye movement. 8-10s: a passerby crosses only in the deep background; subject finishes and gives one small nod. Keep face, clothing, microphone, street direction, and camera distance stable. Sound: real street ambience and distant traffic. No host in frame, no brand logo, no captions, no beauty filter, no perfect studio audio, no music, no applause, no second answer, no dramatic zoom.",
+      "prompt_zh": "竖屏 9:16 真实街头采访，手机手持质感但小幅受控移动。一名穿普通服装的成年受访者，通用无品牌手持麦克风从画面下缘进入。0-3 秒：画外采访者问：“是什么让你改变了想法？” 受访者看向一旁、呼吸一次、思考后再开口。3-8 秒：受访者自然回答：“说实话……我发现自己留下，只是因为离开更难。” 在“说实话”后保留一次轻微重启，口型时序真实，视线有细小变化。8-10 秒：只有一名路人在远处背景经过；受访者说完并轻点头。锁定脸、服装、麦克风、街道方向和镜头距离。声音：真实街声和远处车辆。主持人不入画、无品牌标志、无字幕、无美颜、无完美棚录音质、无音乐、无掌声、无第二段回答、无戏剧化变焦。",
+      "continuity_en": "Keep the interviewer off-screen and microphone position stable. Background motion remains secondary to the answer.",
+      "continuity_zh": "采访者始终在画外，麦克风位置稳定。背景运动始终次于回答。",
+      "failures": [
+        { "symptom_en": "The answer sounds scripted and fluent.", "fix_en": "Restore one thinking pause and one small restart; keep the sentence and framing unchanged.", "symptom_zh": "回答过于流利像背稿。", "fix_zh": "恢复一次思考停顿和一次轻微重启；句子和构图不变。" },
+        { "symptom_en": "The background becomes the main event.", "fix_en": "Limit background to one distant passerby; preserve subject and audio timing.", "symptom_zh": "背景抢走主体。", "fix_zh": "背景只保留一名远处路人；主体和声音时序不变。" }
+      ],
+      "media": {}
+    },
+    {
+      "id": "kitchen-product-testimonial",
+      "category": "documentary-ugc",
+      "title_en": "Kitchen Product Testimonial",
+      "title_zh": "厨房产品体验口播",
+      "summary_en": "A low-polish UGC testimonial where the product is handled naturally and the claim stays specific.",
+      "summary_zh": "产品自然被使用、表达具体且不过度包装的低精修 UGC 口播。",
+      "intent_en": "Build trust through one concrete observation and imperfect creator delivery, not sales pressure.",
+      "intent_zh": "通过一个具体观察和不完美的创作者表达建立信任，而不是制造销售压力。",
+      "mode": "image-to-video",
+      "duration": 10,
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "difficulty": "starter",
+      "asset_roles": [
+        { "slot": "@Image1", "required": true, "en": "Adult creator identity, kitchen, wardrobe, and generic unbranded product reference.", "zh": "成年创作者身份、厨房、服装和通用无品牌产品参考。" }
+      ],
+      "beats": [
+        { "time": "0-3s", "en": "Creator begins mid-thought while using the product, not holding it to camera.", "zh": "创作者在使用产品时从半句开始，不把产品举到镜头前。" },
+        { "time": "3-8s", "en": "One concise observation, one natural glance down at the task, then back to lens.", "zh": "一句具体观察，先自然看向手中操作，再回看镜头。" },
+        { "time": "8-10s", "en": "Finish with a small shrug and continue the task; no call to action.", "zh": "以轻微耸肩结束并继续手中动作；不加行动号召。" }
+      ],
+      "sound_en": "Phone microphone, kitchen room tone, product handling sound, one sentence, no music.",
+      "sound_zh": "手机麦克风质感、厨房底噪、产品使用声、一句话；无音乐。",
+      "prompt_en": "@Image1 is the exact reference for the adult creator's identity, hair, casual wardrobe, kitchen layout, and generic unbranded product. Vertical 9:16 creator phone-video realism, waist-up framing, slight handheld correction, natural window light, no studio polish. 0-3s: creator is already using the product on the counter and begins mid-thought, not holding it up: 'What surprised me is...' 3-8s: they continue, '...it is quieter than the one I had, so I actually use it before work.' They glance down once at the task, then back to lens. 8-10s: a small shrug, then they continue using it without a call to action. Preserve face, wardrobe, product shape, counter layout, and hand path. Sound: phone microphone, kitchen room tone, product handling. No brand logo, no price, no discount, no exaggerated claim, no beauty filter, no captions, no music, no product spin, no pointing at screen.",
+      "prompt_zh": "@Image1 是成年创作者身份、发型、休闲服装、厨房布局和通用无品牌产品的精确参考。竖屏 9:16 创作者手机视频质感，腰部以上构图，轻微手持修正，自然窗光，不做棚拍精修。0-3 秒：创作者已经在台面上使用产品，从半句话开始，不把产品举起来：“让我意外的是……” 3-8 秒：继续说：“……它比我之前那个安静，所以我上班前真的会用。” 自然看向手中操作一次，再回看镜头。8-10 秒：轻微耸肩，然后继续使用，不加行动号召。锁定脸、服装、产品形状、台面布局和手部路径。声音：手机麦克风、厨房底噪、产品使用声。无品牌标志、无价格、无折扣、无夸张承诺、无美颜、无字幕、无音乐、无产品旋转、无指向屏幕。",
+      "continuity_en": "The product stays in use on the counter and never becomes a floating hero object. Keep one continuous hand path.",
+      "continuity_zh": "产品始终在台面上被使用，不变成悬空英雄物体。保持一条连续手部路径。",
+      "failures": [
+        { "symptom_en": "The creator turns into a polished salesperson.", "fix_en": "Remove the call to action and keep the product in use; preserve the concrete observation.", "symptom_zh": "创作者变成精修销售员。", "fix_zh": "删除行动号召，让产品继续被使用；保留具体观察。" },
+        { "symptom_en": "The product changes shape or floats.", "fix_en": "Retake prop continuity only with one counter position and one continuous hand path.", "symptom_zh": "产品变形或漂浮。", "fix_zh": "只重做道具连续性：固定一个台面位置和一条连续手部路径。" }
+      ],
+      "media": { "first_frame_url": "asset://kitchen-testimonial-first-frame" }
+    },
+    {
+      "id": "workshop-day-in-life",
+      "category": "documentary-ugc",
+      "title_en": "Workshop Day-In-The-Life",
+      "title_zh": "手工作坊一日片段",
+      "summary_en": "An observational mini-sequence that moves from hands to face to finished object without glossy commercial coverage.",
+      "summary_zh": "从手部、人物到完成物自然推进，不使用光鲜商业补拍的观察式微序列。",
+      "intent_en": "Show skill and concentration through process details, not through claims or a presenter explanation.",
+      "intent_zh": "通过过程细节展示技能与专注，不靠口头宣传或主持讲解。",
+      "mode": "text-to-video",
+      "duration": 15,
+      "aspect_ratio": "16:9",
+      "resolution": "720p",
+      "difficulty": "intermediate",
+      "asset_roles": [
+        { "slot": "text-only", "required": true, "en": "No reference required; use an original adult craftsperson, simple workshop, and generic handmade object.", "zh": "无需参考；使用原创成年手艺人、朴素工作坊和通用手工作品。" }
+      ],
+      "beats": [
+        { "time": "0-5s", "en": "Close on hands measuring and making one precise mark on raw material.", "zh": "近景观察双手测量并在原材料上做一个精确标记。" },
+        { "time": "5-10s", "en": "Move to side medium shot as the craftsperson performs one controlled tool action.", "zh": "移动到侧面中景，手艺人完成一次受控工具动作。" },
+        { "time": "10-15s", "en": "Reveal the finished detail in their hands, then end on a quiet inspection rather than a smile to camera.", "zh": "展示手中完成细节，以安静检查结束，而不是对镜头微笑。" }
+      ],
+      "sound_en": "Workshop ambience, measuring tool, one controlled machine or hand-tool sound, breath; no narration or music.",
+      "sound_zh": "工作坊底噪、测量工具、一次受控机具或手工具声、呼吸；无旁白、无音乐。",
+      "prompt_en": "Grounded observational live-action sequence in a small working craft studio. One adult craftsperson in practical worn work clothes, natural skin and hands, generic unbranded tools, realistic dust and material texture. 0-5s: close shot on hands measuring raw material and making exactly one precise pencil mark; steady camera, tool sounds clear. 5-10s: move to one side medium shot as the craftsperson performs one controlled cutting, carving, or shaping action; keep hands and material physically connected, no sparks unless the tool requires them. 10-15s: reveal the finished small detail resting in their hands, then hold on their quiet inspection and one satisfied breath, not a smile to camera. Preserve identity, clothing, tool type, material color, bench layout, and work direction. Sound: workshop ambience, measuring tool, one controlled tool sound, breath. No narration, no music, no brand logo, no fast montage, no product glamour spin, no extra hands, no instant transformation, no text.",
+      "prompt_zh": "小型真实手工作坊里的观察式真人片段。一名成年手艺人穿有使用痕迹的实用工作服，保留自然皮肤和手部；工具通用无品牌，灰尘和材料纹理真实。0-5 秒：近景观察双手测量原材料并只做一个精确铅笔标记；镜头稳定，工具声清晰。5-10 秒：移动到一个侧面中景，手艺人完成一次受控切割、雕刻或塑形动作；双手和材料保持物理连接，除非工具真实需要，否则不出现火花。10-15 秒：展示手中完成的小细节，然后停在安静检查和一次满意呼吸上，不对镜头微笑。锁定身份、服装、工具类型、材料颜色、工作台布局和工作方向。声音：工作坊底噪、测量工具、一次受控工具声、呼吸。无旁白、无音乐、无品牌标志、无快速蒙太奇、无产品炫转、无多余手、无瞬间变形、无文字。",
+      "continuity_en": "The same material piece stays in the craftsperson's hands from mark to tool action to inspection. Do not substitute a finished object mid-shot.",
+      "continuity_zh": "从标记、工具动作到检查，始终是同一块材料。不要在镜头中途替换成完成品。",
+      "failures": [
+        { "symptom_en": "The material instantly becomes finished.", "fix_en": "Retake process continuity only: keep the same piece visible through mark, action, and inspection.", "symptom_zh": "材料瞬间变成完成品。", "fix_zh": "只重做过程连续性：同一块材料贯穿标记、动作和检查。" },
+        { "symptom_en": "The sequence becomes a glossy product ad.", "fix_en": "Remove hero spin and camera-facing smile; preserve tools, sound, and process beats.", "symptom_zh": "片段变成光鲜产品广告。", "fix_zh": "移除产品炫转和对镜头微笑；工具、声音和过程节拍不变。" }
+      ],
+      "media": {}
+    }
+  ]
+}

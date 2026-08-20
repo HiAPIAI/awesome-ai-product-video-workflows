@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Awesome Seedance 2.0 Live-Action Workflows</title>
+  <desc id="desc">A camera, a timed shot board, and a set of live-action workflow beats.</desc>
+  <rect width="1600" height="900" fill="#10151b"/>
+  <rect x="70" y="72" width="720" height="756" rx="18" fill="#171f28" stroke="#344454" stroke-width="3"/>
+  <rect x="850" y="72" width="680" height="756" rx="18" fill="#121a22" stroke="#344454" stroke-width="3"/>
+  <rect x="928" y="168" width="520" height="292" rx="12" fill="#263441" stroke="#63d4c1" stroke-width="4"/>
+  <circle cx="1188" cy="314" r="92" fill="#0f161d" stroke="#f4b860" stroke-width="8"/>
+  <circle cx="1188" cy="314" r="38" fill="#63d4c1"/>
+  <path d="M1092 516h190l62 56H1030z" fill="#2e4351" stroke="#63d4c1" stroke-width="4"/>
+  <rect x="944" y="624" width="470" height="22" rx="11" fill="#2d3d4a"/>
+  <rect x="944" y="624" width="300" height="22" rx="11" fill="#f4b860"/>
+  <circle cx="1244" cy="635" r="16" fill="#63d4c1"/>
+  <text x="122" y="188" fill="#f4b860" font-family="Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="2">OPEN, REPRODUCIBLE SHOT RECIPES</text>
+  <text x="122" y="330" fill="#f5f7fa" font-family="Arial, sans-serif" font-size="64" font-weight="700">Awesome Seedance</text>
+  <text x="122" y="410" fill="#f5f7fa" font-family="Arial, sans-serif" font-size="64" font-weight="700">2.0 Live-Action</text>
+  <text x="122" y="490" fill="#63d4c1" font-family="Arial, sans-serif" font-size="64" font-weight="700">Workflows</text>
+  <text x="122" y="588" fill="#c3d0da" font-family="Arial, sans-serif" font-size="28">T2V / I2V / R2V  ·  15 director-ready contracts</text>
+  <text x="122" y="650" fill="#c3d0da" font-family="Arial, sans-serif" font-size="24">Reference roles · timed beats · continuity locks · QC</text>
+  <rect x="122" y="724" width="170" height="8" fill="#f4b860"/>
+  <rect x="308" y="724" width="280" height="8" fill="#63d4c1"/>
+  <rect x="604" y="724" width="108" height="8" fill="#e9795f"/>
+</svg>

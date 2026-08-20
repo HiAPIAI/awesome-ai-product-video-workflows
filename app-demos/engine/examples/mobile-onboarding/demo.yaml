@@ -1,0 +1,103 @@
+schemaVersion: demo-v1
+project:
+  id: mobile-onboarding
+  title: Mobile Onboarding
+  description: Guide a new user from welcome through preference setup to a useful first plan.
+canvas:
+  width: 1080
+  height: 1920
+  fps: 30
+  durationFrames: 300
+brand:
+  background: "#EEF2F0"
+  foreground: "#17201C"
+  accent: "#2E9E6F"
+  fontFamily: "Arial, sans-serif"
+assets:
+  - id: welcome
+    type: image
+    path: assets/welcome.svg
+    alt: Luma welcome screen
+    license: MIT
+  - id: preferences
+    type: image
+    path: assets/preferences.svg
+    alt: Luma preference selection screen
+    license: MIT
+  - id: first-plan
+    type: image
+    path: assets/first-plan.svg
+    alt: Luma generated first plan screen
+    license: MIT
+scenes:
+  - id: onboarding-title
+    kind: title
+    startFrame: 0
+    durationFrames: 30
+    heading: A useful first minute
+    body: Ask less. Deliver value sooner.
+    transitionIn: fade
+    transitionOut: slide-up
+  - id: welcome-step
+    kind: screen
+    startFrame: 30
+    durationFrames: 70
+    assetId: welcome
+    fit: contain
+    from: {y: 36, opacity: 0}
+    to: {y: 0, opacity: 1}
+    easing: ease-out
+    cursor:
+      from: {x: 520, y: 1420}
+      to: {x: 520, y: 1510}
+      clickFrames: [48]
+    transitionIn: slide-up
+    transitionOut: fade
+  - id: preference-step
+    kind: screen
+    startFrame: 100
+    durationFrames: 70
+    assetId: preferences
+    fit: contain
+    from: {x: 32, opacity: 0}
+    to: {x: 0, opacity: 1}
+    easing: ease-out
+    cursor:
+      from: {x: 330, y: 700}
+      to: {x: 670, y: 920}
+      clickFrames: [28, 50]
+    transitionIn: fade
+    transitionOut: fade
+  - id: value-step
+    kind: screen
+    startFrame: 170
+    durationFrames: 70
+    assetId: first-plan
+    fit: contain
+    from: {scale: 0.97, opacity: 0}
+    to: {scale: 1, opacity: 1}
+    easing: spring
+    callouts:
+      - text: The first useful result arrives before signup fatigue
+        at: {x: 540, y: 520}
+        startFrame: 22
+        durationFrames: 38
+        accent: "#2E9E6F"
+    transitionIn: scale
+    transitionOut: fade
+  - id: onboarding-outro
+    kind: outro
+    startFrame: 240
+    durationFrames: 60
+    heading: Ready for Monday
+    body: Luma turns three choices into a practical first plan.
+    transitionIn: fade
+outputs:
+  - id: vertical
+    width: 1080
+    height: 1920
+    fps: 30
+    fileName: mobile-onboarding-vertical.mp4
+hiapi:
+  enabled: false
+  enhancements: []

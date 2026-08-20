@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "render-catalog-summary-v1",
+  "renderedAt": "2026-08-20",
+  "environment": {
+    "ffmpeg": "9.0.1",
+    "ffmpegBuild": "Homebrew ffmpeg-full with libfreetype",
+    "ffprobe": "9.0.1"
+  },
+  "outputs": [
+    {"workflow": "saas-feature-launch", "id": "landscape", "width": 1920, "height": 1080, "fps": 30, "frames": 330, "durationSeconds": 11, "sha256": "0e63b2d86a6feca2936a0aed4f6d082062f2932babfe1a7d5173a0455b5cf755"},
+    {"workflow": "saas-feature-launch", "id": "vertical", "width": 1080, "height": 1920, "fps": 30, "frames": 330, "durationSeconds": 11, "sha256": "ab46d91c59391355c141dc8b326fcd0c0a6ac50c9b9aeda94c555f3e9400d4fb"},
+    {"workflow": "mobile-onboarding", "id": "vertical", "width": 1080, "height": 1920, "fps": 30, "frames": 300, "durationSeconds": 10, "sha256": "59a8436815f9a1e3a097b43896ae6d0fdae5062bdb498b48ae95c06ee8071f24"},
+    {"workflow": "ai-workflow-demo", "id": "landscape", "width": 1920, "height": 1080, "fps": 30, "frames": 360, "durationSeconds": 12, "sha256": "6ea262483569f0433e403554930f34fdab33e50059465e539e7c10fcc2c73982"},
+    {"workflow": "before-after-comparison", "id": "landscape", "width": 1920, "height": 1080, "fps": 30, "frames": 240, "durationSeconds": 8, "sha256": "189ea5e3f7fc0d62e42238bd64f137eb9fdfd2bfc8c0b2ef99af07e67c2c979d"},
+    {"workflow": "before-after-comparison", "id": "vertical", "width": 1080, "height": 1920, "fps": 30, "frames": 240, "durationSeconds": 8, "sha256": "b140f1d3aea2142f575265caf32738317835d01857c99d5ea7eb330487b6ac05"},
+    {"workflow": "vertical-social-feature", "id": "vertical", "width": 1080, "height": 1920, "fps": 30, "frames": 210, "durationSeconds": 7, "sha256": "40605af8a13916aee2c3e983057533216f1ef70080d9bc0d8464837c56283d2d"}
+  ],
+  "automatedChecks": {
+    "workflowCount": 5,
+    "outputCount": 7,
+    "fullDecode": true,
+    "dimensionsMatchCatalog": true,
+    "reviewFramesGenerated": true
+  },
+  "humanReview": {
+    "contactSheetsReviewed": true,
+    "audioListening": "failed: only SaaS Feature Launch declares an audio mix; remaining five outputs are silent",
+    "visualReview": "failed: current outputs are deterministic SVG proof renders, not publication-quality product demos",
+    "publicationStatus": "do-not-publish"
+  },
+  "mediaPolicy": "MP4 files stay local and are intentionally not committed."
+}

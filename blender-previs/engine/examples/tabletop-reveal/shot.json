@@ -1,0 +1,109 @@
+{
+  "$schema": "../../schemas/shot-spec.schema.json",
+  "version": 1,
+  "id": "tabletop-reveal",
+  "title": "Precision Watch Reveal",
+  "intent": "A restrained tabletop move reveals a brushed steel field watch as morning light travels across the dial and the second hand begins moving.",
+  "duration": 5,
+  "fps": 24,
+  "resolution": { "width": 640, "height": 360 },
+  "world": {
+    "background": [0.035, 0.03, 0.025],
+    "groundColor": [0.16, 0.12, 0.09],
+    "groundSize": [10, 8],
+    "lighting": "Soft sunrise through blinds with one narrow moving highlight and warm bounce from a walnut tabletop."
+  },
+  "objects": [
+    {
+      "id": "watch-body",
+      "primitive": "cylinder",
+      "role": "brushed steel field watch with cream dial, black indices, and olive textile strap",
+      "dimensions": [2.4, 2.4, 0.45],
+      "color": [0.58, 0.62, 0.66],
+      "keyframes": [{ "time": 0, "location": [0.3, 0, 0.42], "rotation": [0, 4, 8] }]
+    },
+    {
+      "id": "display-plinth",
+      "primitive": "cylinder",
+      "role": "low dark walnut circular display plinth beneath the watch",
+      "dimensions": [3.4, 3.4, 0.5],
+      "color": [0.24, 0.09, 0.045],
+      "keyframes": [{ "time": 0, "location": [0.3, 0, 0.12], "rotation": [0, 0, 0] }]
+    },
+    {
+      "id": "notebook",
+      "primitive": "cube",
+      "role": "closed charcoal field notebook partially visible behind the product",
+      "dimensions": [3.8, 2.5, 0.18],
+      "color": [0.08, 0.08, 0.075],
+      "keyframes": [{ "time": 0, "location": [2.5, 1.7, 0.1], "rotation": [0, 0, -18] }]
+    },
+    {
+      "id": "pencil",
+      "primitive": "cylinder",
+      "role": "natural cedar pencil forming a quiet diagonal in the background",
+      "dimensions": [0.16, 0.16, 4.8],
+      "color": [0.72, 0.42, 0.12],
+      "keyframes": [{ "time": 0, "location": [-2.0, 1.9, 0.12], "rotation": [0, 90, 28] }]
+    },
+    {
+      "id": "second-hand",
+      "primitive": "cube",
+      "role": "thin red watch second hand that remains still until 2.5 seconds, then advances smoothly clockwise across the dial",
+      "dimensions": [0.07, 1.35, 0.04],
+      "color": [0.82, 0.08, 0.045],
+      "keyframes": [
+        { "time": 0, "location": [0.3, 0, 0.68], "rotation": [0, 0, 0] },
+        { "time": 2.5, "location": [0.3, 0, 0.68], "rotation": [0, 0, 0] },
+        { "time": 3.5, "location": [0.3, 0, 0.68], "rotation": [0, 0, -6] },
+        { "time": 4.5, "location": [0.3, 0, 0.68], "rotation": [0, 0, -12] },
+        { "time": 5, "location": [0.3, 0, 0.68], "rotation": [0, 0, -15] }
+      ]
+    },
+    {
+      "id": "light-sweep-marker",
+      "primitive": "cube",
+      "role": "timing proxy for a narrow sunrise specular highlight that travels once from left to right across the watch face",
+      "dimensions": [0.12, 4.2, 0.03],
+      "color": [1.0, 0.72, 0.22],
+      "keyframes": [
+        { "time": 0, "location": [-3.2, 0, 0.75], "rotation": [0, 0, 0] },
+        { "time": 2.5, "location": [0.3, 0, 0.75], "rotation": [0, 0, 0] },
+        { "time": 5, "location": [3.5, 0, 0.75], "rotation": [0, 0, 0] }
+      ]
+    }
+  ],
+  "camera": {
+    "lensMm": 65,
+    "sensorWidthMm": 36,
+    "rig": "motorized macro slider with a shallow clockwise arc and gentle push-in",
+    "keyframes": [
+      { "time": 0, "location": [-4.8, -5.2, 3.2], "target": [0.2, 0.1, 0.5], "lensMm": 70 },
+      { "time": 2.5, "location": [-3.8, -4.2, 2.7], "target": [0.3, 0, 0.52], "lensMm": 75 },
+      { "time": 5, "location": [-2.6, -3.5, 2.25], "target": [0.35, 0, 0.5], "lensMm": 82 }
+    ]
+  },
+  "seedance": {
+    "model": "seedance-2.0",
+    "resolution": "1080p",
+    "aspectRatio": "16:9",
+    "generateAudio": true,
+    "style": "Premium but quiet product cinematography, truthful brushed metal, visible micro-scratches, warm walnut grain, controlled macro depth, and physically plausible sunrise reflections.",
+    "continuity": [
+      "the watch design, dial markings, crown position, and olive strap remain unchanged",
+      "the watch stays centered on the same plinth",
+      "the camera move remains slow and continuous",
+      "the second hand remains still through 2.5 seconds and then moves clockwise for the rest of the shot",
+      "one narrow sunrise highlight crosses the dial from left to right and reaches its center at 2.5 seconds"
+    ],
+    "avoid": [
+      "floating product",
+      "warped dial typography",
+      "extra crowns or hands",
+      "aggressive lens flare",
+      "retaining primitive cylinder appearance",
+      "retaining the rectangular light-sweep timing marker"
+    ],
+    "seed": 97531
+  }
+}

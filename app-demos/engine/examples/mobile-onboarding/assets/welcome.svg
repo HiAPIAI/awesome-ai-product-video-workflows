@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1600" viewBox="0 0 900 1600" role="img" aria-labelledby="title desc">
+  <title id="title">Luma mobile welcome screen</title>
+  <desc id="desc">A fictional planning app welcome screen with one primary action.</desc>
+  <rect width="900" height="1600" fill="#EEF2F0"/>
+  <rect x="110" y="42" width="680" height="1516" rx="72" fill="#151B18"/>
+  <rect x="130" y="62" width="640" height="1476" rx="56" fill="#FCFDFC"/>
+  <rect x="366" y="82" width="168" height="26" rx="13" fill="#151B18"/>
+  <text x="178" y="154" fill="#17201C" font-family="Arial" font-size="28" font-weight="700">Luma</text>
+  <circle cx="706" cy="142" r="22" fill="#E4F5EC"/>
+  <path d="M696 142h20M706 132v20" stroke="#2E9E6F" stroke-width="4" stroke-linecap="round"/>
+
+  <rect x="178" y="236" width="544" height="520" rx="8" fill="#17201C"/>
+  <circle cx="290" cy="382" r="54" fill="#FFCB69"/>
+  <rect x="370" y="326" width="264" height="34" rx="8" fill="#344039"/>
+  <rect x="370" y="386" width="204" height="20" rx="8" fill="#56635C"/>
+  <rect x="226" y="502" width="446" height="174" rx="8" fill="#F4F7F5"/>
+  <rect x="258" y="536" width="184" height="20" rx="8" fill="#9CA9A2"/>
+  <rect x="258" y="584" width="356" height="16" rx="8" fill="#D4DBD7"/>
+  <rect x="258" y="626" width="244" height="16" rx="8" fill="#D4DBD7"/>
+
+  <text x="178" y="846" fill="#17201C" font-family="Arial" font-size="58" font-weight="800">Plan a calmer week.</text>
+  <text x="178" y="902" fill="#66716B" font-family="Arial" font-size="25">Three choices become a practical plan</text>
+  <text x="178" y="938" fill="#66716B" font-family="Arial" font-size="25">you can actually keep.</text>
+
+  <rect x="178" y="1042" width="544" height="76" rx="8" fill="#2E9E6F"/>
+  <text x="450" y="1091" text-anchor="middle" fill="#FFFFFF" font-family="Arial" font-size="24" font-weight="700">Build my first week</text>
+  <text x="450" y="1170" text-anchor="middle" fill="#7B857F" font-family="Arial" font-size="18">No account required yet</text>
+  <g fill="#C8D0CC"><circle cx="418" cy="1458" r="6"/><circle cx="450" cy="1458" r="6"/><circle cx="482" cy="1458" r="6"/></g>
+  <circle cx="418" cy="1458" r="6" fill="#2E9E6F"/>
+</svg>

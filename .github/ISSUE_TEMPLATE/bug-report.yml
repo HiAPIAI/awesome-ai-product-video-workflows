@@ -1,0 +1,33 @@
+name: Bug report
+description: Report a reproducible workflow, validation, or installer problem.
+title: "[bug] "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction
+      description: Include the command, redacted fixture, and the smallest input that fails.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: macOS 15, Node 22, FFmpeg 7.1
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed API keys, cookies, private URLs, and customer data.
+          required: true

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Awesome AI App Demo Video Workflows</title>
+  <desc id="desc">A product dashboard moves through a deterministic timeline into landscape and vertical videos.</desc>
+  <rect width="1600" height="900" fill="#F3F5F7"/>
+  <rect x="70" y="64" width="1460" height="772" rx="8" fill="#FFFFFF" stroke="#D9DEE5" stroke-width="2"/>
+  <rect x="70" y="64" width="1460" height="62" rx="8" fill="#171A1F"/>
+  <circle cx="108" cy="95" r="8" fill="#FF6B5E"/>
+  <circle cx="136" cy="95" r="8" fill="#F2C14E"/>
+  <circle cx="164" cy="95" r="8" fill="#40B77A"/>
+  <text x="205" y="103" fill="#F7F8FA" font-family="Arial, sans-serif" font-size="22" font-weight="700">APP DEMO WORKFLOWS</text>
+
+  <text x="126" y="224" fill="#171A1F" font-family="Arial, sans-serif" font-size="58" font-weight="800">Screenshots in.</text>
+  <text x="126" y="292" fill="#171A1F" font-family="Arial, sans-serif" font-size="58" font-weight="800">Launch videos out.</text>
+  <text x="128" y="344" fill="#59616D" font-family="Arial, sans-serif" font-size="24">Deterministic UI motion with optional HiAPI enhancement.</text>
+
+  <rect x="126" y="406" width="650" height="322" rx="8" fill="#20242B"/>
+  <rect x="154" y="434" width="594" height="44" rx="6" fill="#2D323B"/>
+  <rect x="174" y="451" width="108" height="10" rx="5" fill="#55C995"/>
+  <rect x="174" y="508" width="166" height="186" rx="6" fill="#292E36"/>
+  <rect x="362" y="508" width="366" height="90" rx="6" fill="#F9FAFB"/>
+  <rect x="386" y="533" width="116" height="12" rx="6" fill="#B7C0CC"/>
+  <rect x="386" y="565" width="294" height="8" rx="4" fill="#DCE1E7"/>
+  <rect x="362" y="614" width="174" height="80" rx="6" fill="#F06A63"/>
+  <rect x="554" y="614" width="174" height="80" rx="6" fill="#2D8CFF"/>
+
+  <path d="M812 567h96" stroke="#8C96A3" stroke-width="4" stroke-linecap="round"/>
+  <path d="m891 548 19 19-19 19" fill="none" stroke="#8C96A3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="944" y="416" width="476" height="268" rx="8" fill="#171A1F"/>
+  <rect x="966" y="438" width="432" height="224" rx="4" fill="#FCFCFD"/>
+  <rect x="988" y="462" width="110" height="176" rx="6" fill="#252A31"/>
+  <rect x="1118" y="462" width="256" height="72" rx="6" fill="#E9EDF2"/>
+  <rect x="1118" y="550" width="118" height="88" rx="6" fill="#55C995"/>
+  <rect x="1256" y="550" width="118" height="88" rx="6" fill="#FFBF5B"/>
+  <rect x="1250" y="704" width="170" height="26" rx="8" fill="#171A1F"/>
+  <text x="1335" y="723" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="14" font-weight="700">16:9 / 9:16</text>
+
+  <rect x="126" y="760" width="238" height="34" rx="8" fill="#E9F7F0"/>
+  <text x="245" y="783" text-anchor="middle" fill="#17764A" font-family="Arial, sans-serif" font-size="16" font-weight="700">5 ORIGINAL WORKFLOWS</text>
+  <text x="1430" y="784" text-anchor="end" fill="#59616D" font-family="Arial, sans-serif" font-size="17">MIT · Node.js · Motion Canvas · FFmpeg</text>
+</svg>

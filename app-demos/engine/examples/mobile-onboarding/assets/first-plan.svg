@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1600" viewBox="0 0 900 1600" role="img" aria-labelledby="title desc">
+  <title id="title">Luma first weekly plan</title>
+  <desc id="desc">A fictional mobile plan showing three focused blocks for Monday.</desc>
+  <rect width="900" height="1600" fill="#EEF2F0"/>
+  <rect x="110" y="42" width="680" height="1516" rx="72" fill="#151B18"/>
+  <rect x="130" y="62" width="640" height="1476" rx="56" fill="#FCFDFC"/>
+  <rect x="366" y="82" width="168" height="26" rx="13" fill="#151B18"/>
+  <circle cx="202" cy="154" r="24" fill="#E4F5EC"/>
+  <path d="m214 154-14 0 7-7m-7 7 7 7" fill="none" stroke="#2E9E6F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="258" y="163" fill="#17201C" font-family="Arial" font-size="26" font-weight="700">Your first week</text>
+
+  <rect x="178" y="234" width="544" height="202" rx="8" fill="#17201C"/>
+  <text x="210" y="278" fill="#A7B2AC" font-family="Arial" font-size="15" font-weight="700">MONDAY · 3 FOCUS BLOCKS</text>
+  <text x="210" y="342" fill="#FFFFFF" font-family="Arial" font-size="42" font-weight="800">Start clear.</text>
+  <text x="210" y="386" fill="#FFFFFF" font-family="Arial" font-size="42" font-weight="800">Finish lighter.</text>
+  <circle cx="650" cy="337" r="40" fill="#FFCB69"/>
+
+  <g font-family="Arial">
+    <text x="178" y="510" fill="#17201C" font-size="28" font-weight="700">Monday</text>
+    <rect x="178" y="548" width="544" height="144" rx="8" fill="#E4F5EC" stroke="#B7E2CB"/>
+    <text x="210" y="586" fill="#2E7A57" font-size="14" font-weight="700">8:30 · 50 MIN</text>
+    <text x="210" y="628" fill="#173D2C" font-size="24" font-weight="700">Deep work: launch brief</text>
+    <text x="210" y="660" fill="#547062" font-size="17">Notifications paused automatically</text>
+    <rect x="178" y="712" width="544" height="130" rx="8" fill="#FFF5DF" stroke="#F0DAAA"/>
+    <text x="210" y="750" fill="#89631B" font-size="14" font-weight="700">12:20 · 20 MIN</text>
+    <text x="210" y="792" fill="#4B3B1D" font-size="24" font-weight="700">Walk and reset</text>
+    <rect x="178" y="862" width="544" height="144" rx="8" fill="#F4F6F5" stroke="#D9DFDC"/>
+    <text x="210" y="900" fill="#68736D" font-size="14" font-weight="700">17:40 · 15 MIN</text>
+    <text x="210" y="942" fill="#29322E" font-size="24" font-weight="700">Close the day</text>
+    <text x="210" y="974" fill="#68736D" font-size="17">Capture wins and choose tomorrow's first task</text>
+  </g>
+
+  <rect x="178" y="1122" width="544" height="76" rx="8" fill="#2E9E6F"/>
+  <text x="450" y="1171" text-anchor="middle" fill="#FFFFFF" font-family="Arial" font-size="24" font-weight="700">Add plan to calendar</text>
+  <text x="450" y="1246" text-anchor="middle" fill="#7B857F" font-family="Arial" font-size="18">Preview the rest of the week</text>
+</svg>

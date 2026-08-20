@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1600" viewBox="0 0 900 1600" role="img" aria-labelledby="title desc">
+  <title id="title">Luma preference selection screen</title>
+  <desc id="desc">A fictional mobile screen asking for focus and energy preferences.</desc>
+  <rect width="900" height="1600" fill="#EEF2F0"/>
+  <rect x="110" y="42" width="680" height="1516" rx="72" fill="#151B18"/>
+  <rect x="130" y="62" width="640" height="1476" rx="56" fill="#FCFDFC"/>
+  <rect x="366" y="82" width="168" height="26" rx="13" fill="#151B18"/>
+  <text x="178" y="160" fill="#68736D" font-family="Arial" font-size="20">Step 2 of 3</text>
+  <rect x="178" y="192" width="544" height="8" rx="4" fill="#E1E7E3"/>
+  <rect x="178" y="192" width="362" height="8" rx="4" fill="#2E9E6F"/>
+  <text x="178" y="296" fill="#17201C" font-family="Arial" font-size="50" font-weight="800">What should feel</text>
+  <text x="178" y="352" fill="#17201C" font-family="Arial" font-size="50" font-weight="800">easier this week?</text>
+  <text x="178" y="410" fill="#6E7973" font-family="Arial" font-size="22">Choose up to two. You can change this later.</text>
+
+  <g font-family="Arial" font-size="22" font-weight="700">
+    <rect x="178" y="492" width="252" height="112" rx="8" fill="#E3F5EC" stroke="#2E9E6F" stroke-width="3"/>
+    <circle cx="214" cy="528" r="12" fill="#2E9E6F"/><path d="m208 528 5 5 9-11" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+    <text x="214" y="572" fill="#1E6649">Deep work</text>
+    <rect x="450" y="492" width="272" height="112" rx="8" fill="#F4F6F5" stroke="#D9DFDC"/>
+    <circle cx="486" cy="528" r="12" fill="#D9DFDC"/>
+    <text x="486" y="572" fill="#4E5953">Better meetings</text>
+    <rect x="178" y="624" width="252" height="112" rx="8" fill="#F4F6F5" stroke="#D9DFDC"/>
+    <circle cx="214" cy="660" r="12" fill="#D9DFDC"/>
+    <text x="214" y="704" fill="#4E5953">Daily movement</text>
+    <rect x="450" y="624" width="272" height="112" rx="8" fill="#E3F5EC" stroke="#2E9E6F" stroke-width="3"/>
+    <circle cx="486" cy="660" r="12" fill="#2E9E6F"/><path d="m480 660 5 5 9-11" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+    <text x="486" y="704" fill="#1E6649">Evening reset</text>
+  </g>
+
+  <text x="178" y="842" fill="#17201C" font-family="Arial" font-size="30" font-weight="700">When is your energy highest?</text>
+  <g font-family="Arial" font-size="20">
+    <rect x="178" y="888" width="160" height="62" rx="8" fill="#17201C"/><text x="258" y="928" text-anchor="middle" fill="#FFFFFF">Morning</text>
+    <rect x="354" y="888" width="168" height="62" rx="8" fill="#F4F6F5" stroke="#D9DFDC"/><text x="438" y="928" text-anchor="middle" fill="#4E5953">Afternoon</text>
+    <rect x="538" y="888" width="184" height="62" rx="8" fill="#F4F6F5" stroke="#D9DFDC"/><text x="630" y="928" text-anchor="middle" fill="#4E5953">It varies</text>
+  </g>
+  <rect x="178" y="1260" width="544" height="76" rx="8" fill="#2E9E6F"/>
+  <text x="450" y="1309" text-anchor="middle" fill="#FFFFFF" font-family="Arial" font-size="24" font-weight="700">Create my plan</text>
+  <text x="450" y="1382" text-anchor="middle" fill="#7B857F" font-family="Arial" font-size="18">2 preferences selected</text>
+</svg>

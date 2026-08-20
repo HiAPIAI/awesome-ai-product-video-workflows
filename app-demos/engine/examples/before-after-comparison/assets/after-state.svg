@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">Ledger invoice queue after redesign</title>
+  <desc id="desc">A fictional action-first invoice queue with visible priority, owner, and next step.</desc>
+  <rect width="1440" height="900" fill="#F4F5F6"/>
+  <rect width="184" height="900" fill="#282B30"/>
+  <text x="30" y="58" fill="#FFFFFF" font-family="Arial" font-size="23" font-weight="700">Ledger</text>
+  <g fill="#A9AFB8" font-family="Arial" font-size="14"><text x="30" y="132">Dashboard</text><text x="30" y="176">Invoices</text><text x="30" y="220">Vendors</text><text x="30" y="264">Reports</text><text x="30" y="308">Settings</text></g>
+  <rect x="16" y="148" width="152" height="42" rx="4" fill="#3A3E45"/>
+  <text x="30" y="175" fill="#FFFFFF" font-family="Arial" font-size="14">Invoices</text>
+
+  <rect x="184" width="1256" height="74" fill="#FFFFFF"/>
+  <text x="224" y="47" fill="#1B1D20" font-family="Arial" font-size="21" font-weight="700">Invoice management</text>
+  <rect x="1242" y="18" width="158" height="38" rx="4" fill="#C7564A"/>
+  <text x="1321" y="43" text-anchor="middle" fill="#FFFFFF" font-family="Arial" font-size="13" font-weight="700">Add invoice</text>
+
+  <text x="224" y="130" fill="#1B1D20" font-family="Arial" font-size="27" font-weight="700">Needs attention</text>
+  <text x="224" y="162" fill="#68707A" font-family="Arial" font-size="14">5 invoices sorted by urgency and ownership</text>
+  <rect x="1012" y="116" width="388" height="48" rx="6" fill="#FFFFFF" stroke="#D5D9DE"/>
+  <text x="1036" y="146" fill="#9299A3" font-family="Arial" font-size="14">Search vendor or invoice...</text>
+
+  <g font-family="Arial">
+    <rect x="224" y="208" width="1176" height="100" rx="8" fill="#FFF3F1" stroke="#E7B9B3"/>
+    <rect x="224" y="208" width="8" height="100" rx="4" fill="#C7564A"/>
+    <text x="256" y="244" fill="#8D3E36" font-size="12" font-weight="700">OVERDUE · 7 DAYS</text><text x="256" y="279" fill="#1B1D20" font-size="19" font-weight="700">INV-2090 · North Paper</text>
+    <text x="650" y="246" fill="#68707A" font-size="13">AMOUNT</text><text x="650" y="280" fill="#1B1D20" font-size="18" font-weight="700">$980</text>
+    <text x="824" y="246" fill="#68707A" font-size="13">OWNER</text><rect x="824" y="258" width="112" height="30" rx="8" fill="#FFFFFF" stroke="#D5D9DE"/><text x="880" y="278" text-anchor="middle" fill="#545B64" font-size="13">Unassigned</text>
+    <rect x="1192" y="236" width="176" height="44" rx="6" fill="#1B1D20"/><text x="1280" y="264" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700">Assign and review</text>
+
+    <rect x="224" y="324" width="1176" height="100" rx="8" fill="#FFF3F1" stroke="#E7B9B3"/>
+    <rect x="224" y="324" width="8" height="100" rx="4" fill="#C7564A"/>
+    <text x="256" y="360" fill="#8D3E36" font-size="12" font-weight="700">OVERDUE · 4 DAYS</text><text x="256" y="395" fill="#1B1D20" font-size="19" font-weight="700">INV-2087 · Field &amp; Form</text>
+    <text x="650" y="362" fill="#68707A" font-size="13">AMOUNT</text><text x="650" y="396" fill="#1B1D20" font-size="18" font-weight="700">$7,100</text>
+    <text x="824" y="362" fill="#68707A" font-size="13">OWNER</text><rect x="824" y="374" width="112" height="30" rx="8" fill="#FFFFFF" stroke="#D5D9DE"/><text x="880" y="394" text-anchor="middle" fill="#545B64" font-size="13">Unassigned</text>
+    <rect x="1192" y="352" width="176" height="44" rx="6" fill="#1B1D20"/><text x="1280" y="380" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700">Assign and review</text>
+
+    <rect x="224" y="440" width="1176" height="100" rx="8" fill="#FFFFFF" stroke="#D5D9DE"/>
+    <rect x="224" y="440" width="8" height="100" rx="4" fill="#E0A441"/>
+    <text x="256" y="476" fill="#8A621D" font-size="12" font-weight="700">DUE TODAY</text><text x="256" y="511" fill="#1B1D20" font-size="19" font-weight="700">INV-2091 · Beacon Studio</text>
+    <text x="650" y="478" fill="#68707A" font-size="13">AMOUNT</text><text x="650" y="512" fill="#1B1D20" font-size="18" font-weight="700">$4,800</text>
+    <text x="824" y="478" fill="#68707A" font-size="13">OWNER</text><rect x="824" y="490" width="112" height="30" rx="8" fill="#EAF2FA"/><text x="880" y="510" text-anchor="middle" fill="#38658E" font-size="13">M. Chen</text>
+    <rect x="1224" y="468" width="144" height="44" rx="6" fill="#F0F2F4"/><text x="1296" y="496" text-anchor="middle" fill="#3E454D" font-size="14" font-weight="700">Review</text>
+
+    <rect x="224" y="556" width="1176" height="100" rx="8" fill="#FFFFFF" stroke="#D5D9DE"/>
+    <rect x="224" y="556" width="8" height="100" rx="4" fill="#E0A441"/>
+    <text x="256" y="592" fill="#8A621D" font-size="12" font-weight="700">DUE TOMORROW</text><text x="256" y="627" fill="#1B1D20" font-size="19" font-weight="700">INV-2088 · Cedar Labs</text>
+    <text x="650" y="594" fill="#68707A" font-size="13">AMOUNT</text><text x="650" y="628" fill="#1B1D20" font-size="18" font-weight="700">$2,460</text>
+    <text x="824" y="594" fill="#68707A" font-size="13">OWNER</text><rect x="824" y="606" width="112" height="30" rx="8" fill="#EAF2FA"/><text x="880" y="626" text-anchor="middle" fill="#38658E" font-size="13">M. Chen</text>
+    <rect x="1224" y="584" width="144" height="44" rx="6" fill="#F0F2F4"/><text x="1296" y="612" text-anchor="middle" fill="#3E454D" font-size="14" font-weight="700">Review</text>
+
+    <rect x="224" y="688" width="1176" height="76" rx="8" fill="#EDF7F2" stroke="#BFDCCF"/>
+    <circle cx="266" cy="726" r="14" fill="#4C9C76"/><path d="m259 726 6 6 10-13" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+    <text x="296" y="732" fill="#2C624A" font-size="15" font-weight="700">1 approved invoice moved out of this queue</text>
+  </g>
+  <rect x="1128" y="842" width="272" height="34" rx="6" fill="#E8F5EF"/>
+  <text x="1264" y="864" text-anchor="middle" fill="#2E704F" font-family="Arial" font-size="13" font-weight="700">AFTER · ACTION-FIRST</text>
+</svg>

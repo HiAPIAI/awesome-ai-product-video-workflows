@@ -1,0 +1,28 @@
+{
+  "name": "awesome-seedance-2-0-live-action-workflows",
+  "version": "0.2.0",
+  "private": false,
+  "description": "Bilingual live-action Seedance 2.0 filmmaking workflows with HiAPI requests.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "generate": "node scripts/run.mjs",
+    "validate": "node scripts/validate.mjs",
+    "test:unit": "node --test tests/*.test.mjs",
+    "test": "node scripts/validate.mjs && node scripts/build.mjs --check && node --test tests/*.test.mjs"
+  },
+  "keywords": [
+    "hiapi",
+    "seedance",
+    "seedance-2-0",
+    "live-action",
+    "ai-filmmaking",
+    "video-workflows",
+    "dialogue-video",
+    "awesome-list"
+  ],
+  "license": "CC-BY-4.0",
+  "engines": {
+    "node": ">=18"
+  }
+}

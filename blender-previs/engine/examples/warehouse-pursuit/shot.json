@@ -1,0 +1,108 @@
+{
+  "$schema": "../../schemas/shot-spec.schema.json",
+  "version": 1,
+  "id": "warehouse-pursuit",
+  "title": "Warehouse Pursuit",
+  "intent": "A grounded handheld pursuit follows a courier sprinting through a working night warehouse while a security guard closes the distance.",
+  "duration": 6,
+  "fps": 24,
+  "resolution": { "width": 640, "height": 360 },
+  "world": {
+    "background": [0.025, 0.035, 0.05],
+    "groundColor": [0.16, 0.18, 0.2],
+    "groundSize": [28, 18],
+    "lighting": "Cold overhead industrial fixtures with intermittent amber safety lamps and wet concrete reflections."
+  },
+  "objects": [
+    {
+      "id": "courier",
+      "primitive": "cylinder",
+      "role": "lead courier in a weathered red jacket carrying a small silver case",
+      "dimensions": [0.7, 0.7, 1.8],
+      "color": [0.85, 0.18, 0.12],
+      "keyframes": [
+        { "time": 0, "location": [-7, -0.8, 0.9], "rotation": [0, 0, -5] },
+        { "time": 3, "location": [-0.5, 0.1, 0.9], "rotation": [0, 0, 7] },
+        { "time": 6, "location": [6.5, 1.4, 0.9], "rotation": [0, 0, 12] }
+      ]
+    },
+    {
+      "id": "guard",
+      "primitive": "cylinder",
+      "role": "pursuing warehouse security guard in dark practical clothing",
+      "dimensions": [0.78, 0.78, 1.9],
+      "color": [0.12, 0.22, 0.48],
+      "keyframes": [
+        { "time": 0, "location": [-9.2, -0.3, 0.95], "rotation": [0, 0, -4] },
+        { "time": 3, "location": [-3.2, 0.4, 0.95], "rotation": [0, 0, 6] },
+        { "time": 6, "location": [3.8, 1.1, 0.95], "rotation": [0, 0, 10] }
+      ]
+    },
+    {
+      "id": "forklift",
+      "primitive": "cube",
+      "role": "yellow electric forklift crossing the aisle as a moving obstacle",
+      "dimensions": [2.2, 1.25, 1.55],
+      "color": [0.95, 0.58, 0.06],
+      "keyframes": [
+        { "time": 0, "location": [1.2, 5.5, 0.78], "rotation": [0, 0, -90] },
+        { "time": 3, "location": [1.2, 2.2, 0.78], "rotation": [0, 0, -90] },
+        { "time": 6, "location": [1.2, -1.4, 0.78], "rotation": [0, 0, -90] }
+      ]
+    },
+    {
+      "id": "left-shelving",
+      "primitive": "cube",
+      "role": "continuous wall of tall metal pallet shelving on frame left",
+      "dimensions": [20, 1.2, 4.5],
+      "color": [0.22, 0.25, 0.28],
+      "keyframes": [{ "time": 0, "location": [0, 5.8, 2.25], "rotation": [0, 0, 0] }]
+    },
+    {
+      "id": "right-shelving",
+      "primitive": "cube",
+      "role": "continuous wall of tall metal pallet shelving on frame right",
+      "dimensions": [20, 1.2, 4.5],
+      "color": [0.22, 0.25, 0.28],
+      "keyframes": [{ "time": 0, "location": [0, -5.8, 2.25], "rotation": [0, 0, 0] }]
+    }
+  ],
+  "camera": {
+    "lensMm": 28,
+    "sensorWidthMm": 36,
+    "rig": "low handheld chase with controlled lateral sway and no cuts",
+    "keyframes": [
+      { "time": 0, "location": [-10.3, -5.2, 2.35], "target": [-7.2, -0.4, 1.05], "lensMm": 26 },
+      { "time": 0.75, "location": [-8.9, -4.82, 2.22], "target": [-5.7, -0.15, 1.0], "lensMm": 25 },
+      { "time": 1.5, "location": [-7.35, -5.18, 2.48], "target": [-4.15, -0.05, 1.12], "lensMm": 24 },
+      { "time": 2.25, "location": [-5.8, -4.78, 2.29], "target": [-2.85, 0.15, 1.0], "lensMm": 25 },
+      { "time": 3, "location": [-4.0, -5.08, 2.46], "target": [-1.7, 0.25, 1.05], "lensMm": 24 },
+      { "time": 3.75, "location": [-2.45, -4.62, 2.3], "target": [-0.2, 0.55, 1.0], "lensMm": 25 },
+      { "time": 4.5, "location": [-0.9, -4.97, 2.51], "target": [1.7, 0.72, 1.1], "lensMm": 24 },
+      { "time": 5.25, "location": [0.7, -4.45, 2.33], "target": [3.4, 1.0, 1.0], "lensMm": 25 },
+      { "time": 6, "location": [2.3, -4.78, 2.55], "target": [5.1, 1.25, 1.05], "lensMm": 26 }
+    ]
+  },
+  "seedance": {
+    "model": "seedance-2.0",
+    "resolution": "720p",
+    "aspectRatio": "16:9",
+    "generateAudio": true,
+    "style": "Naturalistic contemporary thriller, practical warehouse lighting, wet concrete, restrained contrast, realistic running weight and documentary camera inertia.",
+    "continuity": [
+      "the courier remains ahead of the guard for the full take",
+      "the silver case stays in the courier's right hand",
+      "the forklift crosses once from background to foreground",
+      "screen direction remains left-to-right",
+      "the handheld camera sway alternates gently without losing either runner"
+    ],
+    "avoid": [
+      "cuts or angle changes",
+      "floating feet",
+      "rubber limbs",
+      "retaining proxy cylinders or flat viewport materials",
+      "extra performers"
+    ],
+    "seed": 24681357
+  }
+}
