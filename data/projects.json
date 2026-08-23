@@ -1,5 +1,5 @@
 {
-  "verified_at": "2026-07-27",
+  "verified_at": "2026-08-23",
   "method": "GitHub REST API metadata plus README and license-file review",
   "projects": [
     {
@@ -133,6 +133,17 @@
       "adoption": "method-only",
       "summary_en": "A growing library of production skills for motion direction, product and website videos, reference recreation, openers, and QA.",
       "summary_zh": "持续增长的视频制作技能库，覆盖动效导演、商品与网站视频、参考复刻、片头和质检。"
+    },
+    {
+      "name": "OrkasVideoStudio",
+      "repo": "Orkas-AI/Orkas-VideoStudio",
+      "url": "https://github.com/Orkas-AI/Orkas-VideoStudio",
+      "stars": 523,
+      "license": "MIT",
+      "category": "agent-video-toolkit",
+      "adoption": "workflow-reference",
+      "summary_en": "A TypeScript CLI and MCP toolkit for agent-built videos with editable JSON timelines, reusable skills, and automatic assembly.",
+      "summary_zh": "面向 Agent 视频制作的 TypeScript CLI 与 MCP 工具包，提供可编辑 JSON 时间线、可复用技能和自动合成。"
     }
   ]
 }
